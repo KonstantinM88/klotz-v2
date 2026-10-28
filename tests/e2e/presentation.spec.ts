@@ -5,6 +5,9 @@ const routes = [
   "/terrasse-garten/terrassenueberdachungen",
   "/referenzen/glasschiebewaende",
   "/wissen/lamellendach-oder-glasdach",
+  "/wissen",
+  "/wissen/sommergarten-oder-wintergarten",
+  "/wissen/fenster-reparieren-oder-austauschen",
   "/projekt-anfragen",
   "/unternehmen",
 ];
@@ -114,6 +117,38 @@ test("reference filter and crawlable links", async ({ page }) => {
   await expect(page.locator(".reference-card")).toHaveCount(1);
   await page.locator(".reference-card").click();
   await expect(page).toHaveURL(/einzaeunung-stadtstadion/);
+});
+test("Wissen leads from both new guides to relevant services", async ({
+  page,
+}) => {
+  await page.goto("/wissen");
+  await expect(
+    page.locator(".article-grid--featured .article-card"),
+  ).toHaveCount(2);
+  const guides = [
+    {
+      slug: "sommergarten-oder-wintergarten",
+      service: "/terrasse-garten/sommer-wintergaerten",
+    },
+    {
+      slug: "fenster-reparieren-oder-austauschen",
+      service: "/fenster-tueren/fenster",
+    },
+  ];
+  for (const guide of guides) {
+    await page.locator(`.article-card[href="/wissen/${guide.slug}"]`).click();
+    await expect(page.locator(".article-feature img")).toBeVisible();
+    await expect(page.locator("article .checklist li")).toHaveCount(5);
+    await expect(page.locator("article .text-link")).toHaveAttribute(
+      "href",
+      guide.service,
+    );
+    await expect(page.locator(".toc time")).toHaveAttribute(
+      "datetime",
+      "2026-10-28",
+    );
+    await page.goto("/wissen");
+  }
 });
 test("about page is linked in desktop and mobile navigation", async ({
   page,

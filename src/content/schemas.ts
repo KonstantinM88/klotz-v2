@@ -77,4 +77,11 @@ export const articleSchema = z.object({
   readingTime: z.string().min(1),
   updatedAt: z.iso.date(),
   status: contentStatusSchema,
+  image: z
+    .object({
+      src: z.string().startsWith("/images/"),
+      alt: z.string().min(1),
+      caption: z.string().min(1),
+    })
+    .optional(),
 });

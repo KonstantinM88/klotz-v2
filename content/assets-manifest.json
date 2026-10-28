@@ -384,5 +384,19 @@
     "rightsStatus": "client-presentation-approved",
     "rightsNote": "User confirmed client permission for this presentation. Public reuse requires separate release.",
     "factStatus": "legacy"
+  },
+  {
+    "id": "fenster-ratgeber",
+    "src": "/images/fenster-ratgeber.webp",
+    "sourceUrl": "https://www.klotz.mobi/sites/default/files/MetallbauKlotz_Inhalte_Produkte_Fenster_Holzfenster%20%282%29.jpg",
+    "sourcePage": "https://www.klotz.mobi/holzfenster",
+    "width": 1067,
+    "height": 800,
+    "bytes": 33308,
+    "originalSha256": "17141ecc15db9fc871293f8fac04ccc3252fc0260c6f0b17e5d575597f7a4e07",
+    "capturedAt": "2026-10-28T18:11:40.496Z",
+    "rightsStatus": "client-presentation-approved",
+    "rightsNote": "User confirmed client permission for this presentation. Public reuse requires separate release. Product image, not a KLOTZ project reference.",
+    "factStatus": "legacy"
   }
 ]

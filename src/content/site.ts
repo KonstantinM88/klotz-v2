@@ -208,6 +208,42 @@ export const featuredProjects: Project[] = z.array(projectSchema).parse([
 
 export const featuredArticles: Article[] = z.array(articleSchema).parse([
   {
+    id: "summer-or-winter-garden",
+    slug: "sommergarten-oder-wintergarten",
+    title: "Sommergarten oder Wintergarten: Welche Lösung passt zu Ihnen?",
+    excerpt:
+      "Terrassendach, Glasschiebewände oder beheizter Glasanbau? So klären Sie Nutzung, Beschattung und Planung, bevor Sie sich entscheiden.",
+    href: "/wissen/sommergarten-oder-wintergarten",
+    topic: "Terrasse & Garten",
+    readingTime: "4 Min.",
+    updatedAt: "2026-10-28",
+    status: "draft",
+    image: {
+      src: "/images/glas-detail-1.webp",
+      alt: "Überdachte Terrasse mit seitlichen Glaselementen aus dem KLOTZ-Bildarchiv",
+      caption: "Aufnahme aus dem KLOTZ-Bildarchiv · Ausführung als Beispiel",
+    },
+  },
+  {
+    id: "window-repair-or-replacement",
+    slug: "fenster-reparieren-oder-austauschen",
+    title:
+      "Fenster reparieren oder austauschen? So treffen Sie die Entscheidung.",
+    excerpt:
+      "Undichte Fenster, alte Verglasung oder beschädigter Rahmen: Wann eine Reparatur genügt und wann ein Austausch sinnvoll sein kann.",
+    href: "/wissen/fenster-reparieren-oder-austauschen",
+    topic: "Fenster & Türen",
+    readingTime: "4 Min.",
+    updatedAt: "2026-10-28",
+    status: "draft",
+    image: {
+      src: "/images/fenster-ratgeber.webp",
+      alt: "Detail eines Holzfensters aus dem Produktarchiv von KLOTZ",
+      caption:
+        "Produktabbildung aus dem KLOTZ-Archiv · Kein konkretes Kundenprojekt",
+    },
+  },
+  {
     id: "project-process",
     slug: "vom-aufmass-bis-zur-abnahme",
     title: "Von der Idee bis zur Abnahme: So planen Sie Ihr Projekt.",

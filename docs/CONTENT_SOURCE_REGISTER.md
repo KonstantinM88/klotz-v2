@@ -1,5 +1,11 @@
 # Content source register
 
+## 2026-10-28 — два Ratgeber-материала в Wissen
+
+- `src/content/articles.ts`, `src/content/site.ts`: новые немецкие статьи `sommergarten-oder-wintergarten` и `fenster-reparieren-oder-austauschen` — оригинальная редактура со статусом `draft`, а не тексты KLOTZ или утверждённые технические рекомендации. Ассортимент и сервис подтверждены legacy-страницами `https://www.klotz.mobi/portfolio/terrassenueberdachung`, `https://www.klotz.mobi/portfolio/fenster`, `https://www.klotz.mobi/portfolio/wartung-service`; независимая ориентация по окнам — `https://www.verbraucherzentrale.de/wissen/energie/energetische-sanierung/fenster-sanieren-oder-austauschen-darauf-sollten-sie-achten-13878`. Числа о цене, сроках, выгоде, энергосбережении и свойствах конкретных KLOTZ-систем не добавлены.
+- Для статьи о стеклянном саде повторно используется архивная фотография `/images/glas-detail-1.webp`, уже записанная в `content/assets-manifest.json`. Для статьи об окнах 28.10.2026 с `https://www.klotz.mobi/holzfenster` загружено исходное `https://www.klotz.mobi/sites/default/files/MetallbauKlotz_Inhalte_Produkte_Fenster_Holzfenster%20%282%29.jpg`; оригинал сохранён в `content/legacy/originals/fenster-ratgeber.jpg`, оптимизированная копия — `/images/fenster-ratgeber.webp`. URL, размеры, SHA-256 и ограничение прав зафиксированы в manifest. Это продуктовая фотография, не подтверждённый проект KLOTZ.
+- `docs/KEYWORD_RESEARCH_2026-10-28.md`: редакционная карта запросов и источников без неподтверждённых частот. Точные объёмы и поисковый эффект не проверялись, индексация демо отключена.
+
 ## 2026-09-25 — сотрудники и фотографии на «Über uns»
 
 - По прямой просьбе пользователя с S-03 (`https://www.klotz.mobi/ueber-uns`) перенесены все восемь опубликованных карточек: Herr Klotz, Frau Shafiee, Herr Walther, Herr Kimmel, Montageteam, Frau Kriester, Herr Temgoua, Herr Degenhardt. Имена и должности приведены как на исходной странице; короткие пояснения к ролям — редакционный `draft`, не биографические факты.

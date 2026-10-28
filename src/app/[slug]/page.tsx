@@ -48,7 +48,7 @@ export default async function OverviewPage({ params }: Props) {
     wissen: {
       title: "Gut entscheiden. Besser planen.",
       intro:
-        "Orientierung für Ihr Vorhaben: verständliche Antworten zu Dachlösungen, Kostenfaktoren und den nächsten Schritten.",
+        "Der KLOTZ-Ratgeber beantwortet Fragen zu Terrasse, Fenstern und Planung – verständlich und mit dem Blick auf Ihr konkretes Vorhaben.",
     },
     kontakt: {
       title: "Lernen wir Ihr Projekt kennen.",
@@ -142,7 +142,27 @@ export default async function OverviewPage({ params }: Props) {
               Redaktionelle Vorschau zur Kundenabstimmung. Fachliche Freigabe
               durch KLOTZ steht noch aus.
             </p>
-            <ArticleCards articles={articles} />
+            <div className="knowledge-heading">
+              <p className="eyebrow">
+                <span />
+                Neu im Ratgeber
+              </p>
+              <h2>Erst verstehen. Dann entscheiden.</h2>
+              <p>
+                Zwei Fragen, die vor einem Auftrag viel klären: Welcher Glasraum
+                passt zur Terrasse – und wann lohnt es sich, Fenster instand zu
+                setzen oder auszutauschen?
+              </p>
+            </div>
+            <ArticleCards articles={articles.slice(0, 2)} featured />
+            <div className="knowledge-heading knowledge-heading--more">
+              <p className="eyebrow">
+                <span />
+                Weiterlesen
+              </p>
+              <h2>Weitere Antworten für Ihr Vorhaben.</h2>
+            </div>
+            <ArticleCards articles={articles.slice(2)} />
             <div className="topic-panel">
               <p className="eyebrow">
                 <span />
@@ -153,8 +173,6 @@ export default async function OverviewPage({ params }: Props) {
                 {[
                   "Glasdach richtig pflegen",
                   "Beschattung frühzeitig planen",
-                  "Sommergarten oder Wintergarten",
-                  "Fenster im Bestand austauschen",
                   "Haustür und Seitenteil abstimmen",
                   "Sichtschutz zum Grundstück wählen",
                   "Dreh- oder Schiebetor",

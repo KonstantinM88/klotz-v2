@@ -117,17 +117,47 @@ export function ContactPanel() {
     </section>
   );
 }
-export function ArticleCards({ articles }: { articles: Article[] }) {
+export function ArticleCards({
+  articles,
+  featured = false,
+}: {
+  articles: Article[];
+  featured?: boolean;
+}) {
   return (
-    <div className="article-grid">
+    <div
+      className={
+        featured ? "article-grid article-grid--featured" : "article-grid"
+      }
+    >
       {articles.map((a, i) => (
-        <Link className="article-card" href={a.href} key={a.id}>
+        <Link
+          className={
+            a.image ? "article-card article-card--with-image" : "article-card"
+          }
+          href={a.href}
+          key={a.id}
+        >
           <div className="article-card__meta">
             <span>
               0{i + 1} / {a.topic}
             </span>
             <span>{a.readingTime}</span>
           </div>
+          {a.image ? (
+            <div className="article-card__media">
+              <Image
+                src={a.image.src}
+                alt={a.image.alt}
+                fill
+                sizes={
+                  featured
+                    ? "(max-width: 760px) 100vw, 50vw"
+                    : "(max-width: 760px) 100vw, 33vw"
+                }
+              />
+            </div>
+          ) : null}
           <h3>{a.title}</h3>
           <p>{a.excerpt}</p>
           <span className="article-card__link">Ratgeber lesen ↗</span>

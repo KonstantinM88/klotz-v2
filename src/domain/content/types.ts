@@ -69,6 +69,7 @@ export type Article = {
   readingTime: string;
   updatedAt: string;
   status: ContentStatus;
+  image?: { src: string; alt: string; caption: string };
 };
 
 export type ProcessStep = {

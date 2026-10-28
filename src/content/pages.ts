@@ -94,9 +94,9 @@ export const overviewPages: OverviewPageContent[] = [
   {
     slug: "wissen",
     eyebrow: "Ratgeber",
-    title: "Orientierung vor der Entscheidung.",
+    title: "Wissen für gute Entscheidungen.",
     intro:
-      "Klare Antworten auf Fragen zu Planung, Kosten, Material, Pflege und Genehmigung.",
+      "Antworten auf Fragen zu Sommergarten, Fenstern, Terrassendächern, Kosten und Planung – im KLOTZ-Ratgeber.",
     heading: "Hilfreiche Inhalte für Menschen und Suchsysteme.",
     body: [
       "Der Wissensbereich beantwortet konkrete Kundenfragen in verständlicher Sprache. Das stärkt klassische Suchmaschinenoptimierung und schafft zugleich klar strukturierte Quellen für KI-gestützte Suchsysteme.",

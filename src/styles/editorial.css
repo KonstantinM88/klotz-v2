@@ -704,14 +704,10 @@ a:hover .image-arrow {
   background: transparent;
 }
 .article-card {
-  padding: 30px;
+  padding: 0;
   background: transparent;
   border: 0;
-  border-top: 1px solid #a8b1a1;
   border-right: 1px solid #b7bfb0;
-}
-.article-card:first-child {
-  padding-left: 0;
 }
 .article-card:last-child {
   border-right: 0;
@@ -726,10 +722,7 @@ a:hover .image-arrow {
   line-height: 1.18;
 }
 .article-card__meta {
-  font-size: 9px;
-}
-.article-card__link {
-  margin-top: 30px;
+  font-size: 10px;
 }
 .contact-panel {
   position: relative;
@@ -1229,10 +1222,13 @@ a:hover .image-arrow {
   .journal-heading {
     margin-bottom: 35px;
   }
-  .article-card,
-  .article-card:first-child {
-    padding: 26px 0;
+  .article-card {
+    padding: 0;
     border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .article-card:last-child {
+    border-bottom: 0;
   }
   .article-card h3 {
     font-size: 27px;

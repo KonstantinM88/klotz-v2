@@ -286,7 +286,7 @@ export default async function HomePage() {
             </Link>
           </div>
           <div data-reveal>
-            <ArticleCards articles={articles.slice(1)} />
+            <ArticleCards articles={articles.slice(0, 2)} featured />
           </div>
           <p className="source-caption">
             Redaktionelle Vorschau · Fachliche Freigabe durch KLOTZ steht aus.

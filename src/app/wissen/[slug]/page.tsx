@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { localContentRepository as repository } from "@/repositories/local-content-repository";
 import { PageIntro, ContactPanel } from "@/components/sections/page-parts";
@@ -12,7 +13,7 @@ export async function generateMetadata({ params }: Props) {
   const a = (await repository.getFeaturedArticles()).find(
     (a) => a.slug === slug,
   );
-  return a ? pageMetadata(a.title, a.excerpt, a.href) : {};
+  return a ? pageMetadata(a.title, a.excerpt, a.href, a.image?.src) : {};
 }
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
@@ -28,9 +29,31 @@ export default async function ArticlePage({ params }: Props) {
         intro={a.excerpt}
         eyebrow={a.topic + " · " + a.readingTime}
         path={a.href}
+        parents={[{ label: "Wissen", href: "/wissen" }]}
       />
       <section className="content-section">
-        <div className="shell article-layout">
+        <div
+          className={
+            a.image
+              ? "shell article-layout article-layout--illustrated"
+              : "shell article-layout"
+          }
+        >
+          {a.image ? (
+            <figure className="article-feature">
+              <div className="article-feature__image">
+                <Image
+                  src={a.image.src}
+                  alt={a.image.alt}
+                  fill
+                  priority
+                  fetchPriority="high"
+                  sizes="(max-width: 760px) 100vw, 760px"
+                />
+              </div>
+              <figcaption>{a.image.caption}</figcaption>
+            </figure>
+          ) : null}
           <aside className="toc">
             <p className="eyebrow">In diesem Ratgeber</p>
             <ol>
@@ -43,7 +66,15 @@ export default async function ArticlePage({ params }: Props) {
             <p>
               Redaktionelle Vorschau
               <br />
-              Stand: <time dateTime={a.updatedAt}>24. September 2026</time>
+              Stand:{" "}
+              <time dateTime={a.updatedAt}>
+                {new Intl.DateTimeFormat("de-DE", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                  timeZone: "UTC",
+                }).format(new Date(`${a.updatedAt}T00:00:00Z`))}
+              </time>
             </p>
           </aside>
           <article className="article-body">

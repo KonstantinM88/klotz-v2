@@ -9,14 +9,18 @@ if (process.platform === "win32")
   process.env.PATH +=
     ";" + join(process.env.SystemRoot ?? "C:/Windows", "System32");
 await mkdir(".lighthouseci", { recursive: true });
-const routes = [
+const defaultRoutes = [
   "/",
   "/terrasse-garten/terrassenueberdachungen",
   "/referenzen/glasschiebewaende",
   "/wissen/lamellendach-oder-glasdach",
+  "/wissen",
+  "/wissen/sommergarten-oder-wintergarten",
+  "/wissen/fenster-reparieren-oder-austauschen",
   "/projekt-anfragen",
   "/unternehmen",
 ];
+const routes = process.argv.length > 2 ? process.argv.slice(2) : defaultRoutes;
 const results = [];
 const chrome = await launch({
   chromePath: chromium.executablePath(),
