@@ -129,19 +129,19 @@ export const overviewPages: OverviewPageContent[] = [
   },
   {
     slug: "angebote",
-    eyebrow: "Aktuell",
-    title: "Angebote mit echtem Mehrwert.",
+    eyebrow: "Angebotsideen",
+    title: "Angebote für Haus und Garten in Merseburg",
     intro:
-      "Aktionsangebote werden künftig aktuell, strukturiert und mit klarer Laufzeit dargestellt.",
-    heading: "Noch keine freigegebenen Angebote.",
+      "Fünf Angebotsideen von KLOTZ: Lamellendach, Zaun, Fenster, Terrassendach und Sanierung. Preisbeispiele und Planung für Ihr Vorhaben in Merseburg und Umgebung.",
+    heading: "Vom Preisbeispiel zum passenden Projekt.",
     body: [
-      "Dieser Bereich ist technisch vorbereitet. Inhalte erscheinen erst, wenn Preis, Zeitraum, Verfügbarkeit und Bedingungen durch KLOTZ bestätigt sind.",
+      "Vergleichen Sie die Beispiele aus den Aktionsflyern und klären Sie Ausführung, Montage und aktuelle Bedingungen im persönlichen Gespräch.",
     ],
     features: [
       "Klare Laufzeiten",
       "Transparente Bedingungen",
       "Direkte Produktanfrage",
-      "Messbare Kampagnen",
+      "Persönliche Planung",
     ],
   },
   {

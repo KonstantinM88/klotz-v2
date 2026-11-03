@@ -10,6 +10,12 @@ const routes = [
   "/wissen/fenster-reparieren-oder-austauschen",
   "/projekt-anfragen",
   "/unternehmen",
+  "/angebote",
+  "/angebote/lamellendaecher-pergolen",
+  "/angebote/zaeune-tore",
+  "/angebote/fenster-tueren",
+  "/angebote/terrassendach-carport",
+  "/angebote/energetisch-sanieren-foerderung",
 ];
 for (const path of routes)
   test(

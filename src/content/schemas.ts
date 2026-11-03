@@ -85,3 +85,65 @@ export const articleSchema = z.object({
     })
     .optional(),
 });
+
+export const offerPageSchema = z.object({
+  id: z.string().min(1),
+  slug: z.string().regex(/^[a-z0-9-]+$/),
+  href: z.string().startsWith("/angebote/"),
+  kind: z.enum(["products", "funding"]),
+  title: z.string().min(1),
+  shortTitle: z.string().min(1),
+  eyebrow: z.string().min(1),
+  excerpt: z.string().min(1),
+  lead: z.string().min(1),
+  answer: z.string().min(1),
+  metaTitle: z.string().min(1),
+  metaDescription: z.string().min(1),
+  priceSummary: z.string().min(1),
+  inquiryTopic: z.enum(["Terrasse & Garten", "Fenster & Türen", "Zaun & Tor"]),
+  image: z.object({
+    src: z.string().startsWith("/images/angebote-2026/"),
+    alt: z.string().min(1),
+    width: z.number().positive().int(),
+    height: z.number().positive().int(),
+    caption: z.string().min(1),
+  }),
+  products: z.array(
+    z.object({
+      title: z.string().min(1),
+      detail: z.string(),
+      fromPriceEUR: z.number().nonnegative(),
+      unit: z.string().min(1),
+    }),
+  ),
+  sections: z
+    .array(
+      z.object({
+        id: z.string().regex(/^[a-z0-9-]+$/),
+        title: z.string().min(1),
+        paragraphs: z.array(z.string().min(1)).min(1),
+      }),
+    )
+    .min(3),
+  checklist: z.array(z.string().min(1)).min(3),
+  faq: z
+    .array(z.object({ question: z.string().min(1), answer: z.string().min(1) }))
+    .min(3),
+  relatedLinks: z
+    .array(
+      z.object({ label: z.string().min(1), href: z.string().startsWith("/") }),
+    )
+    .min(1),
+  sources: z
+    .array(z.object({ title: z.string().min(1), url: z.string().url() }))
+    .min(1),
+  updatedAt: z.iso.date(),
+  sourcePriceDate: z.string().min(1),
+  validUntil: z.iso.date().optional(),
+  status: contentStatusSchema,
+  publication: z.object({
+    contentApproved: z.boolean(),
+    commercialApproved: z.boolean(),
+    rightsApproved: z.boolean(),
+  }),
+});

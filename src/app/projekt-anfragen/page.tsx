@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ProjectRequestForm } from "@/components/forms/project-request-form";
 import { pageMetadata } from "@/lib/metadata";
+import { localContentRepository as contentRepository } from "@/repositories/local-content-repository";
 
 export const metadata: Metadata = pageMetadata(
   "Projekt anfragen",
@@ -8,7 +9,16 @@ export const metadata: Metadata = pageMetadata(
   "/projekt-anfragen",
 );
 
-export default function RequestPage() {
+export default async function RequestPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ angebot?: string | string[] }>;
+}) {
+  const { angebot } = await searchParams;
+  const offer =
+    typeof angebot === "string"
+      ? await contentRepository.getOfferPage(angebot)
+      : undefined;
   return (
     <main id="main-content">
       <section className="inner-hero">
@@ -40,7 +50,15 @@ export default function RequestPage() {
               </p>
             </div>
           </div>
-          <ProjectRequestForm />
+          <ProjectRequestForm
+            key={offer?.slug ?? "general"}
+            initialTopic={offer?.inquiryTopic}
+            initialMessage={
+              offer
+                ? `Ich interessiere mich für ${offer.shortTitle}. Bitte beraten Sie mich zu einer passenden Ausführung und einem aktuellen Angebot.\n\nMein Vorhaben: `
+                : undefined
+            }
+          />
         </div>
       </section>
     </main>

@@ -14,6 +14,7 @@ import { articleBodies } from "@/content/articles";
 import { homeContent } from "@/content/home";
 import { companyPageContent } from "@/content/company";
 import assetManifest from "../../content/assets-manifest.json";
+import { offerPages } from "@/content/offers";
 
 function withAsset<
   T extends {
@@ -35,6 +36,12 @@ function withAsset<
 }
 
 export const localContentRepository: ContentRepository = {
+  async getOfferPages() {
+    return offerPages;
+  },
+  async getOfferPage(slug) {
+    return offerPages.find((offer) => offer.slug === slug);
+  },
   async getCompanyPageContent() {
     return companyPageContent;
   },

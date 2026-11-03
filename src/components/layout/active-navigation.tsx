@@ -10,7 +10,13 @@ export function ActiveNavigation({ items }: { items: NavigationItem[] }) {
         <Link
           key={item.href}
           href={item.href}
-          aria-current={path === item.href ? "page" : undefined}
+          aria-current={
+            path === item.href
+              ? "page"
+              : path.startsWith(item.href + "/")
+                ? "true"
+                : undefined
+          }
         >
           {item.label}
         </Link>

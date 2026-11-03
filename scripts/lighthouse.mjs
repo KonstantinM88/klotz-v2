@@ -19,6 +19,9 @@ const defaultRoutes = [
   "/wissen/fenster-reparieren-oder-austauschen",
   "/projekt-anfragen",
   "/unternehmen",
+  "/angebote",
+  "/angebote/fenster-tueren",
+  "/angebote/energetisch-sanieren-foerderung",
 ];
 const routes = process.argv.length > 2 ? process.argv.slice(2) : defaultRoutes;
 const results = [];

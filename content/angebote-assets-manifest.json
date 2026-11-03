@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "createdOn": "2026-10-29",
+  "status": "design-review",
+  "generationTool": "built-in image_gen",
+  "promptFile": "content/angebote-image-prompts-2026-10-29.json",
+  "rightsStatus": "client-presentation-approved-only",
+  "productionPublicationApproved": false,
+  "sourcePage": "https://www.klotz.mobi/angebote",
+  "notes": [
+    "Generated advertising designs are not unedited project photographs or verified customer references.",
+    "All commercial prices remain legacy examples requiring current KLOTZ confirmation; VAT treatment is not established by the source.",
+    "Montage is excluded by the source flyers. No automatic seller discount of 15 percent is carried over.",
+    "Offer content and conditions are repeated as accessible HTML on five themed pages; global noindex and publication review remain required.",
+    "Public reuse of source photographs, manufacturer marks and the KLOTZ logo requires separate confirmation."
+  ],
+  "assets": [
+    {
+      "id": "angebote-lamellendach-pergola-2026",
+      "name": "01-lamellendach-pergola",
+      "title": "Lamellendächer & Pergolen",
+      "kind": "ai-assisted-archive-redesign",
+      "original": "content/legacy/originals/angebote-2026/lamellendach-pergola-legacy-original.jpg",
+      "sourceUrl": "https://www.klotz.mobi/sites/default/files/001_RZ_20_02_Feb_2026%20A_Schlagen%20Sie%20zu_5%20Flyer2_0.jpg",
+      "offers": [
+        {
+          "name": "Lamellendach",
+          "dimensions": "3,0 × 3,0 m",
+          "fromPriceEUR": 5999,
+          "unit": "Stück"
+        },
+        {
+          "name": "Pergola",
+          "dimensions": "3,0 × 3,0 m",
+          "fromPriceEUR": 4999,
+          "unit": "Stück"
+        }
+      ],
+      "alt": "Modernes KLOTZ-Werbemotiv für Lamellendächer und Pergolen mit visualisierter Terrassenszene und Preisbeispielen.",
+      "supportingSources": [
+        "public/images/lamelle-detail-1.webp",
+        "public/images/logo.webp"
+      ],
+      "master": "output/angebote-2026/masters/01-lamellendach-pergola.png",
+      "src": "/images/angebote-2026/01-lamellendach-pergola.webp",
+      "factStatus": "legacy-current-check",
+      "previewStatus": "integrated-local-demo",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 462830,
+      "sha256": "dc4dcf8a33bf542ff3e1188e10dd9d6dadecf27d3164d7ce2d792f796d481c70",
+      "originalSha256": "07dbf17f1a10d6122855c8687aaa2d05811942677024cdd57021c0d4154e013c",
+      "masterSha256": "4b2e5adf5bec113f01b64d9403f9df04f15b5d46abe248816e8cd9a60d2fd186",
+      "export": {
+        "format": "webp",
+        "quality": 94,
+        "effort": 6,
+        "smartSubsample": true
+      },
+      "pagePath": "/angebote/lamellendaecher-pergolen"
+    },
+    {
+      "id": "angebote-zaun-tor-2026",
+      "name": "02-zaun-tor",
+      "title": "Zaun & Tor",
+      "kind": "ai-assisted-archive-redesign",
+      "original": "content/legacy/originals/angebote-2026/zaun-tor-legacy-original.jpg",
+      "sourceUrl": "https://www.klotz.mobi/sites/default/files/002%20RZ_20_02_Feb_2026%20A_Schlagen%20Sie%20zu_5%20Flyer2_0.jpg",
+      "offers": [
+        {
+          "name": "Doppelstabmattenzaun",
+          "fromPriceEUR": 59,
+          "unit": "lfm"
+        },
+        {
+          "name": "WPC-Sichtschutzzaun",
+          "fromPriceEUR": 180,
+          "unit": "lfm"
+        },
+        {
+          "name": "Alu-Zaun mit Pforte & elektrischem Flügeltor",
+          "fromPriceEUR": 7999,
+          "unit": "Paket laut Vorlage"
+        },
+        {
+          "name": "Hoftor mit Paneelen",
+          "dimensions": "3,4 × 1,6 m",
+          "fromPriceEUR": 4399,
+          "unit": "Stück"
+        },
+        {
+          "name": "Hoftor aus Schmiedeeisen",
+          "dimensions": "3,5 × 1,2 m",
+          "fromPriceEUR": 2888,
+          "unit": "Stück"
+        }
+      ],
+      "alt": "Modernes KLOTZ-Werbemotiv für Zäune, Sichtschutz und Tore mit visualisiertem Zaun und fünf Preisbeispielen.",
+      "supportingSources": ["public/images/logo.webp"],
+      "master": "output/angebote-2026/masters/02-zaun-tor.png",
+      "src": "/images/angebote-2026/02-zaun-tor.webp",
+      "factStatus": "legacy-current-check",
+      "previewStatus": "integrated-local-demo",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 447232,
+      "sha256": "06360423e74118d9639aa77fbb978d3ddb2569572595c5b3755faa2757ae08a9",
+      "originalSha256": "483d634916408f29dc266593afc659ca7e1a51dd3ed3dcfc93d5b0431a7484b5",
+      "masterSha256": "e7ea8a32ffa66853dba92729687e8d485519484aa7440e3fb4dd7d45e8489eb1",
+      "export": {
+        "format": "webp",
+        "quality": 94,
+        "effort": 6,
+        "smartSubsample": true
+      },
+      "pagePath": "/angebote/zaeune-tore"
+    },
+    {
+      "id": "angebote-fenster-tueren-2026",
+      "name": "03-fenster-tueren",
+      "title": "Fenster & Türen",
+      "kind": "ai-assisted-archive-redesign",
+      "original": "content/legacy/originals/angebote-2026/fenster-tueren-legacy-original.jpg",
+      "sourceUrl": "https://www.klotz.mobi/sites/default/files/001_RZ_20_02_Feb_2026%20A_Schlagen%20Sie%20zu_5%20Flyer_0.jpg",
+      "validUntilFromSource": "2026-12-31",
+      "offers": [
+        {
+          "name": "Schüco-Kunststofffenster",
+          "details": "3-fach-Verglasung",
+          "fromPriceEUR": 250,
+          "unit": "m²"
+        },
+        {
+          "name": "Aluminium-Haustür",
+          "dimensions": "1,1 × 2,1 m",
+          "fromPriceEUR": 2900,
+          "unit": "Stück"
+        },
+        {
+          "name": "Rollladen",
+          "fromPriceEUR": 199,
+          "unit": "Stück"
+        },
+        {
+          "name": "Vordach",
+          "dimensions": "1,2 × 0,8 m",
+          "fromPriceEUR": 1500,
+          "unit": "Stück"
+        },
+        {
+          "name": "CPL-Innentür",
+          "dimensions": "0,86 × 1,99 m",
+          "fromPriceEUR": 395,
+          "unit": "Stück"
+        },
+        {
+          "name": "Garagen-Sektionaltor",
+          "dimensions": "2,25 × 2,0 m",
+          "fromPriceEUR": 999,
+          "unit": "Stück"
+        }
+      ],
+      "alt": "Modernes KLOTZ-Werbemotiv für Fenster und Türen mit visualisierter Fassade sowie sechs Preisbeispielen.",
+      "supportingSources": ["public/images/logo.webp"],
+      "master": "output/angebote-2026/masters/03-fenster-tueren.png",
+      "src": "/images/angebote-2026/03-fenster-tueren.webp",
+      "factStatus": "legacy-current-check",
+      "previewStatus": "integrated-local-demo",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 391930,
+      "sha256": "2fba042d15b4b63a08fe67499aa170d95d3c17b7853bfbde1c1affc8693a02a4",
+      "originalSha256": "efcfd9321c40146c25333c40703b135d0c46f1d0f4f0d0cce4f6c120a792d173",
+      "masterSha256": "112a33a12dabbc46be7ed48666d428295b82f438377d4118c7afa8726770abce",
+      "export": {
+        "format": "webp",
+        "quality": 94,
+        "effort": 6,
+        "smartSubsample": true
+      },
+      "pagePath": "/angebote/fenster-tueren"
+    },
+    {
+      "id": "angebote-terrassendach-carport-2026",
+      "name": "04-terrassendach-carport",
+      "title": "Terrassendach & Carport",
+      "kind": "ai-assisted-archive-redesign",
+      "original": "content/legacy/originals/angebote-2026/terrassendach-carport-legacy-original.jpg",
+      "sourceUrl": "https://www.klotz.mobi/sites/default/files/002%20RZ_20_02_Feb_2026%20A_Schlagen%20Sie%20zu_5%20Flyer_0.jpg",
+      "validUntilFromSource": "2026-12-31",
+      "offers": [
+        {
+          "name": "Terrassenüberdachung",
+          "dimensions": "3,0 × 3,0 m",
+          "fromPriceEUR": 3999,
+          "unit": "Stück"
+        },
+        {
+          "name": "Carport",
+          "dimensions": "3,3 × 5,0 m",
+          "fromPriceEUR": 3999,
+          "unit": "Stück"
+        }
+      ],
+      "alt": "Modernes KLOTZ-Werbemotiv für Terrassenüberdachungen und Carports auf Basis archivierter Montagebilder.",
+      "supportingSources": ["public/images/logo.webp"],
+      "master": "output/angebote-2026/masters/04-terrassendach-carport.png",
+      "src": "/images/angebote-2026/04-terrassendach-carport.webp",
+      "factStatus": "legacy-current-check",
+      "previewStatus": "integrated-local-demo",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 383592,
+      "sha256": "6fb76691a15acbebf0fb309ded8940f80c467e96f32566ddf0898249c2775d2b",
+      "originalSha256": "61b05dee17a76d20df02568b74d19f618709b426df62929e1bce577dfa56e25a",
+      "masterSha256": "d180a6771aeb247ec4e3d51d8ccc9b21b8cbde7e33584c7e0e135a27bfd98a89",
+      "export": {
+        "format": "webp",
+        "quality": 94,
+        "effort": 6,
+        "smartSubsample": true
+      },
+      "pagePath": "/angebote/terrassendach-carport"
+    },
+    {
+      "id": "angebote-sanierung-foerderung-2026",
+      "name": "05-sanierung-foerderung",
+      "title": "Sanierung & Förderung",
+      "kind": "ai-generated-symbolic-illustration",
+      "original": "content/legacy/originals/angebote-2026/foerderung-user-original.jpg",
+      "sourceUrl": "https://www.klotz.mobi/sites/default/files/15%20Prozent%20staatlicher%20Zuschuss_0.jpg",
+      "offers": [],
+      "alt": "Symbolische Illustration eines Hausmodells mit grünem Wollschal und bedingtem Hinweis auf 15 Prozent BEG-Grundförderung.",
+      "supportingSources": ["public/images/logo.webp"],
+      "funding": {
+        "program": "BEG Einzelmaßnahmen",
+        "baseRatePercent": 15,
+        "conditional": true,
+        "checkedOn": "2026-10-29",
+        "notAGuarantee": true,
+        "sources": [
+          "https://www.energiewechsel.de/KAENEF/Redaktion/DE/FAQ/FAQ-Uebersicht/BEG/faq-bundesfoerderung-fuer-effiziente-gebaeude.html?cms_artId=2786004",
+          "https://www.bafa.de/SharedDocs/Downloads/DE/Energie/beg_merkblatt_allgemein_antragstellung.pdf?__blob=publicationFile&v=4"
+        ]
+      },
+      "master": "output/angebote-2026/masters/05-sanierung-foerderung.png",
+      "src": "/images/angebote-2026/05-sanierung-foerderung.webp",
+      "factStatus": "legacy-current-check",
+      "previewStatus": "integrated-local-demo",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 297956,
+      "sha256": "4e802fa52e63194b471b2e80b0a3da5c5c92b75189e8cebc97136dfdd39b7f30",
+      "originalSha256": "e92220a5fb0beced5522ef1694c9c7d0e660f2cb828e79f3af98122180f5ec57",
+      "masterSha256": "bb7d06c6b277e6b9e1770fd5cad8fb70723ef5c9668824ab63b2fd3d6ba099b1",
+      "export": {
+        "format": "webp",
+        "quality": 94,
+        "effort": 6,
+        "smartSubsample": true
+      },
+      "pagePath": "/angebote/energetisch-sanieren-foerderung"
+    }
+  ],
+  "validation": {
+    "checkedOn": "2026-10-29",
+    "files": 5,
+    "aspectRatio": "3:4",
+    "fullDecode": "passed",
+    "nativeDimensionsPreserved": true,
+    "visualReview": "Layout, German text, prices, units and source dimensions reviewed before export."
+  },
+  "integratedOn": "2026-11-03"
+}

@@ -76,7 +76,13 @@ export function MobileNavigation({ items }: { items: NavigationItem[] }) {
               key={item.href}
               href={item.href}
               onClick={close}
-              aria-current={pathname === item.href ? "page" : undefined}
+              aria-current={
+                pathname === item.href
+                  ? "page"
+                  : pathname.startsWith(item.href + "/")
+                    ? "true"
+                    : undefined
+              }
             >
               <small>0{i + 1}</small>
               {item.label}

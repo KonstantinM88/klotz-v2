@@ -13,8 +13,11 @@ import type {
   ServiceDetail,
   OverviewPageContent,
 } from "@/domain/content/presentation";
+import type { OfferPageContent } from "@/domain/content/offers";
 
 export interface ContentRepository {
+  getOfferPages(): Promise<OfferPageContent[]>;
+  getOfferPage(slug: string): Promise<OfferPageContent | undefined>;
   getCompanyPageContent(): Promise<CompanyPageContent>;
   getHomeContent(): Promise<HomeContent>;
   getOverviewPages(): Promise<OverviewPageContent[]>;

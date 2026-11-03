@@ -9,7 +9,13 @@ const labels = {
   phone: "Telefon (optional)",
   postalCode: "Projektort / PLZ",
 };
-export function ProjectRequestForm() {
+export function ProjectRequestForm({
+  initialTopic = "",
+  initialMessage = "",
+}: {
+  initialTopic?: (typeof inquiryTopics)[number] | "";
+  initialMessage?: string;
+}) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [message, setMessage] = useState("");
   const [pending, setPending] = useState(false);
@@ -137,7 +143,7 @@ export function ProjectRequestForm() {
         <select
           id="request-topic"
           name="topic"
-          defaultValue=""
+          defaultValue={initialTopic}
           aria-invalid={!!errors.topic}
           aria-describedby={errors.topic ? "error-topic" : undefined}
         >
@@ -208,6 +214,7 @@ export function ProjectRequestForm() {
         <textarea
           id="request-message"
           name="message"
+          defaultValue={initialMessage}
           required
           maxLength={4000}
           placeholder="Was möchten Sie verändern? Beschreiben Sie Ihre Idee und die Situation vor Ort."

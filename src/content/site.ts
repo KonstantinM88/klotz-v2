@@ -39,13 +39,13 @@ export const primaryNavigation: NavigationItem[] = [
   { label: "Fenster & Türen", href: "/fenster-tueren" },
   { label: "Zaun & Tor", href: "/zaun-tor" },
   { label: "Gewerbekunden", href: "/gewerbekunden" },
+  { label: "Angebote", href: "/angebote" },
   { label: "Referenzen", href: "/referenzen" },
   { label: "Wissen", href: "/wissen" },
   { label: "Über uns", href: "/unternehmen" },
 ];
 
 export const secondaryNavigation: NavigationItem[] = [
-  { label: "Angebote", href: "/angebote" },
   { label: "Fundgrube", href: "/fundgrube" },
   { label: "Jobs", href: "/jobs" },
   { label: "Downloads", href: "/downloads" },

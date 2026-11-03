@@ -12,7 +12,9 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { CompanyPage } from "@/features/company/company-page";
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
-  return (await repository.getOverviewPages()).map(({ slug }) => ({ slug }));
+  return (await repository.getOverviewPages())
+    .filter(({ slug }) => slug !== "angebote")
+    .map(({ slug }) => ({ slug }));
 }
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;

@@ -10,6 +10,7 @@ import "@/styles/editorial.css";
 import { RevealMotion } from "@/components/layout/reveal-motion";
 import { ProjectGuide } from "@/components/assistant/project-guide";
 import "@/styles/project-guide.css";
+import "@/styles/offers.css";
 
 const manrope = Manrope({
   subsets: ["latin"],
