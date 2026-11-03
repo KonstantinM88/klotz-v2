@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SaaleWeb – Ersteinschätzung KLOTZ.mobi & Kaffeehaus Meuschau</title>
+    <style>
+      :root {
+        --ink: #17231d;
+        --muted: #5d6962;
+        --paper: #f6f3eb;
+        --white: #fffefa;
+        --lime: #d8ef86;
+        --green: #1f4938;
+        --green-2: #2f6850;
+        --line: #cbd0c9;
+        --blue: #0a78b5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        color: var(--ink);
+        background: #d9ddd9;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto 8mm;
+        padding: 17mm 18mm 15mm;
+        overflow: hidden;
+        background: var(--paper);
+        break-after: page;
+        page-break-after: always;
+      }
+      .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+      .page.dark {
+        color: #f7f7f2;
+        background: #14271f;
+      }
+      .page.white {
+        background: var(--white);
+      }
+
+      .topline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12mm;
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        text-transform: none;
+        font-size: 12px;
+      }
+      .brand b {
+        color: var(--blue);
+      }
+      .kicker {
+        margin: 0 0 4mm;
+        color: var(--green-2);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      .dark .kicker {
+        color: var(--lime);
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+      h1 {
+        max-width: 170mm;
+        margin-bottom: 7mm;
+        font-size: 38px;
+        line-height: 1.03;
+        letter-spacing: -0.045em;
+      }
+      h2 {
+        max-width: 165mm;
+        margin-bottom: 7mm;
+        font-size: 28px;
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+      }
+      h3 {
+        margin-bottom: 2.5mm;
+        font-size: 13px;
+        line-height: 1.25;
+      }
+      p,
+      li {
+        font-size: 10.5px;
+        line-height: 1.48;
+      }
+      p.lead {
+        max-width: 165mm;
+        font-size: 15px;
+        line-height: 1.42;
+      }
+      p.small,
+      .small,
+      small {
+        font-size: 8.5px;
+        line-height: 1.42;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .dark .muted {
+        color: #bdc8c0;
+      }
+      .accent {
+        color: var(--green-2);
+      }
+      .dark .accent {
+        color: var(--lime);
+      }
+      .big-number {
+        margin: 0;
+        color: var(--green);
+        font-size: 52px;
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+        font-weight: 800;
+      }
+      .dark .big-number {
+        color: var(--lime);
+      }
+      ul {
+        margin: 0;
+        padding-left: 5mm;
+      }
+      li {
+        margin-bottom: 1.6mm;
+      }
+      .clean {
+        list-style: none;
+        padding-left: 0;
+      }
+      .clean li {
+        position: relative;
+        padding-left: 5mm;
+      }
+      .clean li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--green-2);
+        font-weight: 800;
+      }
+      .dark .clean li::before {
+        color: var(--lime);
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6mm;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+      }
+      .card {
+        padding: 5mm;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.54);
+      }
+      .dark .card {
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.055);
+      }
+      .card.lime {
+        border: 0;
+        background: var(--lime);
+        color: var(--ink);
+      }
+      .card.green {
+        border: 0;
+        background: var(--green);
+        color: white;
+      }
+      .rule {
+        height: 1px;
+        margin: 6mm 0;
+        background: var(--line);
+      }
+      .dark .rule {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .tag {
+        display: inline-block;
+        margin: 0 1.5mm 1.5mm 0;
+        padding: 1.4mm 2.3mm;
+        border: 1px solid currentColor;
+        border-radius: 999px;
+        font-size: 8px;
+      }
+
+      .footer {
+        position: absolute;
+        left: 18mm;
+        right: 18mm;
+        bottom: 7mm;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2.5mm;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 7.5px;
+      }
+      .dark .footer {
+        color: #aebbb2;
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      .cover {
+        padding: 0;
+        background: #112119;
+        color: white;
+      }
+      .cover-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 48% center;
+        filter: brightness(0.38) saturate(0.85);
+      }
+      .cover-shade {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(9, 25, 18, 0.94) 0%,
+          rgba(9, 25, 18, 0.78) 53%,
+          rgba(9, 25, 18, 0.42) 100%
+        );
+      }
+      .cover-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 18mm;
+      }
+      .cover h1 {
+        max-width: 155mm;
+        margin: 22mm 0 7mm;
+        font-size: 44px;
+      }
+      .cover .lead {
+        max-width: 132mm;
+        color: #e8ece8;
+      }
+      .cover-bottom {
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 5mm;
+      }
+      .cover-stat {
+        padding-top: 4mm;
+        border-top: 1px solid rgba(255, 255, 255, 0.35);
+      }
+      .cover-stat b {
+        display: block;
+        color: var(--lime);
+        font-size: 18px;
+        margin-bottom: 1mm;
+      }
+      .cover-stat span {
+        font-size: 9px;
+        line-height: 1.35;
+      }
+
+      .split-visual {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 8mm;
+        align-items: stretch;
+      }
+      .browser {
+        overflow: hidden;
+        border: 1px solid #aeb5af;
+        background: #fff;
+        box-shadow: 0 3mm 8mm rgba(15, 28, 22, 0.12);
+      }
+      .browser-bar {
+        height: 7mm;
+        padding: 2.2mm 3mm;
+        background: #e5e9e5;
+        font-size: 7px;
+        color: #647068;
+      }
+      .browser img {
+        display: block;
+        width: 100%;
+        height: 102mm;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3mm;
+        margin-top: 8mm;
+      }
+      .step {
+        min-height: 47mm;
+        padding: 4mm;
+        border-top: 2px solid var(--green);
+        background: rgba(255, 255, 255, 0.54);
+      }
+      .step b {
+        display: block;
+        margin-bottom: 3mm;
+        color: var(--green-2);
+        font-size: 17px;
+      }
+      .step p {
+        font-size: 8.7px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 2.4mm 2mm;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        font-size: 8.8px;
+        line-height: 1.35;
+      }
+      th {
+        color: var(--muted);
+        font-size: 7.5px;
+        letter-spacing: 0.08em;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      td.num,
+      th.num {
+        text-align: right;
+        white-space: nowrap;
+      }
+      tr.total td {
+        padding-top: 4mm;
+        border-top: 2px solid var(--ink);
+        border-bottom: 0;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .price-band {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+        margin-top: 5mm;
+      }
+
+      .answer {
+        display: grid;
+        grid-template-columns: 9mm 1fr;
+        gap: 3mm;
+        padding: 3.1mm 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .answer .n {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 8mm;
+        height: 8mm;
+        border-radius: 50%;
+        background: var(--green);
+        color: white;
+        font-size: 8px;
+        font-weight: 800;
+      }
+      .answer h3 {
+        margin-bottom: 1mm;
+        font-size: 10.3px;
+      }
+      .answer p {
+        margin: 0;
+        font-size: 8.6px;
+        line-height: 1.34;
+      }
+
+      .callout {
+        padding: 5mm;
+        border-left: 3px solid var(--lime);
+        background: #eef4d8;
+      }
+      .dark .callout {
+        background: rgba(216, 239, 134, 0.09);
+      }
+      .quote {
+        padding: 7mm;
+        background: var(--green);
+        color: white;
+        font-size: 17px;
+        line-height: 1.3;
+      }
+      .signature {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12mm;
+        margin-top: 14mm;
+      }
+      .signature div {
+        padding-top: 8mm;
+        border-top: 1px solid var(--ink);
+        font-size: 8.5px;
+      }
+
+      @media print {
+        html,
+        body {
+          background: transparent;
+        }
+        .page {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <img
+        class="cover-image"
+        src="assets/klotz-demo-desktop.png"
+        alt="KLOTZ Designprototyp"
+      />
+      <div class="cover-shade"></div>
+      <div class="cover-content">
+        <div class="topline">
+          <span class="brand"><b>Saale</b>Web</span
+          ><span>Ersteinschätzung · 28.09.2026</span>
+        </div>
+        <p class="kicker">Webrelaunch & digitale Wachstumsbasis</p>
+        <h1>KLOTZ.mobi<br />& Kaffeehaus Meuschau</h1>
+        <p class="lead">
+          Zwei eigenständige Marken. Eine belastbare technische Grundlage. Zwei
+          Websites, die konsequent auf messbare Anfragen ausgerichtet sind.
+        </p>
+        <div class="cover-bottom">
+          <div class="cover-stat">
+            <b>12–16 Wochen</b
+            ><span
+              >realistischer Projektzeitraum nach Freigabe, Materialübergabe und
+              Kick-off</span
+            >
+          </div>
+          <div class="cover-stat">
+            <b>15.000–19.000 €</b
+            ><span
+              >Netto-Budgetkorridor für beide Websites einschließlich
+              definierter Leistungen</span
+            >
+          </div>
+          <div class="cover-stat">
+            <b>Next.js</b
+            ><span
+              >maßgeschneidertes, dokumentiertes Redaktionssystem ohne
+              proprietäre Plattformbindung</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page white">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>01 · Unser Verständnis</span>
+      </div>
+      <p class="kicker">Nicht nur ein neues Erscheinungsbild</p>
+      <h2>
+        Ein Relaunch, der Sichtbarkeit, Vertrauen und Anfragen zusammenführt.
+      </h2>
+      <p class="lead">
+        KLOTZ benötigt eine leistungsfähige digitale Vertriebsbasis für Privat-,
+        Gewerbe- und Wohnungswirtschaftskunden. Das Kaffeehaus Meuschau wird
+        parallel als eigenständige Eventlocation positioniert.
+      </p>
+      <div class="grid-3" style="margin-top: 9mm">
+        <div class="card">
+          <h3>Finden</h3>
+          <p>
+            Technisches SEO, Local SEO, klare Leistungsarchitektur und
+            maschinenlesbare Inhalte schaffen die Grundlage für klassische und
+            KI-gestützte Suche.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Verstehen</h3>
+          <p>
+            Besucher erkennen Angebot, Qualität, Region und nächsten Schritt
+            innerhalb weniger Sekunden – besonders auf dem Smartphone.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Anfragen</h3>
+          <p>
+            Leistungsbezogene Formulare, klare CTA und Conversion-Tracking
+            machen aus Reichweite nachvollziehbare Geschäftschancen.
+          </p>
+        </div>
+      </div>
+      <div class="rule"></div>
+      <div class="grid-2">
+        <div>
+          <h3>KLOTZ.mobi</h3>
+          <ul class="clean">
+            <li>hochwertige Bauelemente und Outdoor Living</li>
+            <li>Privatkunden, Gewerbe und Wohnungswirtschaft</li>
+            <li>leistungsstarke Referenz- und Projektseiten</li>
+            <li>Erhalt relevanter Rankings durch kontrollierte Migration</li>
+            <li>Ratgeber, FAQ und lokale Kompetenzsignale</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kaffeehaus Meuschau</h3>
+          <ul class="clean">
+            <li>private Feiern, Familienveranstaltungen und Business</li>
+            <li>Räume, Ausstattung, Galerie und Anfragewege</li>
+            <li>eigenständige lokale Marke und Suchpräsenz</li>
+            <li>strukturierte Event- und FAQ-Inhalte</li>
+            <li>vorbereitet für einen späteren Eventplaner</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 8mm">
+        <b>Unser Maßstab:</b> Keine pauschalen Rankingversprechen. Wir liefern
+        eine technisch saubere, schnelle und messbare Grundlage, entwickeln
+        relevante Inhalte und machen Fortschritt über belastbare Daten sichtbar.
+      </div>
+      <div class="footer">
+        <span>SaaleWeb · Ersteinschätzung KLOTZ / Kaffeehaus</span
+        ><span>2</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>02 · Zwei eigenständige Websites</span>
+      </div>
+      <p class="kicker">Gemeinsame Qualität, getrennte Markenführung</p>
+      <h2>
+        Technisch effizient verbunden – fachlich und gestalterisch unabhängig.
+      </h2>
+      <div class="grid-2">
+        <div class="card green">
+          <h3>KLOTZ.mobi</h3>
+          <p style="font-size: 14px">
+            Architektonisch, präzise, hochwertig und beratungsstark.
+          </p>
+          <p>
+            Eigene Navigation, Bildwelt, Tonalität, Seitentypen, Formulare und
+            Conversion-Ziele.
+          </p>
+        </div>
+        <div class="card" style="background: #eadfcf; border-color: #cabaa4">
+          <h3>Kaffeehaus Meuschau</h3>
+          <p style="font-size: 14px">
+            Warm, emotional, gastfreundlich und anlassbezogen.
+          </p>
+          <p>
+            Eigene Navigation, Bildwelt, Inhalte, Eventlogik, Formulare und
+            Conversion-Ziele.
+          </p>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top: 7mm">
+        <div>
+          <h3>Unabhängigkeit im Betrieb</h3>
+          <ul class="clean">
+            <li>unabhängige Designs und eigenständige Inhalte</li>
+            <li>getrennte SEO-, Sitemap- und Analytics-Einstellungen</li>
+            <li>eigene Domains, Deployments und Zugänge</li>
+            <li>unabhängige Weiterentwicklung und Veröffentlichung</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Effizienz in der Technik</h3>
+          <ul class="clean">
+            <li>gemeinsame neutrale Qualitäts- und Sicherheitsstandards</li>
+            <li>wiederverwendbare technische Infrastruktur</li>
+            <li>keine sichtbare „Template-Kopie“ zwischen den Marken</li>
+            <li>saubere Trennung der markenspezifischen Module</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rule"></div>
+      <h3>Vorgesehene Seitenstruktur Kaffeehaus</h3>
+      <div>
+        <span class="tag">Startseite</span
+        ><span class="tag">Private Feiern</span
+        ><span class="tag">Business & Seminare</span
+        ><span class="tag">Räume & Ausstattung</span
+        ><span class="tag">Preise / Pakete</span><span class="tag">Galerie</span
+        ><span class="tag">FAQ</span><span class="tag">Kontakt & Anfahrt</span
+        ><span class="tag">Event-Anfrage</span>
+      </div>
+      <p class="small muted" style="margin-top: 4mm">
+        Kapazitäten, Ausstattung, Parkplätze, Barrierefreiheit, Technik,
+        Catering, Getränkeregeln, Preise und Stornobedingungen werden erst nach
+        Bestätigung veröffentlicht. So vermeiden wir falsche Angaben.
+      </p>
+      <div class="callout" style="margin-top: 6mm">
+        <b>Optionaler Vertrauensschritt:</b> Wenn der vorgestellte Ansatz und
+        Budgetrahmen grundsätzlich passen, erstellen wir auf Wunsch vor der
+        endgültigen Beauftragung einen kompakten Designentwurf für eine
+        Kaffeehaus-Schlüsselseite. Voraussetzung sind freigegebene Fotos und
+        Basisdaten.
+      </div>
+      <p style="margin-top: 7mm">
+        <b>SEO-Ausgangslage Kaffeehaus:</b> Sofern bislang keine eigenständige
+        indexierbare Website besteht, ist das Migrationsrisiko gering.
+        Entscheidend sind ein sauberer technischer Start, konsistente
+        Unternehmensdaten und ein gepflegtes Google-Unternehmensprofil.
+      </p>
+      <div class="footer">
+        <span>SaaleWeb · Marken- und Systemarchitektur</span><span>3</span>
+      </div>
+    </section>
+
+    <section class="page dark">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>03 · KLOTZ Designprototyp</span>
+      </div>
+      <p class="kicker">Vom Konzept bereits in die sichtbare Form</p>
+      <h2>
+        Ein hochwertiger, mobiler Prototyp als belastbare Gesprächsgrundlage.
+      </h2>
+      <div class="split-visual">
+        <div class="browser">
+          <div class="browser-bar">klotz.mobi · Präsentationsprototyp</div>
+          <img
+            src="assets/klotz-demo-desktop.png"
+            alt="Desktopansicht des KLOTZ Präsentationsprototyps"
+          />
+        </div>
+        <div>
+          <p class="lead" style="font-size: 13px">
+            Die Richtung verbindet vorhandene Markenwerte mit einer deutlich
+            klareren, moderneren und conversionorientierten Nutzerführung.
+          </p>
+          <ul class="clean">
+            <li>eigenständige visuelle Sprache statt Standard-Theme</li>
+            <li>mobile-first Navigation und klare Anfragewege</li>
+            <li>modulare Leistungs-, Referenz-, Wissens- und Formularseiten</li>
+            <li>serverseitig auslieferbarer, indexierbarer Inhalt</li>
+            <li>
+              vorhandene Inhalte als Ausgangspunkt, redaktionell neu
+              strukturiert
+            </li>
+          </ul>
+          <div class="card" style="margin-top: 7mm">
+            <p class="big-number">90+</p>
+            <p style="margin-bottom: 0">
+              Lighthouse Performance als Zielwert für repräsentative mobile
+              Schlüsselseiten – bei freigegebenem Inhalt und kontrollierten
+              Drittskripten.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-3" style="margin-top: 8mm">
+        <div>
+          <h3>Performance</h3>
+          <p class="small">
+            Optimierte Bilder, wenig Client-JavaScript, Caching und schnelle
+            globale Auslieferung.
+          </p>
+        </div>
+        <div>
+          <h3>Barrierearm</h3>
+          <p class="small">
+            Semantik, Kontraste, Tastaturbedienung, sichtbare Fokuszustände und
+            WCAG-orientierte Tests.
+          </p>
+        </div>
+        <div>
+          <h3>Messbar</h3>
+          <p class="small">
+            Formularabschlüsse, Telefon-/E-Mail-Klicks, Einstiegsseiten, UTM und
+            organische Sichtbarkeit.
+          </p>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top: 7mm">
+        Hinweis: Die Abbildung zeigt den aktuellen Präsentationsstand. Inhalte,
+        Funktionen und Bildrechte werden vor einer Veröffentlichung gemeinsam
+        final geprüft.
+      </p>
+      <div class="footer">
+        <span>SaaleWeb · KLOTZ Präsentationsprototyp</span><span>4</span>
+      </div>
+    </section>
+
+    <section class="page white">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>04 · Technische Grundlage</span>
+      </div>
+      <p class="kicker">Offen, dokumentiert, übertragbar</p>
+      <h2>Next.js + maßgeschneidertes, dokumentiertes Redaktionssystem</h2>
+      <p class="lead">
+        Performanceorientiert und ohne proprietäre Plattformbindung – auf
+        verbreiteten Webstandards, mit sauberer Trennung von Oberfläche, Inhalt
+        und Daten.
+      </p>
+      <div class="grid-2">
+        <div>
+          <h3>Vorgesehener Stack</h3>
+          <ul class="clean">
+            <li>Next.js, React und TypeScript</li>
+            <li>Prisma ORM und PostgreSQL</li>
+            <li>Git-basierte Versionsverwaltung</li>
+            <li>
+              reproduzierbare Deployments und dokumentierte Datenmigrationen
+            </li>
+            <li>
+              serverseitiges Rendering, statische Generierung und kontrolliertes
+              Caching
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Was die Redaktion erhält</h3>
+          <ul class="clean">
+            <li>Pflege von Seiten, Leistungen, Referenzen, FAQ und Artikeln</li>
+            <li>Medien, Alt-Texte, SEO-Daten und Weiterleitungen</li>
+            <li>
+              Rollen, geschützte Anmeldung und nachvollziehbare
+              Veröffentlichungen
+            </li>
+            <li>Schulung, Bedienungsdokumentation und Exportmöglichkeiten</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rule"></div>
+      <h3>Ein Agenturwechsel bleibt technisch möglich</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Code & Zugänge</h3>
+          <p>
+            Das Git-Repository und sämtliche projektbezogenen Zugänge werden
+            vollständig übergeben.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Daten & Medien</h3>
+          <p>
+            Die Datenbank ist als Standard-PostgreSQL-Dump exportierbar; Inhalte
+            und Medien können übertragen werden.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Weiterbetrieb</h3>
+          <p>
+            Technische Dokumentation und Standardtechnologien ermöglichen einem
+            qualifizierten Entwickler Deployment und Weiterentwicklung.
+          </p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 7mm">
+        <b>Nutzungsrechte und Übergabe:</b> Nach vollständiger Bezahlung erhält
+        KLOTZ die vertraglich vereinbarten Nutzungsrechte am individuellen
+        Design, den projektspezifischen Komponenten und den erstellten Inhalten.
+        Open-Source-Komponenten verbleiben unter ihren jeweiligen Lizenzen.
+        Git-Repository, Dokumentation, Datenbankexport und sämtliche
+        Projektzugänge werden vollständig übergeben.
+      </div>
+      <div style="margin-top: 7mm">
+        <h3>Warum kein pauschales „gegen WordPress“?</h3>
+        <p>
+          WordPress ist für viele Websites eine bewährte und wirtschaftliche
+          Lösung. Für dieses Projekt empfehlen wir Next.js, weil die Kombination
+          aus zwei eigenständigen Marken, strukturierten Referenzen,
+          individueller Anfrage- und Redaktionslogik sowie späterer
+          Automatisierung von einer maßgeschneiderten Architektur profitiert.
+          Entscheidend ist nicht das Etikett des Systems, sondern die passende
+          Umsetzung, Dokumentation und Übergabefähigkeit.
+        </p>
+      </div>
+      <div class="footer">
+        <span>SaaleWeb · Technologie und Übergabefähigkeit</span><span>5</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>05 · SEO, GEO/AIO & Migration</span>
+      </div>
+      <p class="kicker">Sichtbarkeit ist ein System</p>
+      <h2>
+        Bestehende Signale schützen. Neue Inhalte verständlich und zitierfähig
+        aufbauen.
+      </h2>
+      <div class="grid-2">
+        <div>
+          <h3>Migration KLOTZ.mobi</h3>
+          <ul class="clean">
+            <li>Crawl, URL- und Content-Inventar vor dem Relaunch</li>
+            <li>
+              Zuordnung: behalten, verbessern, zusammenführen oder weiterleiten
+            </li>
+            <li>301-Redirect-Matrix ohne unnötige Ketten</li>
+            <li>Kontrolle von Canonicals, internen Links, Sitemap und 404</li>
+            <li>Search-Console- und Indexierungsmonitoring nach Go-live</li>
+          </ul>
+        </div>
+        <div>
+          <h3>SEO, Local SEO und GEO/AIO</h3>
+          <ul class="clean">
+            <li>server-rendered HTML, klare Überschriften und Entitäten</li>
+            <li>lokale Leistungs- und Vertrauenssignale</li>
+            <li>hilfreiche FAQ, Ratgeber, Autoren- und Aktualitätsangaben</li>
+            <li>
+              konsistente Unternehmensdaten und Google-Unternehmensprofile
+            </li>
+            <li>keine Doorway-Seiten und keine garantierten KI-Rankings</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rule"></div>
+      <h3>Strukturierte Daten – nur passend zum sichtbaren Inhalt</h3>
+      <div style="margin-bottom: 5mm">
+        <span class="tag">Organization</span
+        ><span class="tag">LocalBusiness</span
+        ><span class="tag">BreadcrumbList</span><span class="tag">Service</span
+        ><span class="tag">Article</span><span class="tag">FAQPage</span
+        ><span class="tag">Event</span>
+      </div>
+      <p>
+        Schema.org/JSON-LD wird aus den redaktionell gepflegten, sichtbaren
+        Informationen erzeugt und mit geeigneten Validatoren geprüft. Nicht
+        bestätigte Daten werden weder veröffentlicht noch in strukturierte Daten
+        aufgenommen.
+      </p>
+      <div class="grid-3" style="margin-top: 7mm">
+        <div class="card lime">
+          <h3>Analytics</h3>
+          <p>
+            Consent-konformes Tracking von Formularen, Telefon-/E-Mail-Klicks,
+            Kampagnen und Einstiegsseiten.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Search Console</h3>
+          <p>
+            Impressionen, Klicks, Suchanfragen, Seitenstatus und technische
+            Auffälligkeiten.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Berichte</h3>
+          <p>
+            Übersichtliche Monatsauswertung mit Leads, Quellen, Entwicklung und
+            Handlungsempfehlungen.
+          </p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 7mm">
+        <b>Wichtig:</b> Positionen in Google, AI Overviews, ChatGPT, Gemini oder
+        anderen Antwortsystemen lassen sich nicht seriös garantieren.
+        Garantierbar sind eine fachgerechte technische Basis, nachvollziehbare
+        Maßnahmen, Tests und transparente Messbarkeit.
+      </div>
+      <div class="footer">
+        <span>SaaleWeb · SEO, GEO/AIO und Migration</span><span>6</span>
+      </div>
+    </section>
+
+    <section class="page white">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span><span>06 · Ablauf</span>
+      </div>
+      <p class="kicker">Realistische Planung</p>
+      <h2>12–16 Wochen bis zur abnahmefähigen Umsetzung.</h2>
+      <p class="lead">
+        Der Zeitrahmen beginnt nach Beauftragung, Kick-off und rechtzeitiger
+        Bereitstellung der benötigten Zugänge, Inhalte und Freigaben.
+      </p>
+      <div class="steps">
+        <div class="step">
+          <b>01</b>
+          <h3>Discovery & Audit</h3>
+          <p>
+            Woche 1–2<br />Ziele, Zielgruppen, Bestand, URL-Inventar,
+            SEO-Baseline, Anforderungen und Scope.
+          </p>
+        </div>
+        <div class="step">
+          <b>02</b>
+          <h3>Konzept & UX</h3>
+          <p>
+            Woche 3–5<br />Sitemaps, Nutzerwege, Wireframes, Contentmodell und
+            Messkonzept.
+          </p>
+        </div>
+        <div class="step">
+          <b>03</b>
+          <h3>Design & Entwicklung</h3>
+          <p>
+            Woche 5–12<br />Zwei Designsysteme, Templates, Redaktionssystem,
+            Formulare und Tracking.
+          </p>
+        </div>
+        <div class="step">
+          <b>04</b>
+          <h3>Migration & Go-live</h3>
+          <p>
+            Woche 12–16<br />Inhalte, Redirects, QA, Schulung, Abnahme und
+            kontrollierter Launch.
+          </p>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top: 9mm">
+        <div>
+          <h3>Gemeinsame Qualitätssicherung</h3>
+          <ul class="clean">
+            <li>zwei gebündelte Korrekturrunden je Hauptphase</li>
+            <li>Desktop- und Mobile-Smoke-Tests</li>
+            <li>Tastatur- und automatisierte Accessibility-Checks</li>
+            <li>Metadaten, Sitemap, robots, Canonicals und JSON-LD</li>
+            <li>Performance- und Formularprüfung vor Freigabe</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Abhängigkeiten</h3>
+          <ul class="clean">
+            <li>ein entscheidungsfähiger Ansprechpartner</li>
+            <li>gebündeltes Feedback innerhalb vereinbarter Fristen</li>
+            <li>vollständige Zugänge und verwertbare Quelldaten</li>
+            <li>freigegebene Texte, Bilder und rechtliche Angaben</li>
+            <li>externe Freigaben können den Termin verschieben</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quote" style="margin-top: 10mm">
+        12–16 Wochen sind für den definierten Umfang realistisch. Eine
+        verbindliche Terminplanung entsteht nach dem gemeinsamen Scoping und der
+        Inhaltsinventur.
+      </div>
+      <div class="footer">
+        <span>SaaleWeb · Projektplan</span><span>7</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>07 · Projektbudget</span>
+      </div>
+      <p class="kicker">Transparente Ersteinschätzung</p>
+      <h2>Budgetkorridor für beide Websites</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Leistungsblock</th>
+            <th class="num">Budget netto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Strategie, Konzeption, SEO- und Bestandsanalyse</td>
+            <td class="num">1.200–1.500 €</td>
+          </tr>
+          <tr>
+            <td>Relaunch KLOTZ.mobi</td>
+            <td class="num">4.000–5.000 €</td>
+          </tr>
+          <tr>
+            <td>Entwicklung Website Kaffeehaus Meuschau</td>
+            <td class="num">2.000–2.600 €</td>
+          </tr>
+          <tr>
+            <td>UX/UI und zwei eigenständige Designsysteme</td>
+            <td class="num">2.300–2.900 €</td>
+          </tr>
+          <tr>
+            <td>Redaktionssystem und technische Entwicklung</td>
+            <td class="num">2.800–3.500 €</td>
+          </tr>
+          <tr>
+            <td>SEO, Local SEO, GEO/AIO und strukturierte Daten</td>
+            <td class="num">1.100–1.400 €</td>
+          </tr>
+          <tr>
+            <td>Migration bestehender Inhalte, Medien und URLs</td>
+            <td class="num">1.000–1.300 €</td>
+          </tr>
+          <tr>
+            <td>Analytics, Search Console und Conversion-Tracking</td>
+            <td class="num">600–800 €</td>
+          </tr>
+          <tr class="total">
+            <td>Gesamtbudget</td>
+            <td class="num">15.000–19.000 €</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="price-band">
+        <div class="card green">
+          <h3>SaaleWeb-Projektkondition</h3>
+          <p>
+            Der Korridor enthält bereits eine einmalige Reduktion von rund 30 %
+            gegenüber unserer kalkulierten regulären Projektleistung. Grundlage
+            sind der strategische Referenzwert des Projekts und die effiziente
+            gemeinsame technische Basis – nicht eine Kürzung der vereinbarten
+            Qualität.
+          </p>
+        </div>
+        <div class="card lime">
+          <h3>Bonus: Event-Anfrageplaner Stufe 1</h3>
+          <p>
+            Bei gemeinsamer Beauftragung beider Websites: Anlass, Wunschtermin,
+            Personenzahl, Raum-/Leistungswünsche und Kontaktdaten als
+            strukturierte qualifizierte Anfrage – ohne Aufpreis.
+          </p>
+        </div>
+      </div>
+      <p class="small" style="margin-top: 4mm">
+        <b>Nicht Teil des Bonus:</b> verbindliche Echtzeitbuchung,
+        Live-Verfügbarkeiten, Kalender-Synchronisation, Zahlungsabwicklung,
+        dynamische Preisberechnung oder automatische Vertragsbestätigung. Diese
+        „Stufe 2“ wird nach fachlicher Spezifikation separat angeboten.
+      </p>
+      <div class="callout" style="margin-top: 5mm">
+        <b>Wie der endgültige Preis entsteht:</b> Dieser Budgetkorridor ist eine
+        belastbare Ersteinschätzung, jedoch noch kein Festpreis. Nach dem
+        gemeinsamen Scoping kann der verbindliche Festpreis – abhängig von
+        Anzahl und Tiefe der Seitentypen, Umfang der Migration, redaktioneller
+        Aufbereitung, Referenzen und Integrationen – niedriger oder höher
+        ausfallen. Vor Beauftragung erhält KLOTZ ein verbindliches Angebot;
+        spätere Erweiterungen erfolgen nur nach schriftlicher Freigabe.
+      </div>
+      <p class="small muted" style="margin-top: 4mm">
+        Alle Preise netto zzgl. gesetzlicher Umsatzsteuer.
+        Zahlungsplanvorschlag: 30 % Projektstart · 30 % Designfreigabe · 30 %
+        abnahmefähige Umsetzung · 10 % Go-live/Übergabe.
+      </p>
+      <div class="footer">
+        <span>SaaleWeb · Budgetrahmen</span><span>8</span>
+      </div>
+    </section>
+
+    <section class="page white">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>08 · Hosting & laufende Kosten</span>
+      </div>
+      <p class="kicker">Vier Jahre klar kalkuliert</p>
+      <h2>Hostinger für die Webanwendungen – PostgreSQL separat.</h2>
+      <p class="lead">
+        Wir empfehlen, Hosting- und Datenbankkonten direkt auf KLOTZ anzulegen.
+        Dadurch bleiben Abrechnung, Zugänge und Anbieterwechsel unter Kontrolle
+        des Auftraggebers.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Zeitraum / Hinweis</th>
+            <th class="num">Netto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Hostinger Unlimited-Plan</b></td>
+            <td>
+              48 Monate im Voraus; aktueller Warenkorbpreis vom 28.09.2026
+            </td>
+            <td class="num">191,52 €</td>
+          </tr>
+          <tr>
+            <td><b>Technische Betreuung</b></td>
+            <td>120 € / Monat × 48 Monate</td>
+            <td class="num">5.760,00 €</td>
+          </tr>
+          <tr class="total">
+            <td>Fix kalkulierbare Kosten 48 Monate</td>
+            <td>ohne variable Drittanbieter</td>
+            <td class="num">5.951,52 €</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small muted">
+        Hostinger-Warenkorb: 227,91 € brutto inkl. 36,39 € MwSt. Der Anbieter
+        nennt aktuell 16,99 € / Monat als Verlängerungspreis nach 48 Monaten.
+        Anbieterpreise und Verlängerungskonditionen können sich bis zur Buchung
+        bzw. Verlängerung ändern.
+      </p>
+      <div class="grid-2" style="margin-top: 6mm">
+        <div class="card">
+          <h3>In 120 € / Monat enthalten</h3>
+          <ul class="clean">
+            <li>technische Updates und Sicherheitswartung</li>
+            <li>Monitoring von Erreichbarkeit und kritischen Fehlern</li>
+            <li>regelmäßige Kontrolle der Backup-Funktion</li>
+            <li>monatlicher technischer Kurzcheck</li>
+            <li>Erstreaktion bis zum nächsten Arbeitstag</li>
+            <li>
+              bei vollständigem Ausfall: Erstreaktion innerhalb von 4
+              Supportstunden
+            </li>
+          </ul>
+          <p class="small muted">
+            Supportzeit: Mo–Fr, 09:00–17:00 Uhr, ausgenommen gesetzliche
+            Feiertage in Sachsen-Anhalt. Die Zeiten bezeichnen die Erstreaktion,
+            nicht zwingend die vollständige Behebung. Neue Funktionen,
+            redaktionelle Arbeiten und umfangreiche Änderungen sind nicht
+            enthalten und werden erst nach Freigabe mit 60 € / Stunde berechnet.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Separat / verbrauchsabhängig</h3>
+          <ul class="clean">
+            <li>PostgreSQL-Datenbank, z. B. Neon</li>
+            <li>Object Storage bei hohem Medienvolumen</li>
+            <li>Consent-, Newsletter-, Karten- oder weitere Drittdienste</li>
+            <li>Domain- und E-Mail-Verlängerungen nach Freizeiträumen</li>
+          </ul>
+          <p class="small muted">
+            Diese Dienste werden erst nach tatsächlichem Bedarf ausgewählt und
+            direkt auf KLOTZ abgerechnet. Damit entstehen keine verdeckten
+            SaaleWeb-Aufschläge.
+          </p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top: 6mm">
+        <b>Warum PostgreSQL separat?</b> Der dargestellte Hostinger-Tarif
+        unterstützt die Next.js-Webanwendungen, stellt im Managed-Paket jedoch
+        MySQL statt PostgreSQL bereit. Für die vereinbarte Standardbasis Next.js
+        + Prisma + PostgreSQL wird die Datenbank daher separat betrieben.
+        Alternativ kann nach dem Scoping ein VPS-Angebot geprüft werden; das
+        wäre technisch flexibler, aber wartungsintensiver.
+      </div>
+      <div class="footer">
+        <span>SaaleWeb · Laufende Kosten, Stand 28.09.2026</span><span>9</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>09 · Antworten zu Lastenheft 10.1</span>
+      </div>
+      <p class="kicker">Entscheidungsrelevante Punkte</p>
+      <h2>Unsere verbindliche Arbeitsgrundlage</h2>
+      <div class="answer">
+        <div class="n">1</div>
+        <div>
+          <h3>CMS, technische Basis und Eigentumsübergang</h3>
+          <p>
+            Next.js + maßgeschneidertes, dokumentiertes Redaktionssystem;
+            TypeScript, Prisma und PostgreSQL. Nutzungsrechte und Übergabe
+            erfolgen nach vollständiger Bezahlung wie auf Seite 5 beschrieben.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">2</div>
+        <div>
+          <h3>Lizenzen und laufende Kosten für Jahr 1–4</h3>
+          <p>
+            Keine proprietäre CMS-Lizenz. Hostinger 191,52 € netto für 48 Monate
+            im Voraus, Betreuung 120 € netto/Monat. PostgreSQL und optionale
+            Drittanbieter separat nach tatsächlicher Nutzung; Details Seite 9.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">3</div>
+        <div>
+          <h3>Möglichkeit des Agenturwechsels</h3>
+          <p>
+            Übergabe von Git-Repository, Zugängen, Dokumentation,
+            Medien-/Content-Export und Standard-PostgreSQL-Dump. Ein
+            qualifizierter Next.js-Entwickler kann das System neu bereitstellen
+            und fortführen.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">4</div>
+        <div>
+          <h3>Referenzen</h3>
+          <p>
+            Relevante Arbeitsproben aus regionalem Bau/Handwerk,
+            Gastronomie/Erlebnis und eigener SaaleWeb-Entwicklung zeigen wir im
+            persönlichen Termin einschließlich unseres konkreten
+            Leistungsumfangs.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">5</div>
+        <div>
+          <h3>SEO-Migration und Ranking-Erhalt</h3>
+          <p>
+            Vollständiges URL-Inventar, SEO-Baseline, Redirect-Matrix,
+            Staging-Prüfung, Canonical-/Sitemap-Kontrolle sowie 30 Tage
+            Monitoring nach Go-live. Rankings können nicht garantiert, Risiken
+            aber systematisch reduziert werden.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">6</div>
+        <div>
+          <h3>Performance, Datenschutz und Barrierefreiheit</h3>
+          <p>
+            Mobile-first, Lighthouse/Core-Web-Vitals-Checks, Playwright/axe,
+            Tastaturtests und semantisches HTML. Consent-first-Einbindung
+            externer Dienste; AV-Verträge und Rechtstexte werden mit KLOTZ bzw.
+            Rechtsberatung abgestimmt.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">7</div>
+        <div>
+          <h3>Strukturierte Daten und KI-Sichtbarkeit</h3>
+          <p>
+            JSON-LD nur passend zu sichtbaren Inhalten, u. a.
+            Organization/LocalBusiness, Breadcrumb, Service, Article, FAQ und
+            Event; technische Validierung. Keine unseriösen Garantien für AI
+            Overviews oder Antwortsysteme.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">8</div>
+        <div>
+          <h3>Nicht enthaltene Leistungen</h3>
+          <p>
+            Professionelle Foto-/Videoproduktion, Rechtsberatung, komplette
+            Texterstellung ohne Ausgangsmaterial, kostenpflichtige
+            Drittanbieter, komplexe Fremdsystemintegrationen und Eventplaner
+            Stufe 2 – sofern nicht schriftlich ergänzt.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">9</div>
+        <div>
+          <h3>Korrekturschleifen und Abnahme</h3>
+          <p>
+            Zwei gebündelte Korrekturrunden je Hauptphase. Danach gemeinsame
+            Abnahme anhand des vereinbarten Scopes; Änderungswünsche außerhalb
+            des Scopes nur nach transparenter Freigabe.
+          </p>
+        </div>
+      </div>
+      <div class="answer">
+        <div class="n">10</div>
+        <div>
+          <h3>Betreuung nach Go-live</h3>
+          <p>
+            30 Tage Stabilisierungsphase für projektbedingte Fehler.
+            Anschließend optional 120 € netto/Monat gemäß Seite 9: Erstreaktion
+            bis zum nächsten Arbeitstag, bei vollständigem Ausfall innerhalb von
+            4 Supportstunden. Weiterentwicklung 60 € netto/Stunde bzw. 480 €
+            netto/Tag nach Beauftragung.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <span>SaaleWeb · Lastenheft 10.1</span><span>10</span>
+      </div>
+    </section>
+
+    <section class="page dark">
+      <div class="topline">
+        <span class="brand"><b>Saale</b>Web</span
+        ><span>10 · Nächster Schritt</span>
+      </div>
+      <p class="kicker">Vom Budgetkorridor zum verbindlichen Angebot</p>
+      <h2>Ein gemeinsamer Scoping-Termin schafft Klarheit für beide Seiten.</h2>
+      <p class="lead">
+        In 60–90 Minuten priorisieren wir Seiten, Inhalte, Migration,
+        Redaktionsrollen, Messziele, Kaffeehaus-Daten und den gewünschten
+        Funktionsumfang.
+      </p>
+      <div class="grid-3" style="margin-top: 10mm">
+        <div class="card">
+          <h3>1 · Klären</h3>
+          <p>
+            Bestand, Ziele, Inhalte, Verantwortlichkeiten, Integrationen und
+            offene Punkte.
+          </p>
+        </div>
+        <div class="card">
+          <h3>2 · Fixieren</h3>
+          <p>
+            Seitentypen, Mengen, Korrekturrunden, Termine, Abnahmekriterien und
+            Betriebskosten.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3 · Anbieten</h3>
+          <p>
+            Verbindlicher Festpreis, Zahlungsplan und Projektplan auf Basis des
+            bestätigten Scopes.
+          </p>
+        </div>
+      </div>
+      <div
+        class="quote"
+        style="margin-top: 12mm; background: var(--lime); color: var(--ink)"
+      >
+        Unser Ziel: zwei charakterstarke Websites, die schnell laden, sauber
+        auffindbar sind, verständlich führen und ihren Beitrag zu echten
+        Anfragen transparent zeigen.
+      </div>
+      <div class="grid-2" style="margin-top: 12mm">
+        <div>
+          <p class="kicker">Ansprechpartner</p>
+          <h3 style="font-size: 18px">Kostiantyn Mykhailov</h3>
+          <p>SaaleWeb<br />hallo@saaleweb.de<br />saaleweb.de</p>
+        </div>
+        <div>
+          <p class="kicker">Vorgesehene Referenzgespräche</p>
+          <p>
+            SorgfaltBau Halle · Bau / regionales Handwerk<br />Neue Liebe ·
+            Gastronomie / Erlebnis<br />SaaleWeb · digitale Plattform und
+            Automatisierung
+          </p>
+          <p class="small muted">
+            Konkreter Leistungsumfang und Veröffentlichungsstatus werden im
+            Termin transparent erläutert.
+          </p>
+        </div>
+      </div>
+      <div class="signature">
+        <div>Ort, Datum · KLOTZ</div>
+        <div>Ort, Datum · SaaleWeb</div>
+      </div>
+      <p
+        class="small muted"
+        style="position: absolute; left: 18mm; right: 18mm; bottom: 18mm"
+      >
+        Diese Unterlage ist eine unverbindliche Ersteinschätzung und kein
+        Vertrag. Verbindlich werden Leistungsumfang, Preis, Zeitplan, Rechte und
+        Betrieb erst durch das nach dem Scoping erstellte und beidseitig
+        bestätigte Angebot.
+      </p>
+      <div class="footer">
+        <span>SaaleWeb · Ersteinschätzung KLOTZ / Kaffeehaus</span
+        ><span>11</span>
+      </div>
+    </section>
+  </body>
+</html>

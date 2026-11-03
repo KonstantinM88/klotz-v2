@@ -1,5 +1,10 @@
 # Content source register
 
+## 2026-11-04 — приватный архив материалов встречи
+
+- Три ранее созданных локальных документа `output/pdf/SaaleWeb_Gespraechsleitfaden_KLOTZ_Kaffeehaus_DE.pdf`, `SaaleWeb_Podgotovka_k_vstreche_KLOTZ_Kaffeehaus_RU.pdf` и `SaaleWeb_Gespraechsprotokoll_KLOTZ_Kaffeehaus_29-10-2026_DE.pdf` сохранены без изменения содержания; это внутренние материалы встречи, не публичный контент сайта и не согласованный договор.
+- Уникальные исходники перенесены из `tmp/pdfs/` в `scripts/documents/`. Изменён только способ определения корня проекта. Материалы `docs/proposal/` и их исходные screenshots архивируются по явной команде пользователя после подтверждения private-статуса GitHub. Источники и калькуляционный статус предложения остаются в записи 28.09.2026 и `docs/proposal/README.md`.
+
 ## 2026-11-03 — каталог Angebote и пять подробных страниц
 
 - `src/content/offers.ts`: оригинальная немецкая редактура пяти страниц — статус draft, не утверждённый текст заказчика. Позиционирование и ассортимент опираются на legacy `https://www.klotz.mobi/angebote`, портфолио Terrassenüberdachung, Fenster, Wartung/Service и существующие зарегистрированные материалы. Точные страницы и независимые источники записаны в каждой записи. Частотности, отзывы, авторы, результаты, гарантии и новые характеристики не выдуманы.
@@ -26,6 +31,14 @@
 - `src/content/articles.ts`, `src/content/site.ts`: новые немецкие статьи `sommergarten-oder-wintergarten` и `fenster-reparieren-oder-austauschen` — оригинальная редактура со статусом `draft`, а не тексты KLOTZ или утверждённые технические рекомендации. Ассортимент и сервис подтверждены legacy-страницами `https://www.klotz.mobi/portfolio/terrassenueberdachung`, `https://www.klotz.mobi/portfolio/fenster`, `https://www.klotz.mobi/portfolio/wartung-service`; независимая ориентация по окнам — `https://www.verbraucherzentrale.de/wissen/energie/energetische-sanierung/fenster-sanieren-oder-austauschen-darauf-sollten-sie-achten-13878`. Числа о цене, сроках, выгоде, энергосбережении и свойствах конкретных KLOTZ-систем не добавлены.
 - Для статьи о стеклянном саде повторно используется архивная фотография `/images/glas-detail-1.webp`, уже записанная в `content/assets-manifest.json`. Для статьи об окнах 28.10.2026 с `https://www.klotz.mobi/holzfenster` загружено исходное `https://www.klotz.mobi/sites/default/files/MetallbauKlotz_Inhalte_Produkte_Fenster_Holzfenster%20%282%29.jpg`; оригинал сохранён в `content/legacy/originals/fenster-ratgeber.jpg`, оптимизированная копия — `/images/fenster-ratgeber.webp`. URL, размеры, SHA-256 и ограничение прав зафиксированы в manifest. Это продуктовая фотография, не подтверждённый проект KLOTZ.
 - `docs/KEYWORD_RESEARCH_2026-10-28.md`: редакционная карта запросов и источников без неподтверждённых частот. Точные объёмы и поисковый эффект не проверялись, индексация демо отключена.
+
+## 2026-09-28 — коммерческое предложение и Hostinger
+
+- `docs/proposal/SaaleWeb_Ersteinschaetzung_KLOTZ_Kaffeehaus_v2.html` и финальная PDF — новая немецкая редактура SaaleWeb по письму и Lastenheft заказчика. Статус: `proposal-draft`; это предварительная оценка, не договор и не опубликованный контент KLOTZ.
+- Стоимость Hostinger взята с переданного пользователем скриншота Warenkorb от 28.09.2026: Unlimited, 48 месяцев, 3,99 EUR/Monat, 191,52 EUR netto, 36,39 EUR MwSt., 227,91 EUR brutto; показанная Verlängerung — 16,99 EUR/Monat после 48 месяцев. Цена требует повторного подтверждения при заказе.
+- Техническая совместимость сверена с официальными страницами Hostinger `https://www.hostinger.com/nodejs-hosting`, `https://www.hostinger.com/support/node-js-hosting-options-at-hostinger/` и таблицей лимитов `https://www.hostinger.com/support/6976044-parameters-and-limits-of-hosting-plans-in-hostinger/`. Next.js/Node.js поддерживается; managed databases тарифа указаны как MySQL, поэтому PostgreSQL не обозначен как включённый.
+- Модель отдельной usage-based PostgreSQL-БД сверена с `https://neon.com/blog/new-usage-based-pricing`; фиксированная цена в предложение не добавлена, так как расход зависит от фактического использования и выбранного плана.
+- Изображение прототипа в PDF — локальный снимок существующего презентационного демо. Оно использует legacy-фотографию только в рамках подтверждённого разрешения для клиентской презентации; PDF не даёт production-права.
 
 ## 2026-09-25 — сотрудники и фотографии на «Über uns»
 

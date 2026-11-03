@@ -17,6 +17,7 @@
 /playwright-report
 /test-results
 /.lighthouseci
+/tmp/
 
 # editors and operating systems
 .DS_Store
