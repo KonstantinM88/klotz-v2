@@ -1,5 +1,15 @@
 # Decision log
 
+## D-032 — Angebote: тон-приглашение, сильные стороны KLOTZ и JSON-LD
+
+- Дата: 2026-11-04. Пользователь передал брифинг `KLOTZ_peredacha_konteksta.md` и попросил переписать `/angebote`, начиная с `/angebote/lamellendaecher-pergolen`. Остальные четыре страницы и обзор — после его одобрения.
+- Тон: каждая оговорка подаётся как сервис («Ihren verbindlichen Preis erhalten Sie nach dem Aufmaß vor Ort – inklusive Montage …»). Внутренний язык («Flyer», «Vorlage», «archiviert», «Werbemotiv» в тексте) убран из видимого текста. Цены по-прежнему «ab» и без монтажа; обещаний по Förderung нет.
+- Сильные стороны берутся только из legacy klotz.mobi (Über uns, Kontakt): Innen-/Außenausstellung, команда из 13 человек, цикл Aufmaß→Abnahme «aus einer Hand», Wartung/Instandsetzung, регион, часы работы, виртуальный тур. Срок «30/40 лет» не называется («seit Jahrzehnten»). Бренды производителей, «Zaun des Jahres», бесплатный замер, гарантия и финансирование не упоминаются.
+- Отменяет часть D-014/D-030 по явной команде пользователя: на страницах Angebote добавлен JSON-LD `@graph` (HomeAndConstructionBusiness, WebPage, Product/Offer с ab-ценой, FAQPage). Все значения строятся из того же объекта, что и видимая страница; изображения в Product не передаются (иллюстрации). Данные остаются legacy/draft: демо закрыто noindex, а `canIndexOffer` по-прежнему требует verified и трёх подтверждений перед production.
+- Общий шаблон изменён для всех пяти страниц: сноска к ценам, срок акции без «laut Vorlage», подпись к изображению, контактная панель с фактами KLOTZ и часами работы, якорь `#preise` / `#foerderung` вместо общего `#preisbeispiele`.
+- 04.11.2026, второй этап: тот же подход применён к остальным четырём страницам и обзору. Название «Schüco-Kunststofffenster» остаётся только в таблице цен как формулировка самого флаера KLOTZ (сверяется с manifest); в тексте не заявляется партнёрство. Обзор получил JSON-LD CollectionPage/ItemList.
+- `getSiteUrl()`: `NEXT_PUBLIC_SITE_URL` → `VERCEL_PROJECT_PRODUCTION_URL` → `VERCEL_URL` → localhost. Canonical, og:url и JSON-LD на Vercel больше не ведут на localhost без ручной настройки переменной.
+
 ## D-031 — Приватный архив документов и очистка tmp
 
 - Дата: 04.11.2026. По прямой команде пользователя приватность репозитория проверена через GitHub; оставшиеся коммерческие документы и материалы встречи разрешены к commit/push.

@@ -8,9 +8,8 @@ export function OfferPreviewNotice() {
     <div className="offer-preview-note" role="note">
       <strong>Redaktionelle Vorschau · noch abzustimmen</strong>
       <p>
-        Die Preisbeispiele stammen aus den Aktionsflyern 2026. Aktuelle Preise,
-        Steuerangaben, Verfügbarkeit und Leistungsumfang sind vor einem Auftrag
-        mit KLOTZ zu bestätigen.
+        Preise, Aktionszeitraum und Leistungsumfang werden vor der
+        Veröffentlichung mit KLOTZ abgestimmt.
       </p>
     </div>
   );
@@ -41,12 +40,18 @@ export function OfferContact({
               wird Ihr Projekt.
             </h2>
             <p>
-              Besprechen Sie Ihr Vorhaben am Standort Merseburg-Meuschau.
-              Projektort, Einbausituation und gewünschte Ausführung bilden die
-              Grundlage für Ihr persönliches Angebot.
+              Rufen Sie uns an, schreiben Sie per WhatsApp oder besuchen Sie
+              unsere Musterausstellung in Merseburg-Meuschau. Von der Planung
+              bis zum Einbau werden Sie aus einer Hand betreut.
             </p>
+            <ul className="offer-contact__facts">
+              <li>Innen- und Außenausstellung am Firmensitz</li>
+              <li>13 Fachleute: Beratung, Technik und eigene Montage</li>
+              <li>Aufmaß, Angebot, Montage und Bauabnahme aus einer Hand</li>
+              <li>Wartung und Instandsetzung auch nach dem Einbau</li>
+            </ul>
             <p className="offer-contact__areas">
-              {site.serviceAreas.join(" · ")}
+              Für Sie im Einsatz: {site.serviceAreas.join(" · ")}
             </p>
             <ButtonLink
               href={
@@ -66,7 +71,17 @@ export function OfferContact({
               {site.address.postalCode} {site.address.city} /{" "}
               {site.address.district}
             </address>
+            <p className="offer-contact__hours">{site.openingHours.display}</p>
             <a href={site.phoneHref}>{site.phoneDisplay}</a>
+            <a
+              href={site.whatsappHref}
+              className="text-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp {site.whatsappDisplay} (neuer Tab){" "}
+              <span aria-hidden="true">↗</span>
+            </a>
             <Link href="/kontakt" className="text-link">
               Kontakt & Anfahrt <span aria-hidden="true">↗</span>
             </Link>

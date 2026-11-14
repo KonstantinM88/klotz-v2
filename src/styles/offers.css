@@ -576,3 +576,37 @@
     transform: none;
   }
 }
+
+.offer-contact__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 28px;
+  max-width: 620px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.offer-contact__facts li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.offer-contact__facts li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 9px;
+  height: 2px;
+  background: var(--blue);
+}
+.offer-contact__hours {
+  font-size: 14px;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .offer-contact__facts {
+    grid-template-columns: 1fr;
+  }
+}

@@ -4,7 +4,9 @@ import type { OfferPageContent } from "@/domain/content/offers";
 import type { SiteSettings } from "@/domain/content/types";
 import { Breadcrumbs } from "@/components/sections/page-parts";
 import { ButtonLink } from "@/components/ui/button-link";
+import { JsonLd } from "@/components/seo/json-ld";
 import { OfferContact, OfferPreviewNotice } from "./offer-parts";
+import { offerPageJsonLd } from "./offer-structured-data";
 
 const euro = new Intl.NumberFormat("de-DE", { maximumFractionDigits: 0 });
 const date = new Intl.DateTimeFormat("de-DE", {
@@ -23,14 +25,12 @@ export function OfferDetail({
   otherOffers: OfferPageContent[];
   site: SiteSettings;
 }) {
+  const priceSection =
+    offer.kind === "funding"
+      ? { id: "foerderung", title: "Fördermöglichkeit verstehen" }
+      : { id: "preise", title: "Preise im Überblick" };
   const sections = [
-    {
-      id: "preisbeispiele",
-      title:
-        offer.kind === "funding"
-          ? "Förderhinweis einordnen"
-          : "Preisbeispiele & Bedingungen",
-    },
+    priceSection,
     ...offer.sections,
     { id: "vorbereitung", title: "Ihre Vorbereitung" },
     { id: "fragen", title: "Häufige Fragen" },
@@ -38,6 +38,7 @@ export function OfferDetail({
   ];
   return (
     <main id="main-content" className="offers-page">
+      <JsonLd data={offerPageJsonLd(offer, site)} />
       <section className="offer-hero">
         <div className="shell">
           <Breadcrumbs
@@ -62,11 +63,8 @@ export function OfferDetail({
                 <ButtonLink href={`/projekt-anfragen?angebot=${offer.slug}`}>
                   Zu diesem Angebot anfragen
                 </ButtonLink>
-                <a href="#preisbeispiele" className="text-link">
-                  {offer.kind === "funding"
-                    ? "Förderung einordnen"
-                    : "Preisbeispiele ansehen"}{" "}
-                  <span aria-hidden="true">↓</span>
+                <a href={`#${priceSection.id}`} className="text-link">
+                  {priceSection.title} <span aria-hidden="true">↓</span>
                 </a>
               </div>
             </div>
@@ -114,18 +112,14 @@ export function OfferDetail({
           {offer.status !== "verified" ? <OfferPreviewNotice /> : null}
           <section
             className="offer-price-section"
-            id="preisbeispiele"
+            id={priceSection.id}
             aria-labelledby="offer-prices-title"
           >
             <p className="eyebrow">
               <span />
               {offer.sourcePriceDate}
             </p>
-            <h2 id="offer-prices-title">
-              {offer.kind === "funding"
-                ? "Fördermöglichkeit verstehen."
-                : "Preisbeispiele im Überblick."}
-            </h2>
+            <h2 id="offer-prices-title">{priceSection.title}.</h2>
             {offer.kind === "products" ? (
               <>
                 <dl className="offer-price-grid">
@@ -138,7 +132,7 @@ export function OfferDetail({
                             ? "Preis je laufendem Meter"
                             : product.unit === "Stück"
                               ? "Preis je Stück"
-                              : "Paket laut Vorlage")}
+                              : "Komplettpaket")}
                       </dd>
                       <dd className="offer-price-item__value">
                         ab {euro.format(product.fromPriceEUR)} €
@@ -151,25 +145,19 @@ export function OfferDetail({
                   ))}
                 </dl>
                 <p className="offer-price-conditions">
-                  *Archivierte Preisbeispiele, keine bestätigten aktuellen
-                  Angebotspreise. Montage nicht enthalten. Steuerangaben,
-                  Lieferumfang, Vorarbeiten und Verfügbarkeit werden im
-                  persönlichen Angebot geklärt.
+                  *Ab-Preise für das Produkt, Montage nicht enthalten. Ihren
+                  verbindlichen Preis erhalten Sie nach dem Aufmaß vor Ort –
+                  inklusive Montage und allem, was für Ihr Projekt dazugehört.
                 </p>
                 {offer.validUntil ? (
                   <p className="offer-validity">
-                    Laufzeit laut Vorlage: bis{" "}
+                    Aktion gültig bis{" "}
                     <time dateTime={offer.validUntil}>
                       {date.format(new Date(`${offer.validUntil}T00:00:00Z`))}
                     </time>
-                    . Aktuelle Gültigkeit bitte bestätigen lassen.
+                    .
                   </p>
-                ) : (
-                  <p className="offer-validity">
-                    Die Vorlage nennt für diese Beispiele keine separat
-                    bestätigte Laufzeit.
-                  </p>
-                )}
+                ) : null}
               </>
             ) : (
               <div className="offer-funding-summary">
@@ -199,6 +187,19 @@ export function OfferDetail({
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              {section.link ? (
+                <p>
+                  <a
+                    href={section.link.href}
+                    className="text-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {section.link.label} (neuer Tab){" "}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </p>
+              ) : null}
             </section>
           ))}
           <section className="offer-checklist" id="vorbereitung">
@@ -250,9 +251,8 @@ export function OfferDetail({
               ))}
             </ul>
             <p>
-              Diese Orientierung ersetzt keine Prüfung Ihres Gebäudes oder
-              Grundstücks. Ausführung und Bedingungen werden für Ihr Vorhaben
-              abgestimmt.
+              Was genau zu Ihrem Haus passt, klären wir gemeinsam beim Termin
+              vor Ort.
             </p>
           </section>
           <section className="offer-related">
@@ -278,7 +278,7 @@ export function OfferDetail({
             <span />
             Weiterdenken
           </p>
-          <h2 id="offer-other-title">Weitere Angebotsideen.</h2>
+          <h2 id="offer-other-title">Weitere Angebote.</h2>
           <div className="offer-theme-links">
             {otherOffers.map((item) => (
               <Link href={item.href} key={item.id}>

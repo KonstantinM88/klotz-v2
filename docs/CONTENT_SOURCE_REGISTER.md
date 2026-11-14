@@ -1,5 +1,12 @@
 # Content source register
 
+## 2026-11-04 — переписка Angebote: Lamellendach & Pergola
+
+- `src/content/offers.ts` (`lamellendaecher-pergolen`): новая немецкая редактура, статус draft. Цены/размеры без изменений из manifest. Сильные стороны KLOTZ: S-03 `https://www.klotz.mobi/ueber-uns` (Ausstellung innen/außen, 13 сотрудников, Aufmaß→Bauabnahme, «Von der Planung bis zum Einbau … aus einer Hand»), S-04 `https://www.klotz.mobi/kontakt` (часы, регион), виртуальный тур `https://klotz.virtiv.de/vtour/`. Статус legacy-current-check.
+- Второй этап (тот же день): `zaeune-tore`, `fenster-tueren`, `terrassendach-carport`, `energetisch-sanieren-foerderung` и обзор (`src/features/offers/offers-index.tsx`, `src/app/angebote/page.tsx`, `src/content/pages.ts`) — новая немецкая редактура, статус draft, те же источники S-03/S-04. Haustürkonfigurator: `http://konfigurator.klotz.mobi/` (из этого реестра). BEG-формулировки Förderung — прежние официальные источники BMWE/BAFA, по сути не менялись. В `content/angebote-assets-manifest.json` из alt Terrassendach/Carport убрано слово «archivierter».
+- `src/content/site.ts`: `serviceAreas` расширены до списка legacy-сайта, добавлены `openingHours` и `showroomTourUrl` (legacy-current-check).
+- `src/features/offers/offer-parts.tsx`: контактная панель с фактами KLOTZ (те же источники).
+
 ## 2026-11-04 — приватный архив материалов встречи
 
 - Три ранее созданных локальных документа `output/pdf/SaaleWeb_Gespraechsleitfaden_KLOTZ_Kaffeehaus_DE.pdf`, `SaaleWeb_Podgotovka_k_vstreche_KLOTZ_Kaffeehaus_RU.pdf` и `SaaleWeb_Gespraechsprotokoll_KLOTZ_Kaffeehaus_29-10-2026_DE.pdf` сохранены без изменения содержания; это внутренние материалы встречи, не публичный контент сайта и не согласованный договор.

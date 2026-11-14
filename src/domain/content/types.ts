@@ -33,6 +33,21 @@ export type SiteSettings = {
     district: string;
   };
   serviceAreas: string[];
+  openingHours: {
+    display: string;
+    days: (
+      | "Monday"
+      | "Tuesday"
+      | "Wednesday"
+      | "Thursday"
+      | "Friday"
+      | "Saturday"
+      | "Sunday"
+    )[];
+    opens: string;
+    closes: string;
+  };
+  showroomTourUrl: string;
   status: ContentStatus;
 };
 

@@ -71,7 +71,17 @@ for (const path of routes)
         .locator('script[type="application/ld+json"]')
         .all()) {
         const data = JSON.parse((await schema.textContent())!);
-        expect(data["@type"]).toBe("BreadcrumbList");
+        if (data["@graph"] && path.startsWith("/angebote")) {
+          const types = data["@graph"].map(
+            (node: { "@type": string }) => node["@type"],
+          );
+          expect(types).toContain("HomeAndConstructionBusiness");
+          expect(types).toContain(
+            path === "/angebote" ? "CollectionPage" : "FAQPage",
+          );
+        } else {
+          expect(data["@type"]).toBe("BreadcrumbList");
+        }
       }
       expect(errors).toEqual([]);
       await page.screenshot({

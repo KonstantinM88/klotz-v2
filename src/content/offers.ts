@@ -10,82 +10,104 @@ const definitions = [
     id: "angebote-lamellendach-pergola-2026",
     slug: "lamellendaecher-pergolen",
     kind: "products",
-    title: "Lamellendach- und Pergola-Angebote in Merseburg",
+    title: "Lamellendach & Pergola in Merseburg: Preise und Montage",
     shortTitle: "Lamellendach & Pergola",
     eyebrow: "Terrasse & Garten",
     excerpt:
-      "Zwei Wege zum Lieblingsplatz draußen: Lamellendach und Pergola mit Preisbeispielen, Planungsfragen und persönlicher Beratung.",
-    lead: "Wie möchten Sie Ihre Terrasse nutzen? Vergleichen Sie die Ausgangspreise aus unserem Aktionsflyer und klären Sie mit KLOTZ, welche Dachlösung zu Haus, Sonne und Alltag passt.",
+      "Lamellendach ab 5.999 €, Pergola ab 4.999 €: zwei Wege zu mehr Zeit draußen – zu sehen in unserer Ausstellung in Meuschau, geplant und montiert von KLOTZ.",
+    lead: "Schatten am Mittag, lange Abende auf der Terrasse: Mit einem Lamellendach oder einer Pergola wird Ihre Terrasse zu einem Platz, den Sie öfter und länger nutzen. KLOTZ berät Sie, misst vor Ort auf und montiert mit eigenem Team.",
     answer:
-      "Der Flyer nennt ein Lamellendach mit 3,0 × 3,0 m ab 5.999 € und eine Pergola mit 3,0 × 3,0 m ab 4.999 €, jeweils ohne Montage. Welches Angebot zu Ihrem Vorhaben passt, entscheidet sich an Nutzung, Dachsystem, Befestigung und Ausstattung. Die Beträge sind archivierte Preisbeispiele; ein aktuelles Angebot setzt die Prüfung Ihrer Einbausituation voraus.",
-    metaTitle: "Lamellendach & Pergola: Angebotsideen in Merseburg",
+      "Ein Lamellendach mit 3,0 × 3,0 m gibt es bei KLOTZ ab 5.999 €, eine Pergola in gleicher Größe ab 4.999 €. In unserer Innen- und Außenausstellung in Merseburg-Meuschau sehen Sie Ausführungen im Original. Ihren verbindlichen Preis erhalten Sie nach dem Aufmaß vor Ort – inklusive Montage und allem, was dazugehört.",
+    metaTitle: "Lamellendach & Pergola Merseburg: Preise & Montage",
     metaDescription:
-      "Lamellendach und Pergola in Merseburg vergleichen: Preisbeispiele, Maße, Ausstattung und Planung mit KLOTZ. Montage und Bedingungen transparent erklärt.",
+      "Lamellendach ab 5.999 €, Pergola ab 4.999 € (3 × 3 m). Beratung in der Ausstellung Merseburg-Meuschau, Aufmaß, Montage und Service von KLOTZ.",
     priceSummary: "Lamellendach ab 5.999 € · Pergola ab 4.999 €",
     inquiryTopic: "Terrasse & Garten",
     sections: [
       {
         id: "dachwahl",
-        title: "Lamellendach oder Pergola: Was möchten Sie draußen erleben?",
+        title: "Lamellendach oder Pergola: Was passt zu Ihrer Terrasse?",
         paragraphs: [
-          "Ein Lamellendach arbeitet mit verstellbaren Lamellen. So lässt sich der Lichteinfall je nach System beeinflussen. Bei einer Pergola stehen Gestaltung und Sonnenschutz im Mittelpunkt; welche Dachbespannung oder Bedachung vorgesehen ist, muss das konkrete Angebot erklären. Der Produktname allein beschreibt den Leistungsumfang noch nicht.",
-          "Beginnen Sie deshalb mit Ihren Lieblingszeiten auf der Terrasse: Frühstück in der Morgensonne, ein Platz zum Lesen oder ein großer Esstisch am Haus? Ausrichtung, vorhandene Verschattung und der Übergang zum Wohnraum helfen, zwischen den Lösungen zu wählen. Eine bestimmte Witterungsbeständigkeit ergibt sich erst aus den geprüften Systemdaten.",
+          "Das Lamellendach ist die Lösung für alle, die Licht und Schatten selbst bestimmen möchten. Über verstellbare Lamellen regeln Sie, wie viel Sonne auf die Terrasse fällt: morgens offen für die ersten Strahlen, mittags geschlossen für angenehmen Schatten.",
+          "Die Pergola ist die offenere, leichtere Variante und der günstigere Einstieg. Sie gibt Ihrer Terrasse einen klaren architektonischen Rahmen. Welche Bedachung und welcher Sonnenschutz dazu passen, besprechen wir mit Ihnen anhand Ihrer Terrasse.",
+          "Unser Tipp: Denken Sie an Ihre Lieblingszeiten draußen – Frühstück in der Morgensonne, Lesen am Nachmittag, Abende mit Familie und Freunden. Daraus ergibt sich meist schnell, welche Lösung zu Ihnen passt.",
         ],
       },
       {
-        id: "preisvergleich",
+        id: "ausstellung",
         title:
-          "Warum zwei Anlagen gleicher Größe unterschiedlich viel kosten können",
+          "Ansehen, vergleichen, entscheiden: unsere Ausstellung in Meuschau",
         paragraphs: [
-          "Die 3,0 × 3,0 m aus dem Flyer sind ein Vergleichsmaß und keine Zusage für jede Grundstückssituation. Dachmaterial, Stützen, Farbwahl, Bedienung und Zubehör beeinflussen den Preis. Ebenso wichtig ist, ob die Konstruktion frei steht oder an eine geeignete Hauswand angeschlossen werden soll.",
-          "Lassen Sie sich im Angebot zeigen, welche Teile enthalten sind und welche Arbeiten gesondert berechnet werden. Fundamente, Elektroanschluss, Entwässerung und Beschattung gehören früh ins Gespräch. Ein niedriger Einstiegspreis ist erst dann hilfreich, wenn Sie die gesamte Ausführung mit einer anderen Lösung vergleichen können.",
+          "Ein Dach für die Terrasse wählt man nicht nach einem Katalogbild. Deshalb zeigt KLOTZ am Firmensitz in der Straße Zur Saale 16 eine Innen- und Außenausstellung. Hier sehen Sie Ausführungen im Original, vergleichen Oberflächen, prüfen Farben im Tageslicht und klären Ihre Fragen direkt am Beispiel.",
+          "Die Ausstellung ist montags bis freitags von 7:00 bis 16:00 Uhr geöffnet, gern auch nach Vereinbarung. Einen ersten Eindruck bekommen Sie vorab im virtuellen Rundgang.",
+        ],
+        link: {
+          label: "Virtueller Rundgang durch die Ausstellung",
+          href: "https://klotz.virtiv.de/vtour/",
+        },
+      },
+      {
+        id: "preis",
+        title: "Was den Preis Ihres Terrassendachs bestimmt",
+        paragraphs: [
+          "Die Ab-Preise gelten für eine Anlage mit 3,0 × 3,0 m. Ihr Preis richtet sich nach Größe, Ausstattung und Einbausituation: ob das Dach an der Hauswand angeschlossen wird oder frei steht, welche Farbe Sie wählen und ob Sie elektrische Bedienung, Beleuchtung oder Seitenbeschattung wünschen.",
+          "Beim Aufmaß klären wir auch Fundamente, Wasserableitung und Stromanschluss. So steht in Ihrem Angebot von Anfang an alles, was Ihr Projekt braucht – nachvollziehbar Position für Position.",
         ],
       },
       {
-        id: "standort",
-        title: "Standort und Erweiterungen zusammen planen",
+        id: "erweiterung",
+        title: "Heute planen, später erweitern",
         paragraphs: [
-          "Vor der Systemwahl sollten Stellfläche, Stützenpositionen und die Ableitung des Regenwassers geklärt sein. Denken Sie auch an Türen, Laufwege und den Zugang für die Montage. Ob ein baurechtliches Verfahren erforderlich ist, muss für Grundstück und Ausführung bei der zuständigen Stelle geprüft werden.",
-          "Wenn später Glasschiebewände, Seitenbeschattung oder Beleuchtung gewünscht sind, sprechen Sie diese Optionen jetzt an. Nicht jedes Dach lässt sich beliebig nachrüsten. Eine passende Vorbereitung kann die spätere Entscheidung erleichtern; die tatsächliche Erweiterbarkeit bestätigt der Fachbetrieb für das ausgewählte System.",
+          "Vielleicht soll aus dem Dach später mehr werden: Glasschiebewände, Seitenbeschattung oder Licht. Sagen Sie es uns gleich beim ersten Gespräch. Dann wählen wir ein System und eine Konstruktion, die diese Erweiterung vorsehen.",
+          "Ob für Ihr Terrassendach eine Genehmigung nötig ist, hängt von Bundesland, Gemeinde und Ausführung ab. Worauf Sie achten sollten, besprechen wir beim Aufmaß; verbindlich entscheidet die zuständige Bauaufsicht.",
         ],
       },
       {
-        id: "anfrage",
-        title: "So wird aus dem Preisbeispiel Ihr konkretes Projekt",
+        id: "ablauf",
+        title: "Aus einer Hand: von der Beratung bis zur Abnahme",
         paragraphs: [
-          "Für den ersten Kontakt sind der Projektort, ungefähre Breite und Tiefe sowie Fotos der Hausseite hilfreich. Notieren Sie, wie viele Personen den Platz nutzen und was Sie am bisherigen Außenbereich stört. Auch die Frage nach manueller oder elektrischer Bedienung darf zunächst offen bleiben.",
-          "KLOTZ ist am Standort Merseburg-Meuschau ansprechbar. Für Vorhaben in Halle (Saale), Leipzig und im Saalekreis werden Umfang und Einbausituation individuell abgestimmt. Aus dem Gespräch und der Prüfung vor Ort kann ein nachvollziehbares Angebot mit abgegrenzten Leistungen entstehen. Verfügbarkeit und Montagetermin sind gesondert zu vereinbaren.",
+          "Bei KLOTZ bleibt Ihr Projekt in einer Hand: Fachberatung, Aufmaß vor Ort, Angebot, Montage durch unsere eigenen Monteure und die gemeinsame Bauabnahme. Unser 13-köpfiges Team aus Fachberatern, technischen Sachbearbeitern, Monteuren und einem Auszubildenden arbeitet dafür Hand in Hand.",
+          "Auch nach der Montage sind wir für Sie da: Wartung und Instandsetzung gehören zu unseren Leistungen. Der Name KLOTZ ist in der Region seit Jahrzehnten bekannt. Von Merseburg aus betreuen wir Projekte in Halle (Saale), Leipzig, im Saalekreis und Burgenlandkreis sowie in Weimar, Erfurt, Jena und Gera.",
         ],
       },
     ],
     checklist: [
-      "Projektort, Breite und Tiefe notieren",
-      "Ausrichtung und gewünschte Nutzungszeiten beschreiben",
-      "Fundamente, Wandanschluss und Entwässerung ansprechen",
-      "Bedienung, Beschattung und spätere Seitenelemente mitdenken",
-      "Gesamtumfang inklusive Montage im Angebot prüfen",
+      "Projektort und ungefähre Maße der Terrasse (Breite × Tiefe)",
+      "Zwei, drei Fotos von Terrasse und Hauswand",
+      "Ihre Lieblingszeiten draußen – daraus ergibt sich die passende Lösung",
+      "Wünsche wie Licht, elektrische Bedienung oder Seitenelemente",
+      "Ihr Wunschzeitraum für die Montage",
     ],
     faq: [
       {
-        question: "Ist das Lamellendach im Flyer inklusive Montage?",
+        question: "Was kostet ein Lamellendach bei KLOTZ?",
         answer:
-          "Nein. Die Preisbeispiele des Flyers verstehen sich ohne Montage. Ob zusätzlich Fundamente, Elektroarbeiten oder andere Vorleistungen nötig sind, hängt vom Standort ab. Ein aktuelles Angebot sollte Material, Ausstattung, Montage und bauseitige Arbeiten getrennt und verständlich ausweisen.",
+          "Ein Lamellendach mit 3,0 × 3,0 m gibt es ab 5.999 €, eine Pergola in gleicher Größe ab 4.999 €. Das sind Produktpreise ohne Montage. Ihren verbindlichen Gesamtpreis – inklusive Montage und allem, was Ihr Projekt braucht – erhalten Sie nach dem Aufmaß vor Ort.",
       },
       {
-        question:
-          "Ist eine Pergola automatisch günstiger als ein Lamellendach?",
+        question: "Übernimmt KLOTZ auch die Montage?",
         answer:
-          "Die beiden Flyerbeispiele nennen unterschiedliche Einstiegspreise. Daraus folgt kein allgemeines Preisverhältnis für jede Größe und Ausstattung. Vergleichen Sie Dachsystem, Bedienung, Fundamentierung und Zubehör im gleichen Leistungsumfang. Erst damit lässt sich die wirtschaftlich passende Lösung für Ihr Haus bewerten.",
+          "Ja. Aufmaß, Montage und Bauabnahme übernimmt KLOTZ mit eigenen Monteuren. Von der Planung bis zum Einbau werden Sie aus einer Hand betreut – und auch danach, wenn Wartung oder eine Instandsetzung ansteht.",
+      },
+      {
+        question: "Kann ich mir Ausführungen vorher ansehen?",
+        answer:
+          "Ja. In unserer Innen- und Außenausstellung in Merseburg-Meuschau, Zur Saale 16, sehen Sie Ausführungen im Original. Geöffnet ist montags bis freitags von 7:00 bis 16:00 Uhr oder nach Vereinbarung. Einen ersten Eindruck gibt der virtuelle Rundgang.",
       },
       {
         question: "Kann ich das Dach später mit Glaswänden schließen?",
         answer:
-          "Das kann bei geeigneten Systemen eine Option sein, ist aber keine automatische Eigenschaft jeder Anlage. Tragkonstruktion, Anschlüsse und Entwässerung müssen zur Erweiterung passen. Lassen Sie die gewünschte spätere Nutzung bereits beim ersten Angebot prüfen und schriftlich beschreiben.",
+          "Wenn Sie das von Anfang an wünschen, planen wir es mit ein: Wir wählen ein System, das Glasschiebewände oder Seitenbeschattung vorsieht, und legen Konstruktion und Anschlüsse entsprechend aus.",
       },
       {
-        question: "Sind die abgebildeten Anlagen genau das angebotene Modell?",
+        question: "Brauche ich eine Genehmigung für ein Terrassendach?",
         answer:
-          "Die Motive veranschaulichen die Gestaltungsmöglichkeiten. Aus dem Bild lassen sich weder die im Einstiegspreis enthaltene Ausstattung noch die exakten Maße ableiten. Maßgeblich sind die Beschreibung und die technischen Unterlagen Ihres individuell abgestimmten Angebots.",
+          "Das hängt von Bundesland, Gemeinde, Größe und Lage ab. Die wichtigsten Punkte haben wir in unserem Ratgeber zusammengefasst. Verbindliche Auskunft gibt die zuständige Bauaufsicht; gern sprechen wir das Thema beim Aufmaß mit an.",
+      },
+      {
+        question: "In welcher Region montiert KLOTZ?",
+        answer:
+          "Von unserem Standort in Merseburg-Meuschau aus sind wir in Halle (Saale), Leipzig, im Saalekreis und Burgenlandkreis sowie in Weimar, Erfurt, Jena und Gera im Einsatz.",
       },
     ],
     relatedLinks: [
@@ -101,15 +123,35 @@ const definitions = [
         label: "Lamellendach oder Glasdach?",
         href: "/wissen/lamellendach-oder-glasdach",
       },
+      {
+        label: "Genehmigung für die Terrassenüberdachung",
+        href: "/wissen/genehmigung-terrassenueberdachung",
+      },
+      {
+        label: "Anfahrt zur Ausstellung",
+        href: "/kontakt",
+      },
     ],
     sources: [
       {
-        title: "KLOTZ: Lamellendach und Montagebilder",
+        title: "KLOTZ: Lamellendach",
         url: "https://www.klotz.mobi/lamellendach",
       },
       {
         title: "KLOTZ: Terrassenüberdachungen",
         url: "https://www.klotz.mobi/portfolio/terrassenueberdachung",
+      },
+      {
+        title: "KLOTZ: Über uns",
+        url: "https://www.klotz.mobi/ueber-uns",
+      },
+      {
+        title: "KLOTZ: Kontakt und Öffnungszeiten",
+        url: "https://www.klotz.mobi/kontakt",
+      },
+      {
+        title: "Virtueller Rundgang durch die Ausstellung",
+        url: "https://klotz.virtiv.de/vtour/",
       },
     ],
   },
@@ -117,81 +159,87 @@ const definitions = [
     id: "angebote-zaun-tor-2026",
     slug: "zaeune-tore",
     kind: "products",
-    title: "Zaun- und Tor-Angebote für Ihr Grundstück",
+    title: "Zaun & Tor in Merseburg: Preise und Montage",
     shortTitle: "Zaun & Tor",
     eyebrow: "Grundstück & Zugang",
     excerpt:
-      "Vom Doppelstabmattenzaun bis zum Hoftor: fünf Preisbeispiele und Orientierung zu Sichtschutz, Zufahrt und Montage.",
-    lead: "Ein Grundstücksabschluss soll zu Ihrem Alltag passen. Vergleichen Sie Zaun, Sichtschutz und Toranlagen anhand der Flyerbeispiele und planen Sie den Zugang mit KLOTZ aus Merseburg.",
+      "Doppelstabmattenzaun ab 59 €/lfm, WPC-Sichtschutz ab 180 €/lfm, Hoftore ab 2.888 €: Zaun und Zufahrt aus einer Hand – vom Aufmaß bis zur Montage.",
+    lead: "Ein Zaun, der zum Haus passt, Sichtschutz für den Garten und eine Einfahrt, die sich bequem öffnet: KLOTZ plant Ihren Grundstücksabschluss, misst vor Ort auf und montiert mit eigenem Team.",
     answer:
-      "Der Flyer enthält fünf Beispiele: Doppelstabmattenzaun ab 59 €/lfm, WPC-Sichtschutz ab 180 €/lfm, ein Alu-Zaun-Paket mit Pforte und elektrischem Flügeltor ab 7.999 € sowie zwei Hoftore ab 4.399 € beziehungsweise 2.888 €. Montage ist nicht enthalten. Laufende Meter und komplette Torpakete sind unterschiedliche Bezugsgrößen und lassen sich nicht direkt als Gesamtpreise vergleichen.",
-    metaTitle: "Zaun & Tor: Preisbeispiele und Planung in Merseburg",
+      "Den Doppelstabmattenzaun gibt es bei KLOTZ ab 59 €, den WPC-Sichtschutzzaun ab 180 € pro laufendem Meter. Hoftore beginnen bei 2.888 € (Schmiedeeisen, 3,5 × 1,2 m) und 4.399 € (mit Paneelen, 3,4 × 1,6 m), das Komplettpaket aus Alu-Zaun, Pforte und elektrischem Flügeltor bei 7.999 €. Ihren verbindlichen Preis erhalten Sie nach dem Aufmaß vor Ort – inklusive Montage und allem, was dazugehört.",
+    metaTitle: "Zaun, Sichtschutz & Hoftor Merseburg: Preise",
     metaDescription:
-      "Zaun, WPC-Sichtschutz und Hoftore mit KLOTZ in Merseburg planen. Fünf Preisbeispiele, Materialien, Zufahrt, Antrieb und Montage verständlich vergleichen.",
+      "Doppelstabmattenzaun ab 59 €/lfm, WPC-Sichtschutz ab 180 €/lfm, Hoftore ab 2.888 €. Beratung in Merseburg-Meuschau, Aufmaß und Montage von KLOTZ.",
     priceSummary: "Zaun ab 59 €/lfm · Sichtschutz ab 180 €/lfm",
     inquiryTopic: "Zaun & Tor",
     sections: [
       {
         id: "grundstueck",
-        title: "Sichtschutz, Abgrenzung oder komfortable Zufahrt?",
+        title: "Sichtschutz, Abgrenzung oder bequeme Zufahrt?",
         paragraphs: [
-          "Zuerst zählt die Aufgabe: Soll die Grenze sichtbar sein, ein Sitzplatz abgeschirmt werden oder eine Zufahrt bequem zu öffnen sein? Ein offener Zaun, ein Sichtschutzfeld und eine Toranlage lösen unterschiedliche Fragen. Die gewünschte Höhe allein reicht deshalb für die Auswahl noch nicht aus.",
-          "Denken Sie Gehwege, Mülltonnen, Fahrradzugang und Stellplätze mit. Ein separates Gartentor kann im Alltag anders genutzt werden als die breite Einfahrt. Auch die Optik von Haus, Nachbargrundstück und vorhandenen Mauern ist ein sinnvoller Ausgangspunkt für Material und Farbe.",
+          "Am Anfang steht die Frage, was Ihr Zaun leisten soll: die Grenze klar markieren, die Terrasse vor Blicken schützen oder die Einfahrt komfortabel machen. Oft ist es eine Kombination – ein offener Zaun zur Straße, Sichtschutz am Sitzplatz und ein Hoftor für das Auto.",
+          "Denken Sie dabei an Ihren Alltag: Wo kommen Mülltonnen und Fahrräder hinaus, wo parkt das Auto, wo soll ein separates Gartentor hin? Und an die Optik – Farbe und Material sollten zu Haus, Fassade und vorhandenen Mauern passen.",
         ],
       },
       {
         id: "material",
-        title: "Doppelstabmatten, WPC und Aluminium richtig vergleichen",
+        title:
+          "Doppelstabmatten, WPC oder Aluminium: die Materialien im Überblick",
         paragraphs: [
-          "Im Flyer stehen ein Doppelstabmattenzaun und ein WPC-Sichtschutzzaun mit Preisen pro laufendem Meter. Entscheidend ist, welche Höhe, Pfosten, Befestigungen und Abschlüsse das jeweilige Angebot umfasst. Die Bezeichnung WPC darf dabei nicht mit PVC gleichgesetzt werden; Material und Ausführung sind ausdrücklich zu benennen.",
-          "Das Alu-Zaun-Beispiel ist dagegen ein Paket mit Pforte und elektrischem Flügeltor. Die Hoftore mit Paneelen beziehungsweise aus Schmiedeeisen haben eigene Maße. Ein fairer Vergleich berücksichtigt Füllung, Öffnungsbreite, Beschläge, Oberfläche und den vorgesehenen Einbau statt nur den größten Preis auf dem Motiv.",
+          "Der Doppelstabmattenzaun ist die klassische, transparente Lösung und der günstigste Einstieg. WPC-Sichtschutz schirmt Garten und Terrasse ab und bringt eine wohnliche Holzoptik. Aluminium steht für eine moderne, klare Linie – zum Beispiel im Komplettpaket mit Pforte und elektrischem Flügeltor.",
+          "Welche Höhe, welche Pfosten und welche Abschlüsse zu Ihrem Grundstück passen, legen wir beim Aufmaß fest. Ausführungen im Original sehen Sie vorher in unserer Innen- und Außenausstellung in Meuschau.",
         ],
       },
       {
         id: "torplanung",
-        title: "Für eine Toranlage zählen Öffnungsraum und sichere Bedienung",
+        title:
+          "Hoftor und elektrische Toranlage: bequem und sicher ins Grundstück",
         paragraphs: [
-          "Ein Flügeltor benötigt Platz für seine Bewegung. Prüfen Sie, wo Fahrzeuge halten, wie die Zufahrt ansteigt und ob die Torflügel in den nutzbaren Bereich hineinragen würden. Ein Schiebetor kann eine andere Lösung sein; dafür braucht es geeigneten seitlichen Raum und passende bauliche Voraussetzungen.",
-          "Bei einem Antrieb gehören Bedienung, Stromversorgung und die vorgesehenen Sicherheitseinrichtungen ins Angebot. Lassen Sie auch erklären, wie Wartung und eine Bedienung bei Ausfall vorgesehen sind. Die konkrete Eignung und sichere Ausführung muss für das ausgewählte System und den Standort geprüft werden.",
+          "Ein Hoftor muss zur Zufahrt passen: Ein Flügeltor braucht Platz zum Öffnen, ein Schiebetor seitlichen Raum. Beim Termin vor Ort schauen wir uns Gefälle, Stellfläche und Laufwege an und empfehlen die Torart, die in Ihrem Alltag funktioniert.",
+          "Soll das Tor elektrisch öffnen, planen wir Antrieb, Stromanschluss und Sicherheitseinrichtungen gleich mit. Und weil Wartung und Instandsetzung zu unseren Leistungen gehören, bleiben wir auch nach der Montage Ihr Ansprechpartner für die Toranlage.",
         ],
       },
       {
         id: "montage",
-        title: "Gelände und Montageumfang vor dem Auftrag klären",
+        title: "Aus einer Hand: Aufmaß, Montage und Abnahme",
         paragraphs: [
-          "Gefälle, Boden, vorhandene Fundamente und Anschluss an Gebäude oder Mauern können den Aufwand verändern. Ebenso wichtig sind eine geklärte Grundstücksgrenze und die örtlichen Vorgaben. Höhen oder Abstände sollten anhand der tatsächlichen Situation abgestimmt werden; diese Seite ersetzt keine baurechtliche Prüfung.",
-          "Für eine Anfrage helfen eine Skizze mit Zaunlänge und Durchfahrtsbreite sowie Fotos des Geländes. KLOTZ in Merseburg-Meuschau bespricht Projekte aus Merseburg, Halle (Saale), Leipzig und dem Saalekreis individuell. Fragen Sie nach einem Gesamtangebot, das Rückbau, Erdarbeiten, Material, Montage und Antrieb nachvollziehbar abgrenzt.",
+          "Gelände, Boden und vorhandene Fundamente bestimmen den Aufwand. Deshalb klären wir beim Aufmaß auch Grenzverlauf, Erdarbeiten und den Umgang mit dem alten Zaun – und ob für Höhe oder Lage örtliche Vorgaben gelten. In Ihrem Angebot steht dann alles, was Ihr Projekt braucht, nachvollziehbar Position für Position.",
+          "Montiert wird von unseren eigenen Monteuren, die Bauabnahme machen wir gemeinsam mit Ihnen. Von Merseburg aus betreuen wir Projekte in Halle (Saale), Leipzig, im Saalekreis und Burgenlandkreis sowie in Weimar, Erfurt, Jena und Gera.",
         ],
       },
     ],
     checklist: [
-      "Zaunlänge, gewünschte Höhe und Zufahrtsbreite erfassen",
-      "Sichtschutz und Durchblicke bewusst auswählen",
-      "Gefälle, vorhandene Pfosten und Fundamente fotografieren",
-      "Öffnungsraum, Antrieb und Stromversorgung ansprechen",
-      "Grenzverlauf, örtliche Vorgaben und Leistungsumfang klären",
+      "Ungefähre Zaunlänge und gewünschte Höhe",
+      "Breite der Einfahrt und gewünschte Torart",
+      "Fotos von Grundstücksgrenze, Gefälle und vorhandenen Pfosten",
+      "Wo Sichtschutz gewünscht ist – und wo Durchblick",
+      "Wunsch nach elektrischem Antrieb und vorhandener Stromanschluss",
     ],
     faq: [
       {
-        question: "Was bedeutet der Preis pro laufendem Meter?",
+        question: "Was kostet ein Zaun pro Meter bei KLOTZ?",
         answer:
-          "Ein laufender Meter beschreibt die Länge der Zaunanlage. Der Flyer nennt 59 €/lfm für das Doppelstabmattenbeispiel und 180 €/lfm für WPC-Sichtschutz. Welche Höhe, Pfosten und Zubehörteile dazugehören, muss das aktuelle Angebot klären. Montage und gegebenenfalls notwendige Erdarbeiten sind gesondert zu betrachten.",
+          "Der Doppelstabmattenzaun beginnt bei 59 €, der WPC-Sichtschutzzaun bei 180 € pro laufendem Meter – also je Meter Zaunlänge. Höhe, Pfosten und Abschlüsse legen wir beim Aufmaß fest. Ihren verbindlichen Preis inklusive Montage erhalten Sie danach.",
       },
       {
-        question: "Was umfasst das Alu-Zaun-Paket ab 7.999 €?",
+        question: "Was ist im Alu-Zaun-Paket ab 7.999 € enthalten?",
         answer:
-          "Der alte Flyer bezeichnet es als Alu-Zaun mit Pforte und elektrischem Flügeltor. Weitere Maße und Ausstattungsdetails sind dort nicht vollständig beschrieben. Die genaue Zaunlänge, Torbreite, Technik, Sicherheitsausstattung und Montage müssen daher vor einer Beauftragung konkret bestätigt werden.",
+          "Das Paket umfasst Alu-Zaun, Pforte und ein elektrisches Flügeltor. Welche Länge und Torbreite für Ihr Grundstück passen, klären wir beim Termin vor Ort.",
       },
       {
-        question:
-          "Kann ein vorhandenes Tor nachträglich elektrifiziert werden?",
+        question: "Kann ein vorhandenes Tor elektrisch nachgerüstet werden?",
         answer:
-          "Das hängt unter anderem von Zustand, Bewegung, Beschlägen und der Einbausituation ab. Ein Antrieb lässt sich nicht pauschal an jedes Tor setzen. Lassen Sie die bestehende Anlage und die Anforderungen an die sichere Bedienung vor der Auswahl prüfen.",
+          "Das prüfen wir gern vor Ort: Zustand, Beschläge und Bewegung des Tores entscheiden, ob sich ein Antrieb nachrüsten lässt. Danach sagen wir Ihnen, ob Nachrüsten oder ein neues Tor die bessere Lösung ist.",
       },
       {
-        question: "Welche Angaben braucht KLOTZ für eine erste Einschätzung?",
+        question: "Kann ich mir Zäune und Tore vorher ansehen?",
         answer:
-          "Hilfreich sind der Projektort, ungefähre Länge und Höhe des Zauns, die freie Durchfahrtsbreite und Fotos. Teilen Sie mit, ob Sichtschutz, ein zusätzlicher Fußgängerzugang oder elektrische Bedienung gewünscht sind. Ungeklärte Maße können beim weiteren Aufmaß präzisiert werden.",
+          "Ja. In unserer Innen- und Außenausstellung in Merseburg-Meuschau, Zur Saale 16, sehen Sie Ausführungen im Original. Geöffnet ist montags bis freitags von 7:00 bis 16:00 Uhr oder nach Vereinbarung. Einen ersten Eindruck gibt der virtuelle Rundgang.",
+      },
+      {
+        question: "Welche Angaben braucht KLOTZ für ein Angebot?",
+        answer:
+          "Für den Anfang genügen Projektort, ungefähre Länge und Höhe des Zauns, die Breite der Einfahrt und ein paar Fotos. Alles Weitere klären wir beim Aufmaß.",
       },
     ],
     relatedLinks: [
@@ -211,6 +259,10 @@ const definitions = [
         label: "Elektrische Toranlagen",
         href: "/zaun-tor/elektrische-toranlagen",
       },
+      {
+        label: "Anfahrt zur Ausstellung",
+        href: "/kontakt",
+      },
     ],
     sources: [
       {
@@ -221,86 +273,103 @@ const definitions = [
         title: "KLOTZ: Hoftore",
         url: "https://www.klotz.mobi/portfolio/hoftore",
       },
+      {
+        title: "KLOTZ: Über uns",
+        url: "https://www.klotz.mobi/ueber-uns",
+      },
+      {
+        title: "KLOTZ: Kontakt und Öffnungszeiten",
+        url: "https://www.klotz.mobi/kontakt",
+      },
     ],
   },
   {
     id: "angebote-fenster-tueren-2026",
     slug: "fenster-tueren",
     kind: "products",
-    title: "Fenster- und Türen-Angebote für Ihre Modernisierung",
+    title: "Fenster & Türen in Merseburg: Preise und Einbau",
     shortTitle: "Fenster & Türen",
     eyebrow: "Modernisieren & gestalten",
     excerpt:
-      "Sechs Flyerbeispiele von Fenster und Haustür bis Rollladen und Garagentor – mit klaren Einheiten und Fragen zum Einbau.",
-    lead: "Neue Bauelemente verändern den Alltag am Haus. KLOTZ aus Merseburg hilft bei der Einordnung von Fenstern, Türen und ergänzenden Lösungen, bevor aus einer Preisidee ein konkreter Auftrag wird.",
+      "Fenster ab 250 €/m², Aluminium-Haustür ab 2.900 €, Rollladen ab 199 €: sechs Angebote für Ihr Zuhause – beraten, aufgemessen und eingebaut von KLOTZ.",
+    lead: "Neue Fenster, eine neue Haustür oder Rollläden verändern den Alltag im Haus spürbar. KLOTZ berät Sie, misst vor Ort auf und baut mit eigenem Team ein – und ist auch danach für Wartung und Instandsetzung da.",
     answer:
-      "Der Flyer nennt Schüco-Kunststofffenster mit 3-fach-Verglasung ab 250 €/m², eine Aluminium-Haustür ab 2.900 € und Rollläden ab 199 € pro Stück. Hinzu kommen Vordach, CPL-Innentür und Garagen-Sektionaltor. Die Beispiele gelten laut Vorlage bis 31.12.2026 und verstehen sich ohne Montage. Produktgrößen, Einbauumfang und aktuelle Konditionen müssen individuell bestätigt werden.",
-    metaTitle: "Fenster & Türen: Angebote für Merseburg und Umgebung",
+      "Kunststofffenster mit 3-fach-Verglasung gibt es bei KLOTZ ab 250 € pro Quadratmeter, eine Aluminium-Haustür (1,1 × 2,1 m) ab 2.900 € und Rollläden ab 199 € pro Stück. Dazu kommen Vordach, Innentür und Garagen-Sektionaltor. Die Aktion gilt bis 31. Dezember 2026. Ihren verbindlichen Preis erhalten Sie nach dem Aufmaß vor Ort – inklusive Einbau und allem, was dazugehört.",
+    metaTitle: "Fenster & Haustüren Merseburg: Preise & Montage",
     metaDescription:
-      "Fenster, Haustür, Rollladen und Garagentor mit KLOTZ in Merseburg vergleichen. Sechs Preisbeispiele, Einheiten, Montageumfang und Modernisierung erklärt.",
+      "Fenster ab 250 €/m², Haustür ab 2.900 €, Rollladen ab 199 €: Beratung in der Ausstellung Merseburg-Meuschau, Aufmaß und Einbau von KLOTZ.",
     priceSummary: "Fenster ab 250 €/m² · Haustür ab 2.900 €",
     inquiryTopic: "Fenster & Türen",
     sections: [
       {
         id: "bestand",
-        title: "Erst den Bestand prüfen, dann Bauelemente auswählen",
+        title: "Reparieren oder erneuern? Wir schauen uns Ihren Bestand an",
         paragraphs: [
-          "Wenn ein Fenster klemmt oder eine Tür nicht sauber schließt, ist ein vollständiger Austausch nicht automatisch der erste Schritt. Zustand, Beschläge und Dichtungen sollten geprüft werden. KLOTZ nennt im bestehenden Service auch Wartung und Instandsetzung; welche Maßnahme sinnvoll ist, lässt sich am Bestand klären.",
-          "Für eine Erneuerung zählen Ihre Prioritäten: leichtere Bedienung, Gestaltung, Ruhe, Sonnenschutz oder Anforderungen an die Sicherheit. Teilen Sie mit, was heute fehlt. Ein bestimmter Energiegewinn oder eine Schutzklasse lässt sich aus dem Werbemotiv nicht ableiten und wird hier nicht pauschal versprochen.",
+          "Nicht jedes klemmende Fenster muss gleich ausgetauscht werden. Weil zu KLOTZ auch Wartung und Instandsetzung gehören, prüfen wir zuerst Beschläge, Dichtungen und Zustand – und sagen Ihnen dann, ob eine Reparatur genügt oder ein neues Bauelement die bessere Wahl ist.",
+          "Für die Auswahl zählen Ihre Prioritäten: leichte Bedienung, Ruhe, Sonnenschutz, Sicherheit oder die Optik der Fassade. Erzählen Sie uns, was Sie heute stört – daraus entsteht die passende Lösung.",
         ],
       },
       {
         id: "vergleich",
-        title: "Warum €/m² und Stückpreise unterschiedliche Fragen beantworten",
+        title: "Fenster nach Fläche, Türen und Rollläden nach Stück",
         paragraphs: [
-          "Das Fensterbeispiel ist ein Flächenpreis für Kunststofffenster mit 3-fach-Verglasung. Größe, Teilung, Öffnungsart und Einbausituation können die Kalkulation verändern. Lassen Sie erklären, auf welche Bezugsfläche sich der Preis bezieht und welche Rahmen, Beschläge und Anschlussarbeiten enthalten sind.",
-          "Der Rollladen ist dagegen pro Stück angegeben. Für Haustür, Vordach, Innentür und Garagentor nennt der Flyer konkrete Größen. Prüfen Sie beim Vergleich, ob Ihre Maße und die gewünschte Ausführung damit übereinstimmen. Ein Angebot für eine andere Abmessung oder zusätzliche Ausstattung ist eine neue Kalkulation.",
+          "Der Fensterpreis ist ein Flächenpreis: ab 250 € pro Quadratmeter für Kunststofffenster mit 3-fach-Verglasung. Wie viele Quadratmeter Ihr Projekt umfasst, hängt von Größe, Teilung und Öffnungsart ab – beim Aufmaß rechnen wir das für jedes Fenster genau aus.",
+          "Rollläden gibt es ab 199 € pro Stück. Für Haustür, Vordach, Innentür und Garagentor gelten die Ab-Preise für die jeweils genannte Größe. Ihre Maße und Ihre Wunschausstattung übernehmen wir direkt in Ihr Angebot.",
         ],
       },
       {
-        id: "anschluss",
-        title: "Einbau, Anschluss und Lüftung gemeinsam betrachten",
+        id: "haustuer",
+        title: "Ihre neue Haustür: ansehen, konfigurieren, entscheiden",
         paragraphs: [
-          "Neue Fenster und Außentüren müssen zum vorhandenen Gebäude passen. Laibungen, Anschlussfugen, Fensterbänke und Rollladenkästen können den Umfang der Arbeiten mitbestimmen. Ein vollständiges Angebot benennt deshalb nicht nur das Bauteil, sondern auch Ausbau, Entsorgung, Einbau und gegebenenfalls erforderliche Nacharbeiten.",
-          "Wenn die Gebäudehülle dichter wird, sollte auch die Lüftung mitgedacht werden. Fragen Sie nach dem Zusammenspiel mit den vorhandenen Wänden und möglichen Feuchtestellen. Die technische Beurteilung erfolgt am Gebäude; diese Angebotsübersicht legt keine pauschalen U-Werte oder Sanierungspflichten fest.",
+          "Die Haustür ist die Visitenkarte Ihres Hauses. In unserer Innen- und Außenausstellung in Merseburg-Meuschau sehen Sie Ausführungen im Original und prüfen Oberflächen und Farben im Tageslicht.",
+          "Wer vorab stöbern möchte, stellt sich seine Wunschtür im Haustürkonfigurator von KLOTZ zusammen. Das passende Vordach planen wir auf Wunsch gleich mit.",
         ],
+        link: {
+          label: "Zum Haustürkonfigurator",
+          href: "http://konfigurator.klotz.mobi/",
+        },
       },
       {
-        id: "projekt",
-        title: "Mehrere Bauteile als gemeinsames Vorhaben organisieren",
+        id: "einbau",
+        title: "Sauberer Einbau aus einer Hand",
         paragraphs: [
-          "Eine Haustür mit Vordach, neue Fenster mit Rollläden oder ein erneuertes Garagentor betreffen unterschiedliche Anschlüsse und Abläufe. Legen Sie fest, welche Arbeiten zusammengehören und welche Räume während der Montage nutzbar bleiben sollen. Stimmen Sie Schnittstellen mit anderen Gewerken rechtzeitig ab.",
-          "Für KLOTZ in Merseburg-Meuschau sind Anzahl, ungefähre Maße und Fotos innen wie außen ein hilfreicher Gesprächseinstieg. Vorhaben in Halle (Saale), Leipzig und im Saalekreis werden nach Umfang und Standort besprochen. Falls eine Förderung relevant ist, müssen deren aktuelle Voraussetzungen vor einer verbindlichen Beauftragung geklärt werden.",
+          "Neue Fenster und Türen müssen zum Gebäude passen. Beim Aufmaß klären wir Laibungen, Anschlussfugen, Fensterbänke und Rollladenkästen und besprechen, wie Ausbau und Entsorgung der alten Elemente ablaufen. Wird die Gebäudehülle dichter, sprechen wir auch über das richtige Lüften.",
+          "Den Einbau übernehmen unsere eigenen Monteure, die Bauabnahme machen wir gemeinsam mit Ihnen. Mehrere Bauteile – etwa Fenster mit Rollläden oder Haustür mit Vordach – planen wir als ein Projekt, damit die Arbeiten gut ineinandergreifen. Von Merseburg aus betreuen wir Projekte in Halle (Saale), Leipzig, im Saalekreis und Burgenlandkreis sowie in Weimar, Erfurt, Jena und Gera.",
         ],
       },
     ],
     checklist: [
-      "Anzahl und ungefähre Maße der Bauelemente notieren",
-      "Fotos innen und außen sowie erkennbare Probleme sammeln",
-      "Öffnungsart, Bedienung, Schall- und Sonnenschutz priorisieren",
-      "Ausbau, Entsorgung und Anschlussarbeiten im Angebot prüfen",
-      "Lüftung und gegebenenfalls Förderung vor Auftrag ansprechen",
+      "Anzahl und ungefähre Maße der Fenster und Türen",
+      "Fotos von innen und außen",
+      "Was Sie heute stört: Zugluft, Lärm, schwergängige Beschläge",
+      "Wünsche zu Öffnungsart, Sonnenschutz und Sicherheit",
+      "Ihr Wunschzeitraum für den Einbau",
     ],
     faq: [
       {
-        question: "Gilt der Fensterpreis von 250 € für ein komplettes Fenster?",
+        question: "Was kostet ein neues Fenster bei KLOTZ?",
         answer:
-          "Im Flyer steht ab 250 €/m², also ein Flächenpreis und kein pauschaler Stückpreis. Er bezieht sich auf das dort genannte Beispiel mit Kunststoffrahmen und 3-fach-Verglasung. Bezugsfläche, Größe, Öffnungsart, Ausstattung und Montageumfang müssen im aktuellen Angebot eindeutig beschrieben sein.",
+          "Kunststofffenster mit 3-fach-Verglasung gibt es ab 250 € pro Quadratmeter. Der Preis Ihres Fensters ergibt sich aus Größe, Teilung und Ausstattung. Ihren verbindlichen Preis inklusive Einbau erhalten Sie nach dem Aufmaß vor Ort.",
       },
       {
-        question: "Sind die 199 € für Rollläden pro Quadratmeter?",
+        question: "Was kostet eine neue Haustür?",
         answer:
-          "Nein. Der Originalflyer nennt ab 199 € pro Stück. Größe, Bedienung und enthaltene Teile werden vor Auftrag individuell festgelegt. Der Betrag ist ein Preisbeispiel aus dem Flyer und keine bestätigte Kalkulation für jeden Fenstertyp.",
+          "Eine Aluminium-Haustür in 1,1 × 2,1 m gibt es ab 2.900 €. Ihre Wunschtür können Sie vorab im Haustürkonfigurator zusammenstellen und in unserer Ausstellung in Merseburg-Meuschau im Original ansehen.",
       },
       {
-        question: "Ist eine staatliche Förderung bereits vom Preis abgezogen?",
+        question: "Lohnt sich eine Reparatur statt eines neuen Fensters?",
         answer:
-          "Nein. Die dargestellten Basispreise enthalten keine von dieser Seite zugesagte staatliche Förderung. Ein möglicher Zuschuss richtet sich nach Programm, Gebäude und Ausführung. Er ist keine automatische Ermäßigung des Verkäufers und muss gesondert mit einer geeigneten Energieberatung geprüft werden.",
+          "Das hängt vom Zustand ab. Weil wir auch Wartung und Instandsetzung anbieten, prüfen wir zuerst, was sich reparieren lässt, und beraten Sie dann. Mehr dazu lesen Sie in unserem Ratgeber.",
       },
       {
-        question: "Wie lange gelten die Beispiele und ist Montage enthalten?",
+        question: "Gibt es eine Förderung für neue Fenster?",
         answer:
-          "Die Vorlage nennt den 31.12.2026 als Laufzeit und schließt Montage aus. Ob das Angebot aktuell noch verfügbar ist, welche Steuerangaben gelten und welche Arbeiten erforderlich sind, muss KLOTZ bestätigen. Maßgeblich ist das persönliche Angebot für Ihr Vorhaben.",
+          "Für förderfähige Maßnahmen an der Gebäudehülle ist eine BEG-Grundförderung von 15 Prozent möglich. Ob Ihr Vorhaben dazugehört, prüft eine Energieeffizienz-Expertin oder ein Experte. Alles Wichtige dazu finden Sie auf unserer Seite zur Förderung.",
+      },
+      {
+        question: "Wie lange gilt die Aktion?",
+        answer:
+          "Die Aktion gilt bis zum 31. Dezember 2026. Die Ab-Preise gelten für das Produkt ohne Montage; Ihren verbindlichen Preis inklusive Einbau erhalten Sie nach dem Aufmaß vor Ort.",
       },
     ],
     relatedLinks: [
@@ -320,6 +389,10 @@ const definitions = [
         label: "Reparieren oder austauschen?",
         href: "/wissen/fenster-reparieren-oder-austauschen",
       },
+      {
+        label: "Förderung für Fenster und Türen",
+        href: "/angebote/energetisch-sanieren-foerderung",
+      },
     ],
     sources: [
       {
@@ -331,8 +404,16 @@ const definitions = [
         url: "https://www.klotz.mobi/portfolio/wartung-service",
       },
       {
+        title: "KLOTZ: Haustürkonfigurator",
+        url: "http://konfigurator.klotz.mobi/",
+      },
+      {
         title: "Verbraucherzentrale: Fenster sanieren oder austauschen",
         url: "https://www.verbraucherzentrale.de/wissen/energie/energetische-sanierung/fenster-sanieren-oder-austauschen-darauf-sollten-sie-achten-13878",
+      },
+      {
+        title: "KLOTZ: Über uns",
+        url: "https://www.klotz.mobi/ueber-uns",
       },
     ],
   },
@@ -340,80 +421,92 @@ const definitions = [
     id: "angebote-terrassendach-carport-2026",
     slug: "terrassendach-carport",
     kind: "products",
-    title: "Terrassenüberdachung und Carport: Angebote vergleichen",
+    title: "Terrassendach & Carport in Merseburg: Preise und Montage",
     shortTitle: "Terrassendach & Carport",
     eyebrow: "Draußen mehr Raum",
     excerpt:
-      "Zwei Überdachungen, zwei Aufgaben: Einstiegspreise für die Terrasse und den Stellplatz mit Orientierung zu Untergrund und Hausanschluss.",
-    lead: "Ein Dach über der Terrasse und ein geschützter Stellplatz brauchen eine passende Planung. Starten Sie mit den Flyerbeispielen und klären Sie mit KLOTZ die baulichen Voraussetzungen Ihres Grundstücks.",
+      "Terrassenüberdachung und Carport jeweils ab 3.999 €: geschützt draußen sitzen, trocken parken – geplant und montiert von KLOTZ.",
+    lead: "Ein Dach über der Terrasse, ein trockener Stellplatz fürs Auto: Mit einer Überdachung gewinnen Sie Platz, den Sie auch bei Regen nutzen. KLOTZ plant beides passend zu Haus und Grundstück und montiert mit eigenem Team.",
     answer:
-      "Die Vorlage nennt eine Terrassenüberdachung mit 3,0 × 3,0 m ab 3.999 € und einen Carport mit 3,3 × 5,0 m ebenfalls ab 3.999 €. Gleicher Einstiegspreis bedeutet hier nicht gleicher Leistungsumfang: Nutzfläche, Untergrund, Anschlüsse und Ausstattung unterscheiden sich. Montage ist nicht enthalten; als Laufzeit nennt der Flyer den 31.12.2026.",
-    metaTitle: "Terrassendach & Carport: Angebotsideen in Merseburg",
+      "Eine Terrassenüberdachung mit 3,0 × 3,0 m gibt es bei KLOTZ ab 3.999 €, einen Carport mit 3,3 × 5,0 m ebenfalls ab 3.999 €. Die Aktion gilt bis 31. Dezember 2026. Ihren verbindlichen Preis erhalten Sie nach dem Aufmaß vor Ort – inklusive Montage und allem, was dazugehört.",
+    metaTitle: "Terrassendach & Carport Merseburg: Preise & Montage",
     metaDescription:
-      "Terrassenüberdachung und Carport mit KLOTZ in Merseburg planen: Maße, Preisbeispiele, Fundamente, Entwässerung und Montage nachvollziehbar vergleichen.",
+      "Terrassenüberdachung (3 × 3 m) und Carport (3,3 × 5 m) jeweils ab 3.999 €. Beratung in Merseburg-Meuschau, Aufmaß und Montage von KLOTZ.",
     priceSummary: "Terrassendach und Carport jeweils ab 3.999 €",
     inquiryTopic: "Terrasse & Garten",
     sections: [
       {
         id: "nutzung",
-        title: "Für die Terrasse oder den Stellplatz: Die Nutzung entscheidet",
+        title: "Terrasse oder Stellplatz: Was soll Ihr Dach leisten?",
         paragraphs: [
-          "Auf der Terrasse geht es um Licht, Aufenthalt und den Anschluss an den Wohnbereich. Prüfen Sie, wie das Dach Schatten wirft und ob zusätzlicher Sonnenschutz oder seitliche Elemente gewünscht sind. Vorhandene Türen und Fenster sollten im Gesamtbild berücksichtigt werden.",
-          "Beim Carport stehen Fahrzeug, Einfahrt und Bewegungsraum im Vordergrund. Nicht nur die Fahrzeuggröße zählt: Türen müssen sich öffnen lassen und der Zugang zu Haus oder Garten soll funktionieren. Denken Sie auch an Fahrräder oder zusätzlichen Stauraum, ohne die Durchfahrt unnötig einzuengen.",
+          "Auf der Terrasse geht es ums Draußensein: ein trockener Platz für den Esstisch und ein fließender Übergang vom Wohnzimmer nach draußen. Wir planen das Dach so, dass Türen, Fenster und Licht im Haus gut zusammenspielen.",
+          "Beim Carport stehen Auto, Einfahrt und Bewegungsraum im Mittelpunkt: Türen sollen sich bequem öffnen lassen, der Weg zum Haus kurz bleiben. Auf Wunsch denken wir Platz für Fahrräder oder Stauraum gleich mit.",
         ],
       },
       {
         id: "masse",
-        title: "Was die Abmessungen aus dem Flyer bedeuten",
+        title: "Ihr Dach nach Maß und nach Geschmack",
         paragraphs: [
-          "Die genannten 3,0 × 3,0 m beziehungsweise 3,3 × 5,0 m beschreiben zwei unterschiedliche Angebotsbeispiele. Lassen Sie erläutern, ob damit Außenmaße, Dachfläche oder nutzbarer Innenraum gemeint sind. Stützen und Dachüberstände können die tatsächlich verfügbare Fläche beeinflussen.",
-          "Für andere Breiten, Tiefen oder Höhen ist eine neue Kalkulation erforderlich. Vergleichen Sie außerdem Dachmaterial, Tragkonstruktion und Ausstattung. Ein Werbemotiv illustriert eine Gestaltung; daraus folgt nicht, dass die gezeigte Anlage genau dem enthaltenen Paket entspricht.",
+          "Die Ab-Preise gelten für eine Terrassenüberdachung mit 3,0 × 3,0 m und einen Carport mit 3,3 × 5,0 m. Ist Ihre Terrasse breiter oder Ihr Stellplatz tiefer, nehmen wir beim Aufmaß Ihre Wunschmaße auf und berechnen Ihr Dach genau.",
+          "Dachmaterial, Farbe und Ausstattung wählen Sie am besten im Original aus: In unserer Innen- und Außenausstellung in Merseburg-Meuschau vergleichen Sie Ausführungen direkt am Beispiel.",
         ],
       },
       {
         id: "baugrund",
-        title: "Fundamente, Entwässerung und Befestigung früh klären",
+        title: "Fundamente, Regenwasser, Hausanschluss: Wir klären das vor Ort",
         paragraphs: [
-          "Ob ein Dach an das Gebäude angeschlossen oder frei gestellt wird, beeinflusst die Planung. Prüfen Sie Untergrund, mögliche Stützenpositionen und die Führung des Regenwassers. Bei einem Hausanschluss müssen Befestigung und bestehende Fassade zur Konstruktion passen.",
-          "Örtliche Vorgaben und die Frage nach einer Genehmigung sind für die konkrete Anlage vorab zu klären. Aus dem Einstiegspreis lassen sich keine Fundamentkosten oder zulässigen Wind- und Schneelasten ableiten. Die notwendigen Nachweise und die bauliche Eignung müssen für das gewählte System geprüft werden.",
+          "Ob das Dach an der Hauswand befestigt wird oder frei steht, wo die Stützen stehen und wohin das Regenwasser läuft – das klären wir beim Aufmaß. So steht in Ihrem Angebot von Anfang an alles, was Ihr Projekt braucht, nachvollziehbar Position für Position.",
+          "Ob eine Genehmigung nötig ist, hängt von Bundesland, Gemeinde, Größe und Lage ab. Worauf Sie achten sollten, besprechen wir beim Termin; verbindlich entscheidet die zuständige Bauaufsicht.",
         ],
       },
       {
-        id: "angebot",
-        title: "So vergleichen Sie das vollständige Angebot",
+        id: "erweiterung",
+        title: "Vom Terrassendach zum Sommergarten",
         paragraphs: [
-          "Ein nachvollziehbares Angebot trennt Material und Ausstattung von Montage und Vorarbeiten. Fragen Sie nach Rückbau, Fundamenten, Anschlüssen und dem Umgang mit vorhandenem Pflaster. Klären Sie auch, wer welche bauseitigen Leistungen übernimmt und ob ein Stromanschluss überhaupt benötigt wird.",
-          "Für die Beratung am Standort Merseburg-Meuschau helfen eine Grundstücksskizze, Fotos und Ihre ungefähren Wunschmaße. KLOTZ bespricht auch Vorhaben aus Halle (Saale), Leipzig und dem Saalekreis nach den örtlichen Voraussetzungen. Aus dieser Grundlage werden Ausführung, Umfang und Termin individuell abgestimmt.",
+          "Mit Glasschiebewänden kann aus einem Terrassendach später ein geschützter Sommergarten werden. Sagen Sie es uns gleich beim ersten Gespräch – dann wählen wir ein System und eine Konstruktion, die diese Erweiterung vorsehen.",
+        ],
+      },
+      {
+        id: "ablauf",
+        title: "Aus einer Hand bis zur Abnahme",
+        paragraphs: [
+          "Fachberatung, Aufmaß, Angebot, Montage durch unsere eigenen Monteure und die gemeinsame Bauabnahme: Bei KLOTZ bleibt Ihr Projekt in einer Hand. Auch danach sind wir mit Wartung und Instandsetzung für Sie da.",
+          "Der Name KLOTZ ist in der Region seit Jahrzehnten bekannt. Von Merseburg aus betreuen wir Projekte in Halle (Saale), Leipzig, im Saalekreis und Burgenlandkreis sowie in Weimar, Erfurt, Jena und Gera.",
         ],
       },
     ],
     checklist: [
-      "Nutzung, gewünschte Fläche und Durchgänge festlegen",
-      "Skizze mit Haus, Zufahrt und möglichen Stützen vorbereiten",
-      "Untergrund und bestehende Anschlüsse fotografieren",
-      "Regenwasserführung und gegebenenfalls Beschattung besprechen",
-      "Baurecht und vollständigen Montageumfang vor Auftrag klären",
+      "Wofür das Dach gedacht ist: Terrasse, Auto oder beides",
+      "Ungefähre Wunschmaße und eine kleine Skizze von Haus und Zufahrt",
+      "Fotos von Hauswand, Untergrund und vorhandenem Pflaster",
+      "Wünsche wie Beleuchtung, Beschattung oder Seitenwände",
+      "Ihr Wunschzeitraum für die Montage",
     ],
     faq: [
       {
-        question: "Warum kosten die beiden Flyerbeispiele jeweils ab 3.999 €?",
+        question: "Was kostet eine Terrassenüberdachung bei KLOTZ?",
         answer:
-          "Es handelt sich um zwei unterschiedlich aufgebaute Preisbeispiele mit verschiedenen Abmessungen. Der gleiche Einstiegspreis sagt nicht aus, dass Fläche, Ausstattung oder Montageaufwand gleich sind. Maßgeblich ist die Leistungsbeschreibung des konkreten Terrassendachs oder Carports.",
+          "Eine Terrassenüberdachung mit 3,0 × 3,0 m gibt es ab 3.999 €. Das ist der Produktpreis ohne Montage. Ihren verbindlichen Gesamtpreis – inklusive Montage und allem, was Ihr Projekt braucht – erhalten Sie nach dem Aufmaß vor Ort.",
       },
       {
-        question: "Sind Fundamente und Montage im Preis enthalten?",
+        question: "Was kostet ein Carport?",
         answer:
-          "Die Vorlage schließt Montage ausdrücklich aus. Welche Fundamente, Anschlussarbeiten oder Vorleistungen bei Ihrem Grundstück benötigt werden, ist damit noch nicht geklärt. Lassen Sie diese Positionen im aktuellen Angebot zusammen mit Material und Ausstattung nachvollziehbar beschreiben.",
+          "Einen Carport mit 3,3 × 5,0 m gibt es ab 3.999 €. Andere Maße planen wir passend zu Ihrem Grundstück; den verbindlichen Preis inklusive Montage erhalten Sie nach dem Aufmaß.",
+      },
+      {
+        question: "Übernimmt KLOTZ auch die Montage?",
+        answer:
+          "Ja. Die Montage übernimmt KLOTZ mit eigenen Monteuren. Welche Fundamente und Anschlussarbeiten Ihr Grundstück braucht, klären wir beim Aufmaß und weisen sie in Ihrem Angebot nachvollziehbar aus.",
       },
       {
         question: "Kann aus dem Terrassendach später ein Sommergarten werden?",
         answer:
-          "Je nach System können seitliche Glaselemente eine Option sein. Eine Erweiterung setzt eine geeignete Konstruktion und passende Anschlüsse voraus. Sprechen Sie den Wunsch bei der ersten Planung an und lassen Sie die Möglichkeiten für das konkrete System bestätigen.",
+          "Wenn Sie das von Anfang an wünschen, planen wir es mit ein: Wir wählen ein System, das Glasschiebewände vorsieht, und legen Konstruktion und Anschlüsse entsprechend aus.",
       },
       {
         question: "Brauche ich eine Baugenehmigung?",
         answer:
-          "Das hängt von Grundstück, Größe, Lage und Ausführung sowie den geltenden Vorgaben ab. Der Produktname oder die Größe im Werbeflyer entscheidet diese Frage nicht allein. Klären Sie die baurechtliche Einordnung vor einer Beauftragung bei der zuständigen Stelle.",
+          "Das hängt von Bundesland, Gemeinde, Größe und Lage ab. Die wichtigsten Punkte haben wir in unserem Ratgeber zusammengefasst. Verbindliche Auskunft gibt die zuständige Bauaufsicht; gern sprechen wir das Thema beim Aufmaß mit an.",
       },
     ],
     relatedLinks: [
@@ -433,6 +526,10 @@ const definitions = [
         label: "Genehmigung früh klären",
         href: "/wissen/genehmigung-terrassenueberdachung",
       },
+      {
+        label: "Anfahrt zur Ausstellung",
+        href: "/kontakt",
+      },
     ],
     sources: [
       {
@@ -442,6 +539,14 @@ const definitions = [
       {
         title: "KLOTZ: Carports",
         url: "https://www.klotz.mobi/portfolio/carports",
+      },
+      {
+        title: "KLOTZ: Über uns",
+        url: "https://www.klotz.mobi/ueber-uns",
+      },
+      {
+        title: "KLOTZ: Kontakt und Öffnungszeiten",
+        url: "https://www.klotz.mobi/kontakt",
       },
     ],
   },
@@ -453,8 +558,8 @@ const definitions = [
     shortTitle: "Sanierung & Förderung",
     eyebrow: "Bestand & Modernisierung",
     excerpt:
-      "Was die 15 Prozent Grundförderung bedeuten können und welche Fragen vor einer Fenster- oder Türensanierung geklärt werden sollten.",
-    lead: "Eine Förderung beginnt mit der passenden Maßnahme und einer sauberen Vorbereitung. Ordnen Sie Produktwahl, Gebäude und Antrag gemeinsam ein, bevor Sie aus einem Werbehinweis eine finanzielle Erwartung ableiten.",
+      "15 % BEG-Grundförderung für förderfähige Fenster und Außentüren: So bereiten Sie Ihr Vorhaben vor – mit KLOTZ und Ihrer Energieberatung.",
+    lead: "Neue Fenster und Außentüren können staatlich gefördert werden. Damit das gelingt, gehören Maßnahme, Gebäude und Antrag von Anfang an zusammen – KLOTZ hilft Ihnen, Ihr Vorhaben gut vorzubereiten.",
     answer:
       "Für förderfähige Einzelmaßnahmen an der Gebäudehülle nennen die offiziellen BEG-Informationen eine Grundförderung von 15 Prozent. Daraus folgt keine pauschale Zusage für jedes Fenster oder jede Haustür. Förderfähigkeit, technische Anforderungen, Antrag und gegebenenfalls weitere Bedingungen müssen mit einer zugelassenen Energieeffizienz-Expertin oder einem Experten anhand des konkreten Vorhabens geprüft werden.",
     metaTitle: "Fenster-Förderung und Sanierung in Merseburg planen",
@@ -465,18 +570,17 @@ const definitions = [
     sections: [
       {
         id: "einordnung",
-        title: "Förderhinweis und Produktangebot sind zwei verschiedene Dinge",
+        title: "Zuschuss und Angebot: wie beides zusammenhängt",
         paragraphs: [
-          "Ein staatlicher Zuschuss ist keine automatische Ermäßigung des Verkäufers. Das Angebot des Fachbetriebs beschreibt Bauteile und Arbeiten; die Förderung hängt von einem eigenen Verfahren und den förderfähigen Ausgaben ab. Rechnen Sie einen möglichen Zuschuss deshalb nicht ungeprüft vom gesamten Auftragswert ab.",
-          "Die Abbildung mit dem Hausmodell veranschaulicht das Thema Sanierung. Sie beschreibt kein konkretes Gebäude, keine garantierte Einsparung und keine bewilligte Maßnahme. Auch die Preisbeispiele auf unseren anderen Angebotsseiten enthalten keine zugesagte Förderung.",
+          "Ein staatlicher Zuschuss wird über ein eigenes Verfahren beantragt und bezieht sich auf die förderfähigen Ausgaben. Unser Angebot beschreibt Bauteile und Arbeiten; die Ab-Preise auf unseren Angebotsseiten verstehen sich ohne Förderung. Beides lässt sich gut aufeinander abstimmen, wenn es von Anfang an zusammen geplant wird.",
         ],
       },
       {
         id: "zustand",
         title: "Zuerst die sinnvolle Maßnahme am Gebäude klären",
         paragraphs: [
-          "Bei alten Fenstern oder Außentüren steht zunächst der Bestand im Mittelpunkt: Welche Bauteile sind beschädigt, was funktioniert noch und welche Anforderungen sollen künftig erfüllt werden? Ein Problem am Beschlag ist eine andere Aufgabe als eine energetisch geplante Erneuerung mehrerer Fenster.",
-          "Bei einem Austausch gehören Anschlüsse, Laibungen und Lüftung zum Gespräch. Die Auswahl eines Produktes allein beantwortet noch nicht, wie es sich in das bestehende Gebäude einfügt. KLOTZ bespricht die Bauelemente und die Einbausituation; die energetische und förderrechtliche Bewertung ist mit der dafür qualifizierten Stelle abzustimmen.",
+          "Bei alten Fenstern oder Außentüren steht zunächst der Bestand im Mittelpunkt: Welche Bauteile sind beschädigt, was funktioniert noch und welche Anforderungen sollen künftig erfüllt werden? Weil Wartung und Instandsetzung zu unseren Leistungen gehören, prüfen wir auch, ob sich ein Bauteil reparieren lässt.",
+          "Bei einem Austausch gehören Anschlüsse, Laibungen und Lüftung zum Gespräch. Die Auswahl eines Produktes allein beantwortet noch nicht, wie es sich in das bestehende Gebäude einfügt. KLOTZ bespricht mit Ihnen Bauelemente und Einbausituation; die energetische und förderrechtliche Bewertung übernimmt die dafür qualifizierte Energieberatung.",
         ],
       },
       {
@@ -484,7 +588,7 @@ const definitions = [
         title: "Förderfähigkeit vor einer verbindlichen Beauftragung prüfen",
         paragraphs: [
           "Für Einzelmaßnahmen an der Gebäudehülle ist nach den offiziellen Informationen eine Energieeffizienz-Expertin oder ein Experte einzubeziehen. Lassen Sie dort das aktuell geltende Verfahren, die technischen Anforderungen und den richtigen Zeitpunkt für Antrag und Vertrag prüfen. Bedingungen können sich ändern.",
-          "Bringen Sie vorhandene Unterlagen und ein zunächst klar abgegrenztes Vorhaben mit. Hilfreich sind die geplanten Bauteile, Fotos und die Beschreibung weiterer Sanierungsarbeiten. Die zuständigen Stellen beziehungsweise die Energieberatung klären, welche Nachweise und Vertragsbedingungen erforderlich sind. Diese Seite ersetzt diese Prüfung nicht.",
+          "Bringen Sie vorhandene Unterlagen und ein zunächst klar abgegrenztes Vorhaben mit. Hilfreich sind die geplanten Bauteile, Fotos und die Beschreibung weiterer Sanierungsarbeiten. Die Energieberatung klärt, welche Nachweise und Vertragsbedingungen erforderlich sind.",
         ],
       },
       {
@@ -492,7 +596,7 @@ const definitions = [
         title: "Technisches Angebot und Förderprüfung aufeinander abstimmen",
         paragraphs: [
           "Halten Sie fest, welche Leistungen im Angebot stehen und welche Anforderungen für die Förderprüfung nachgewiesen werden sollen. Produktunterlagen, genaue Maße und ein abgegrenzter Montageumfang erleichtern die Abstimmung zwischen Auftraggebenden, Fachbetrieb und Energieberatung. Offene Punkte sollten vor der Entscheidung schriftlich geklärt sein.",
-          "Der erste Kontakt mit KLOTZ am Standort Merseburg-Meuschau kann helfen, das geplante Fenster- oder Türenprojekt zu strukturieren. Auch für Vorhaben aus Halle (Saale), Leipzig und dem Saalekreis sind Projektort, Bestand und Umfang ein guter Einstieg. Es wird hier weder eine Förderbewilligung noch eine bestimmte Ersparnis versprochen.",
+          "Gern strukturieren wir Ihr Fenster- oder Türenprojekt im ersten Gespräch – am Telefon, per WhatsApp oder in unserer Ausstellung in Merseburg-Meuschau. Von hier aus betreuen wir Vorhaben in Halle (Saale), Leipzig, im Saalekreis und Burgenlandkreis sowie in Weimar, Erfurt, Jena und Gera.",
         ],
       },
     ],
@@ -507,17 +611,17 @@ const definitions = [
       {
         question: "Sind die 15 Prozent für mein Vorhaben garantiert?",
         answer:
-          "Nein. Die Grundförderung ist an förderfähige Maßnahmen und die jeweils geltenden Voraussetzungen gebunden. Ob Ihr Vorhaben darunterfällt und auf welche Ausgaben sich ein Zuschuss beziehen kann, muss individuell geprüft werden. Diese Seite enthält keine Förderzusage.",
+          "Nein. Die Grundförderung ist an förderfähige Maßnahmen und die jeweils geltenden Voraussetzungen gebunden. Ob Ihr Vorhaben darunterfällt und auf welche Ausgaben sich ein Zuschuss beziehen kann, prüft die Energieberatung individuell.",
       },
       {
         question: "Ersetzt KLOTZ die unabhängige Energieberatung?",
         answer:
-          "Diese Seite verspricht keine solche Leistung oder Akkreditierung. KLOTZ ist für das Gespräch über Bauelemente und Einbausituation ansprechbar. Für die erforderliche energetische Beurteilung und das Förderverfahren müssen die geeigneten, für das Vorhaben zugelassenen Fachleute eingebunden werden.",
+          "Nein. KLOTZ ist Ihr Fachbetrieb für Fenster, Türen und den Einbau. Für die energetische Beurteilung und das Förderverfahren binden Sie eine zugelassene Energieeffizienz-Expertin oder einen Experten ein. Maße und Produktangaben für diese Prüfung besprechen wir gern mit Ihnen.",
       },
       {
         question: "Gilt Förderung pauschal auch für Rollläden und Garagentore?",
         answer:
-          "Eine pauschale Aussage ist nicht möglich. Maßnahme, Gebäude und technische Voraussetzungen müssen zum konkreten Programm passen. Aus einem gemeinsamen Werbeflyer folgt nicht, dass jedes dort gezeigte Produkt förderfähig ist. Lassen Sie den vorgesehenen Leistungsumfang einzeln einordnen.",
+          "Eine pauschale Aussage ist nicht möglich: Maßnahme, Gebäude und technische Voraussetzungen müssen zum konkreten Programm passen. Lassen Sie jede geplante Maßnahme einzeln von der Energieberatung einordnen.",
       },
       {
         question:
@@ -573,11 +677,11 @@ export const offerPages: OfferPageContent[] = z.array(offerPageSchema).parse(
       ...definition,
       href: `/angebote/${definition.slug}`,
       status: "draft",
-      updatedAt: "2026-11-03",
+      updatedAt: "2026-11-04",
       sourcePriceDate:
         definition.kind === "funding"
           ? "Förderinformationen geprüft: 03.11.2026"
-          : "Aktionsflyer Februar 2026",
+          : "KLOTZ-Aktion 2026",
       validUntil: expiry,
       publication: {
         contentApproved: false,
@@ -590,7 +694,7 @@ export const offerPages: OfferPageContent[] = z.array(offerPageSchema).parse(
         width: asset.width,
         height: asset.height,
         caption:
-          "Gestaltungsbeispiel auf Basis der KLOTZ-Materialien. Abbildungen dienen der Veranschaulichung; die Ausführung wird individuell abgestimmt.",
+          "Gestaltungsbeispiel. Ausführungen im Original sehen Sie in unserer Ausstellung in Merseburg-Meuschau.",
       },
       products: asset.offers.map((product) => ({
         title: product.name,
@@ -605,7 +709,7 @@ export const offerPages: OfferPageContent[] = z.array(offerPageSchema).parse(
       })),
       sources: [
         {
-          title: "KLOTZ: Angebotsvorlagen und Aktionsflyer",
+          title: "KLOTZ: aktuelle Angebote",
           url: campaignAssets.sourcePage,
         },
         ...definition.sources,

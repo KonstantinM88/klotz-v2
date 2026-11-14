@@ -30,7 +30,25 @@ export const siteSettings: SiteSettings = siteSettingsSchema.parse({
     city: "Merseburg",
     district: "Meuschau",
   },
-  serviceAreas: ["Merseburg", "Halle (Saale)", "Leipzig", "Saalekreis"],
+  // Legacy klotz.mobi/kontakt and /ueber-uns; to be confirmed by KLOTZ.
+  serviceAreas: [
+    "Merseburg",
+    "Halle (Saale)",
+    "Leipzig",
+    "Saalekreis",
+    "Burgenlandkreis",
+    "Weimar",
+    "Erfurt",
+    "Jena",
+    "Gera",
+  ],
+  openingHours: {
+    display: "Mo–Fr 7:00–16:00 Uhr oder nach Vereinbarung",
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "07:00",
+    closes: "16:00",
+  },
+  showroomTourUrl: "https://klotz.virtiv.de/vtour/",
   status: "legacy",
 });
 

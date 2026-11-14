@@ -3,7 +3,9 @@ import Link from "next/link";
 import type { OfferPageContent } from "@/domain/content/offers";
 import type { SiteSettings } from "@/domain/content/types";
 import { Breadcrumbs } from "@/components/sections/page-parts";
+import { JsonLd } from "@/components/seo/json-ld";
 import { OfferContact, OfferPreviewNotice } from "./offer-parts";
+import { offersIndexJsonLd } from "./offer-structured-data";
 
 export function OffersIndex({
   offers,
@@ -14,6 +16,7 @@ export function OffersIndex({
 }) {
   return (
     <main id="main-content" className="offers-page">
+      <JsonLd data={offersIndexJsonLd(offers, site)} />
       <section className="offers-intro">
         <div className="shell">
           <Breadcrumbs items={[{ label: "Angebote", href: "/angebote" }]} />
@@ -31,14 +34,15 @@ export function OffersIndex({
             </div>
             <div className="offers-intro__copy">
               <p>
-                Mehr Raum draußen, ein neuer Zugang oder die Modernisierung
-                Ihres Hauses: Entdecken Sie fünf Angebotsideen aus den
-                KLOTZ-Aktionsflyern.
+                Mehr Raum draußen, ein neuer Zaun oder neue Fenster: Entdecken
+                Sie die aktuellen Angebote von KLOTZ mit Ab-Preisen für Haus und
+                Garten.
               </p>
               <p>
-                Jede Themenseite erklärt die Preisbeispiele, die wichtigsten
-                Planungsfragen und den Weg zu einem individuellen Angebot für
-                Merseburg und Umgebung.
+                Jede Themenseite zeigt Preise, Planungstipps und den Weg zu
+                Ihrem persönlichen Angebot – beraten in unserer Ausstellung in
+                Merseburg-Meuschau, aufgemessen und montiert von unserem eigenen
+                Team.
               </p>
               <a href="#angebote" className="text-link">
                 Fünf Themen entdecken <span aria-hidden="true">↓</span>
@@ -59,9 +63,7 @@ export function OffersIndex({
         <div className="shell">
           <div className="offers-catalog__heading">
             <h2 id="offers-catalog-title">Was möchten Sie verändern?</h2>
-            <p>
-              Produkt verstehen. Bedingungen vergleichen. Persönlich planen.
-            </p>
+            <p>Vergleichen. Im Original ansehen. Persönlich planen.</p>
           </div>
           <ul className="offers-grid">
             {offers.map((offer, index) => (
@@ -94,7 +96,7 @@ export function OffersIndex({
                       <small>
                         {offer.kind === "funding"
                           ? "Bedingungen individuell prüfen"
-                          : "Preisbeispiele · zzgl. Montage"}
+                          : "Ab-Preise · zzgl. Montage"}
                       </small>
                     </p>
                     <span className="offer-card__cta">
@@ -106,9 +108,8 @@ export function OffersIndex({
             ))}
           </ul>
           <p className="source-caption">
-            Gestaltungsbeispiele auf Basis der KLOTZ-Materialien. Abbildungen
-            dienen der Veranschaulichung; die konkrete Ausführung wird
-            individuell abgestimmt.
+            Gestaltungsbeispiele. Ausführungen im Original sehen Sie in unserer
+            Innen- und Außenausstellung in Merseburg-Meuschau.
           </p>
         </div>
       </section>
@@ -128,16 +129,15 @@ export function OffersIndex({
           </div>
           <div className="content-copy">
             <p>
-              Ein Einstiegspreis ist hilfreich, wenn klar ist, worauf er sich
-              bezieht. Größe, Material, Ausstattung und die Situation vor Ort
-              bestimmen den Leistungsumfang. Die Preisbeispiele auf diesen
-              Seiten ersetzen deshalb keine persönliche Kalkulation.
+              Die Ab-Preise geben Ihnen eine erste Orientierung. Ihren
+              verbindlichen Preis erhalten Sie nach dem Aufmaß vor Ort –
+              inklusive Montage und allem, was für Ihr Projekt dazugehört.
             </p>
             <p>
-              Notieren Sie Ihren Projektort, ungefähre Maße und die gewünschte
-              Nutzung. Fragen Sie nach Montage, Vorarbeiten und möglichen
-              Anschlüssen. So lassen sich Angebote mit vergleichbarem Umfang
-              gegenüberstellen.
+              Von der Beratung bis zur Bauabnahme werden Sie bei KLOTZ aus einer
+              Hand betreut: Fachberatung, Aufmaß, Angebot, Montage durch unsere
+              eigenen Monteure und auf Wunsch Wartung und Instandsetzung. Für
+              den Anfang genügen Projektort, ungefähre Maße und ein paar Fotos.
             </p>
             <Link
               href="/wissen/vom-aufmass-bis-zur-abnahme"

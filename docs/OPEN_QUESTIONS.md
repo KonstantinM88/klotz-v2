@@ -10,6 +10,14 @@
 
 ## Для согласования на презентации и до production
 
+- Angebote (04.11.2026): 30 лет или почти 40? В meta legacy-сайта «seit über 30 Jahre», на Über uns «seit fast 40 Jahren». Пока в тексте нейтрально «seit Jahrzehnten».
+- Angebote: можно ли называть производителей (Weinor, Schüco, Wiśniowski, Roggemann)? На legacy они только в подписях к фото, как партнёрство не заявлены. «Schüco-Kunststofffenster» пока остаётся только в таблице цен Fenster & Türen, как во флаере.
+- Haustürkonfigurator: legacy-ссылка `http://konfigurator.klotz.mobi/` без https — подтвердить актуальный адрес.
+- Angebote: что означает бейдж «Zaun des Jahres» (zaundesjahres.de)?
+- Angebote: актуальны ли цены из флаеров и срок 31.12.2026? Есть ли данные по НДС?
+- Angebote: бесплатный ли Aufmaß? Есть ли гарантия сверх законной? Есть ли финансирование?
+- Angebote: что конкретно стоит в Musterausstellung (есть ли Lamellendach/Pergola, Zäune, Türen)? Текст пока говорит общо: «Ausführungen im Original».
+- Актуальны ли 13 сотрудников и расширенный регион (Burgenlandkreis, Weimar, Erfurt, Jena, Gera) с legacy klotz.mobi?
 - Angebote: утвердить тексты пяти страниц, актуальные цены и НДС, состав поставки, монтаж/предварительные работы, доступность и срок каждой акции. Уточнить отсутствующий срок для Lamellendach/Pergola и Zaun/Tor; подтвердить указанное в двух шаблонах 31.12.2026. После истечения обновить условия либо согласовать полезный архив.
 - Angebote: получить отдельные права на публичное использование изображений/логотипа и согласовать иллюстративные макеты. Текущие флаги content/commercial/rights остаются false; noindex включён.
 - Angebote: перед production определить процесс обновления и пересборки к окончанию акции. При SSG guard проверяет срок в момент сборки, а не запускает фоновое снятие страниц по календарю.

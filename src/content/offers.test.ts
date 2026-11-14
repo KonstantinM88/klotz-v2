@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { localContentRepository as repository } from "@/repositories/local-content-repository";
 import { canIndexOffer } from "@/lib/offer-publication";
+import { offerPageJsonLd } from "@/features/offers/offer-structured-data";
 import manifest from "../../content/angebote-assets-manifest.json";
 
 describe("offer publication and source integrity", () => {
@@ -18,7 +19,7 @@ describe("offer publication and source integrity", () => {
     expect(new Set(offers.map((item) => item.metaDescription)).size).toBe(5);
     for (const offer of offers) {
       const anchors = [
-        "preisbeispiele",
+        offer.kind === "funding" ? "foerderung" : "preise",
         "vorbereitung",
         "fragen",
         "quellen",
@@ -72,5 +73,25 @@ describe("offer publication and source integrity", () => {
     expect(canIndexOffer(offer, today)).toBe(false);
     delete offer.validUntil;
     expect(canIndexOffer(offer, today)).toBe(true);
+  });
+});
+
+describe("offer structured data", () => {
+  it("mirrors visible prices and FAQ without placeholders", async () => {
+    const site = await repository.getSiteSettings();
+    for (const offer of await repository.getOfferPages()) {
+      const graph = offerPageJsonLd(offer, site)["@graph"] as {
+        "@type": string;
+        offers?: { price: number };
+        mainEntity?: unknown[];
+      }[];
+      const products = graph.filter((node) => node["@type"] === "Product");
+      expect(products.map((node) => node.offers?.price)).toEqual(
+        offer.products.map((product) => product.fromPriceEUR),
+      );
+      const faq = graph.find((node) => node["@type"] === "FAQPage");
+      expect(faq?.mainEntity).toHaveLength(offer.faq.length);
+      expect(JSON.stringify(graph)).not.toMatch(/"\s*"|undefined|null/);
+    }
   });
 });

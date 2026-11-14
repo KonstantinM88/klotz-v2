@@ -41,6 +41,25 @@ export const siteSettingsSchema = z.object({
     district: z.string().min(1),
   }),
   serviceAreas: z.array(z.string().min(1)).min(1),
+  openingHours: z.object({
+    display: z.string().min(1),
+    days: z
+      .array(
+        z.enum([
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ]),
+      )
+      .min(1),
+    opens: z.string().regex(/^\d{2}:\d{2}$/),
+    closes: z.string().regex(/^\d{2}:\d{2}$/),
+  }),
+  showroomTourUrl: z.url(),
   status: contentStatusSchema,
 });
 
@@ -122,6 +141,7 @@ export const offerPageSchema = z.object({
         id: z.string().regex(/^[a-z0-9-]+$/),
         title: z.string().min(1),
         paragraphs: z.array(z.string().min(1)).min(1),
+        link: z.object({ label: z.string().min(1), href: z.url() }).optional(),
       }),
     )
     .min(3),

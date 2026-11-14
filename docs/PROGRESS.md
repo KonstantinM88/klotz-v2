@@ -1,6 +1,6 @@
 # Progress
 
-Последнее обновление: 2026-11-04.
+Последнее обновление: 2026-11-14.
 
 ## Текущая стадия
 
@@ -23,6 +23,26 @@
 Первичная фиксация и push ранее выполнены по отдельной команде пользователя:
 `f748470 chore: initialize KLOTZ demo`, remote `https://github.com/KonstantinM88/klotz.git`.
 28.10.2026 пользователь отдельно разрешил commit/push обновления Wissen: две статьи, архивные изображения и адаптивные карточки на главной и в разделе. Локальные проверки этого пакета приведены ниже. Deployment и production-публикация отдельно не запрашивались.
+
+## 2026-11-14 — проверка полного пакета перед commit/push
+
+По прямой команде пользователя проверяются и включаются все оставшиеся изменения: редактура пяти страниц Angebote и каталога, контактная панель, часы работы и регион, типизированные данные, JSON-LD и определение canonical-домена через окружение Vercel. Всего 21 изменённый/новый файл, включая `offer-structured-data.ts`. GitHub подтверждает приватный статус репозитория; перед работой локальный `main` совпадал с `origin/main`.
+
+Повторно пройдены форматирование, TypeScript, ESLint, **25/25 unit/component tests**, production build (60 записей), route check (51 HTML-страница, 1 redirect, 62 ссылки) и **56/56 Playwright-сценариев** на desktop/mobile. Проверены canonical, robots/sitemap, noindex, JSON-LD, клавиатура, axe, запрос из Angebote, no-JS, reduced motion и адаптивные размеры. Визуально просмотрены главная, услуга, референс, статья и форма на обоих размерах, каталог и контактные блоки Angebote; локальные previews — `.lighthouseci/review-2026-11-14/`.
+
+Lighthouse mobile на локальной production-сборке: `/angebote` — Performance 83, LCP 3.50 s; `/angebote/lamellendaecher-pergolen` — Performance 85, LCP 3.20 s. Accessibility/Best Practices — 100/100, SEO — 69 из-за намеренного noindex, CLS — 0 на обеих страницах. Цель Performance ≥95 остаётся открытой; значения не являются production-метриками или доказательством ускорения.
+
+Глобальный noindex сохранён. Новых зависимостей и правок runtime в ходе подготовки push нет. Deployment и включение индексации не запрашивались; результат push, совпадение SHA и отсутствие оставшихся tracked/untracked изменений проверяются непосредственно после отправки.
+
+## 2026-11-04 — Angebote: первая страница в новом тоне
+
+- [x] `/angebote/lamellendaecher-pergolen` переписана: тон-приглашение, блоки Ausstellung, «Aus einer Hand», регион; 6 FAQ; title «Lamellendach & Pergola Merseburg: Preise & Montage».
+- [x] Общий шаблон Angebote: новая сноска к ценам, контактная панель с фактами KLOTZ, часы и WhatsApp, якоря `#preise`/`#foerderung`.
+- [x] JSON-LD для всех пяти страниц Angebote (LocalBusiness, WebPage, Product/Offer, FAQPage) + unit-тест соответствия видимым данным.
+- [x] Canonical/og:url/JSON-LD на Vercel больше не ведут на localhost (`getSiteUrl` с системными переменными Vercel).
+- [x] После одобрения пользователя тем же тоном переписаны Zaun & Tor, Fenster & Türen, Terrassendach & Carport, Förderung (только снятие повторов и предостерегающего тона, условия Förderung не менялись) и обзор `/angebote`. Новые title с «Preise», H1 с «Preise und Montage/Einbau», ссылка на Haustürkonfigurator, JSON-LD обзора (CollectionPage + ItemList).
+- Проверено после второго этапа: prettier, `git diff --check`, typecheck, ESLint, vitest 25/25, production build, route check (51 страница, 62 внутренние ссылки), Playwright 56/56 desktop + mobile с axe, повторно 16/16 сценариев Angebote после последней правки текста. Lighthouse mobile по шести страницам Angebote: Accessibility/Best Practices 100, SEO 69 (намеренный noindex), Performance 71–97 в зависимости от прогона (шумный облачный контейнер, 2 CPU), CLS ≤ 0.06. Push/deploy не выполнялись.
+- Проверено локально (облачная копия): prettier, typecheck, ESLint, vitest 25/25, production build, Playwright 56/56 (desktop + mobile, axe). Сборка в облаке шла через `--webpack` с локальной копией шрифта Manrope, потому что Google Fonts оттуда недоступен; код сборки не менялся. Lighthouse не запускался. Не публиковалось, push/deploy не выполнялись.
 
 ## Важная граница
 

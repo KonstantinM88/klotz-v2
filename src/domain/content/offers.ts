@@ -28,7 +28,12 @@ export type OfferPageContent = {
     fromPriceEUR: number;
     unit: string;
   }[];
-  sections: { id: string; title: string; paragraphs: string[] }[];
+  sections: {
+    id: string;
+    title: string;
+    paragraphs: string[];
+    link?: { label: string; href: string };
+  }[];
   checklist: string[];
   faq: { question: string; answer: string }[];
   relatedLinks: { label: string; href: string }[];
