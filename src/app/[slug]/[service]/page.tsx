@@ -3,6 +3,7 @@ import { localContentRepository as repository } from "@/repositories/local-conte
 import { PageIntro, ContactPanel } from "@/components/sections/page-parts";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
+import { TerraceServicePage } from "@/features/terrace/terrace-service-page";
 type Props = { params: Promise<{ slug: string; service: string }> };
 export async function generateStaticParams() {
   return (await repository.getServices()).map((s) => {
@@ -12,6 +13,19 @@ export async function generateStaticParams() {
 }
 export async function generateMetadata({ params }: Props) {
   const p = await params;
+  if (p.slug === "terrasse-garten") {
+    const detail = (await repository.getTerraceServicePages()).find(
+      (page) => page.slug === p.service,
+    );
+    return detail
+      ? pageMetadata(
+          detail.metaTitle,
+          detail.metaDescription,
+          `/terrasse-garten/${detail.slug}`,
+          detail.media.image.src,
+        )
+      : {};
+  }
   const item = (await repository.getServices()).find(
     (s) => s.slug === p.slug + "/" + p.service,
   );
@@ -26,6 +40,29 @@ export async function generateMetadata({ params }: Props) {
 }
 export default async function ServicePage({ params }: Props) {
   const p = await params;
+  if (p.slug === "terrasse-garten") {
+    const [pages, site, projects, articles] = await Promise.all([
+      repository.getTerraceServicePages(),
+      repository.getSiteSettings(),
+      repository.getFeaturedProjects(),
+      repository.getFeaturedArticles(),
+    ]);
+    const detail = pages.find((page) => page.slug === p.service);
+    if (!detail) notFound();
+    return (
+      <TerraceServicePage
+        content={detail}
+        site={site}
+        related={detail.related.flatMap((slug) =>
+          pages.filter((page) => page.slug === slug),
+        )}
+        projects={projects.filter(
+          (project) => project.category === "Terrasse & Garten",
+        )}
+        guide={articles.find((article) => article.slug === detail.guideSlug)}
+      />
+    );
+  }
   const services = await repository.getServices();
   const item = services.find((s) => s.slug === p.slug + "/" + p.service);
   if (!item) notFound();

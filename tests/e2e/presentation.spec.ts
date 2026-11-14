@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 const routes = [
   "/",
+  "/terrasse-garten",
   "/terrasse-garten/terrassenueberdachungen",
   "/referenzen/glasschiebewaende",
   "/wissen/lamellendach-oder-glasdach",
@@ -79,6 +80,12 @@ for (const path of routes)
           expect(types).toContain(
             path === "/angebote" ? "CollectionPage" : "FAQPage",
           );
+        } else if (
+          path === "/terrasse-garten" &&
+          data["@type"] === "CollectionPage"
+        ) {
+          expect(data.mainEntity.numberOfItems).toBe(6);
+          expect(data.mainEntity.itemListElement).toHaveLength(6);
         } else {
           expect(data["@type"]).toBe("BreadcrumbList");
         }
@@ -322,6 +329,14 @@ test("editorial content works without JavaScript", async ({ browser }) => {
   ).toBeVisible();
   await page.locator(".expertise-card").first().click();
   await expect(page).toHaveURL(/terrasse-garten$/);
+  await expect(page.locator(".terrace-solution")).toHaveCount(6);
+  await page.locator(".terrace-faq summary").first().click();
+  await expect(
+    page.getByRole("link", {
+      name: "Glasdach und Lamellendach vergleichen",
+      exact: true,
+    }),
+  ).toBeVisible();
   await context.close();
 });
 

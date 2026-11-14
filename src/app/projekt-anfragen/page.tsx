@@ -12,12 +12,23 @@ export const metadata: Metadata = pageMetadata(
 export default async function RequestPage({
   searchParams,
 }: {
-  searchParams: Promise<{ angebot?: string | string[] }>;
+  searchParams: Promise<{
+    angebot?: string | string[];
+    bereich?: string | string[];
+    leistung?: string | string[];
+  }>;
 }) {
-  const { angebot } = await searchParams;
+  const { angebot, bereich, leistung } = await searchParams;
   const offer =
     typeof angebot === "string"
       ? await contentRepository.getOfferPage(angebot)
+      : undefined;
+  const terraceContext = !offer && bereich === "terrasse-garten";
+  const service =
+    !offer && typeof leistung === "string"
+      ? (await contentRepository.getTerraceServicePages()).find(
+          (page) => page.slug === leistung,
+        )
       : undefined;
   return (
     <main id="main-content">
@@ -51,12 +62,23 @@ export default async function RequestPage({
             </div>
           </div>
           <ProjectRequestForm
-            key={offer?.slug ?? "general"}
-            initialTopic={offer?.inquiryTopic}
+            key={
+              offer?.slug ??
+              service?.slug ??
+              (terraceContext ? "terrasse-garten" : "general")
+            }
+            initialTopic={
+              offer?.inquiryTopic ??
+              (service || terraceContext ? "Terrasse & Garten" : undefined)
+            }
             initialMessage={
               offer
                 ? `Ich interessiere mich für ${offer.shortTitle}. Bitte beraten Sie mich zu einer passenden Ausführung und einem aktuellen Angebot.\n\nMein Vorhaben: `
-                : undefined
+                : service
+                  ? `${service.requestMessage}\n\nMein Vorhaben: `
+                  : terraceContext
+                    ? "Ich interessiere mich für eine Lösung für meine Terrasse oder meinen Garten. Bitte beraten Sie mich zu Überdachung, Beschattung und passenden Erweiterungen.\n\nMein Vorhaben: "
+                    : undefined
             }
           />
         </div>

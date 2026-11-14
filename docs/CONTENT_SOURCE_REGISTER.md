@@ -1,5 +1,20 @@
 # Content source register
 
+## 2026-11-15 — шесть полноценных страниц Terrasse & Garten
+
+- `src/content/terrace-services.ts`: новая самостоятельная немецкая редактура для Terrassenüberdachungen, Lamellendächer, Pergolen, Sommer-/Wintergärten, Glasschiebewände и Sonnenschutz. Внутренний статус draft. Источники разделены по услугам в `sourceRefs`: `/produkte/terrassen%C3%BCberdachungen-0`, `/portfolio/terrassenueberdachung`, `/produkt/lamellendach`, `/produkte/pergola-mit-sonnentuch`, `/produkte/gartenzimmer`, `/portfolio/wintergaerten`, `/produkte/glasschiebe-faltw%C3%A4nde`, `/markiesen`, `/portfolio/sicht-sonnenschutz`, а также `/ueber-uns` и `/kontakt` на klotz.mobi. Страницы/галереи перепроверены 15.11.2026; `/markiesen` доступна через HTTP fetch, хотя web-open вернул ошибку.
+- Пояснения о выборе, удобстве и планировании — новая редакторская работа, а не цитаты заказчика. Нет новых цен, нагрузок, гарантированных сроков, энергоэффективности, автоматической влагонепроницаемости, барьерной доступности, партнёрства с изготовителями или адресов реальных объектов. Sommergarten не приравнен к отапливаемому Wohnraum.
+- Семь новых WebP `terrace-roof-{hero,detail}`, `terrace-pergola-hero`, `terrace-glass-{hero,detail}`, `terrace-shade-{hero,detail}`: наблюдённые URL сохранены в `content/terrace-service-image-sources.json`; оригиналы и SHA в основном manifest. Импорт воспроизводим через `scripts/import-terrace-service-assets.mjs` без зависимости от порядка изображений в живой галерее.
+- Права: `client-presentation-approved`; публичное использование и возможные права производителей требуют отдельного согласования. Подписи описывают продуктовые/дизайнерские примеры, а не неподтверждённые клиентские проекты. Исходные кадры не обрезаны и не изменены генеративно.
+- `src/content/terrace-media.ts`: единое назначение изображений для обзора и деталей; `src/content/site.ts` получил качественный кадр Terrassendach для карточки категории на главной. Остальные источники и права сохраняются.
+
+## 2026-11-14 — Terrasse & Garten: новая редактура и архивные изображения
+
+- `src/content/terrace.ts`, `src/features/terrace/terrace-page.tsx`, обзорный seed в `src/content/pages.ts`: новая немецкая редактура, статус draft, не утверждённые заявления заказчика. Продукты и компания проверены по оригиналу 14.11.2026; полная карта URL→сведения→ограничения находится в `docs/TERRASSE_GARTEN_CONTENT_PLAN_2026-11-14.md` и `sourceRefs` контента.
+- FAQ о разрешениях: официальный список Bauaufsichtsbehörden Sachsen-Anhalt (ссылка в плане), без юридических порогов. SEO/AI-подход: Google Search Central `https://developers.google.com/search/docs/appearance/ai-features`. Региональная выдача изучалась для намерений; частотности и результаты продвижения не заявляются.
+- Новые `/images/terrace-pergola.webp` и `/images/terrace-markise.webp` — оригинальные продуктовые изображения с `/produkte/pergola-mit-sonnentuch` и `/markiesen`; файлы-источники сохранены в `content/legacy/originals/`. Все URL, размеры и SHA в `content/assets-manifest.json`. Права `client-presentation-approved`, включая необходимость отдельной проверки прав производителя перед публичным использованием.
+- Существующие изображения из галерей Lamellendach/Glasschiebewände/Störmthaler See использованы с прежней provenance. Новая генерация/ретушь не выполнялась. Подписи не превращают продуктовую иллюстрацию в конкретный выполненный объект.
+
 ## 2026-11-04 — переписка Angebote: Lamellendach & Pergola
 
 - `src/content/offers.ts` (`lamellendaecher-pergolen`): новая немецкая редактура, статус draft. Цены/размеры без изменений из manifest. Сильные стороны KLOTZ: S-03 `https://www.klotz.mobi/ueber-uns` (Ausstellung innen/außen, 13 сотрудников, Aufmaß→Bauabnahme, «Von der Planung bis zum Einbau … aus einer Hand»), S-04 `https://www.klotz.mobi/kontakt` (часы, регион), виртуальный тур `https://klotz.virtiv.de/vtour/`. Статус legacy-current-check.

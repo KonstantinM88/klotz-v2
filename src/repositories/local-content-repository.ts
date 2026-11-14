@@ -15,6 +15,8 @@ import { homeContent } from "@/content/home";
 import { companyPageContent } from "@/content/company";
 import assetManifest from "../../content/assets-manifest.json";
 import { offerPages } from "@/content/offers";
+import { terracePageContent } from "@/content/terrace";
+import { terraceServicePages } from "@/content/terrace-services";
 
 function withAsset<
   T extends {
@@ -36,6 +38,12 @@ function withAsset<
 }
 
 export const localContentRepository: ContentRepository = {
+  async getTerraceServicePages() {
+    return terraceServicePages;
+  },
+  async getTerracePageContent() {
+    return terracePageContent;
+  },
   async getOfferPages() {
     return offerPages;
   },

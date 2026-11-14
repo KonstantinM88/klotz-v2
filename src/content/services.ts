@@ -1,4 +1,5 @@
 import type { ServiceDetail } from "@/domain/content/presentation";
+import { terraceServicePages } from "./terrace-services";
 
 const terrace = "https://www.klotz.mobi/portfolio/terrassenueberdachung";
 const windows = "https://www.klotz.mobi/portfolio/fenster";
@@ -432,6 +433,26 @@ const seeds: Seed[] = [
 export const serviceDetails: ServiceDetail[] = seeds.map(
   ([slug, title, introHeading, intro, variants, planning, costs]) => {
     const category = slug.split("/")[0]!;
+    const terracePage =
+      category === "terrasse-garten"
+        ? terraceServicePages.find(
+            (page) => slug === `terrasse-garten/${page.slug}`,
+          )
+        : undefined;
+    if (terracePage)
+      return {
+        slug,
+        category,
+        title: terracePage.title,
+        intro: terracePage.hero.lead,
+        image: terracePage.media.image.src,
+        variants: terracePage.variants.map((v) => v.title),
+        planning: terracePage.planning.map((v) => v.text),
+        costs: terracePage.costs.factors,
+        faq: terracePage.faq,
+        sourceRefs: terracePage.sourceRefs,
+        status: terracePage.status,
+      };
     const image =
       category === "fenster-tueren"
         ? slug.endsWith("/fenster")

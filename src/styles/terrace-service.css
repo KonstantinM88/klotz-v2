@@ -1,0 +1,724 @@
+/* Outdoor service pages: shared visual identity, individual editorial content. */
+.service-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  aspect-ratio: 3/2;
+  width: 100%;
+  overflow: hidden;
+  background: #e3e6dd;
+}
+.service-media--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.service-media__frame {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+.service-media .service-media__frame img {
+  object-fit: contain;
+  transform: none;
+}
+.outdoor-service {
+  --outdoor-space: clamp(64px, 7.5vw, 110px);
+}
+.outdoor-service .index-label {
+  margin-bottom: 24px;
+  font-size: 11px;
+}
+.outdoor-service h2 {
+  font-size: clamp(34px, 4.2vw, 62px);
+  line-height: 1.1;
+}
+.outdoor-service h3 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.outdoor-service p {
+  font-size: 16px;
+  line-height: 1.85;
+}
+.outdoor-service .editorial-link {
+  font-size: 13px;
+  gap: 24px;
+}
+.outdoor-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.outdoor-section {
+  padding-block: var(--outdoor-space);
+}
+.outdoor-hero {
+  padding-bottom: 54px;
+}
+.outdoor-hero .breadcrumbs {
+  padding: 25px 0;
+  margin: 0;
+}
+.outdoor-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(30px, 4vw, 64px);
+  padding-top: 28px;
+}
+.outdoor-hero__copy {
+  padding-block: 18px;
+}
+.outdoor-hero h1 {
+  font-size: clamp(40px, 4.5vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+  margin: 0 0 26px;
+}
+.outdoor-hero h1 em {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.outdoor-hero__lead {
+  color: var(--muted);
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+.outdoor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+}
+.outdoor-actions .button {
+  max-width: 100%;
+}
+.outdoor-hero__local {
+  color: var(--muted);
+  font-size: 12px !important;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  margin: 24px 0 0;
+}
+.outdoor-hero__figure {
+  margin: 0;
+  min-width: 0;
+}
+.outdoor-hero__figure figcaption,
+.outdoor-detail figcaption {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+.outdoor-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid var(--line);
+}
+.outdoor-benefits > div {
+  padding: 32px;
+}
+.outdoor-benefits > div:first-child {
+  padding-left: 0;
+}
+.outdoor-benefits > div + div {
+  border-left: 1px solid var(--line);
+}
+.outdoor-index {
+  display: block;
+  color: var(--blue);
+  font-size: 11px;
+  margin-bottom: 22px;
+}
+.outdoor-benefits h2 {
+  font-size: 23px;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+.outdoor-benefits p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+.outdoor-story {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(30px, 7vw, 100px);
+}
+.outdoor-copy p {
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+.outdoor-copy p:last-child {
+  margin-bottom: 0;
+}
+.outdoor-options {
+  background: var(--blue-deep);
+  color: var(--paper);
+}
+.outdoor-options .index-label,
+.outdoor-options .outdoor-index {
+  color: var(--accent);
+}
+.outdoor-section-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  margin-bottom: 45px;
+}
+.outdoor-section-heading > p {
+  padding-top: 10px;
+}
+.outdoor-section-heading h2 {
+  margin: 0;
+}
+.outdoor-options__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.outdoor-options__grid article {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #5e6c60;
+  padding-top: 26px;
+}
+.outdoor-options__grid h3 {
+  font-size: 28px;
+  max-width: 370px;
+}
+.outdoor-options__grid p {
+  font-size: 15px;
+  color: #d2d8cc;
+}
+.outdoor-options__suitable {
+  color: var(--accent) !important;
+  border-top: 1px solid #5e6c60;
+  padding-top: 20px;
+  margin-top: auto;
+}
+.outdoor-detail {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(32px, 7vw, 100px);
+  align-items: center;
+}
+.outdoor-detail figure {
+  margin: 0;
+  min-width: 0;
+}
+.outdoor-detail figure img {
+  width: 100%;
+  height: auto;
+  max-height: 660px;
+  object-fit: contain;
+  background: #e3e6dd;
+}
+.outdoor-detail .button {
+  margin-top: 28px;
+}
+.outdoor-planning {
+  background: var(--paper-strong);
+}
+.outdoor-planning ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 54px;
+}
+.outdoor-planning li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid #b6bcae;
+}
+.outdoor-planning li .outdoor-index {
+  padding-top: 7px;
+}
+.outdoor-planning li p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.outdoor-planning__note {
+  border-top: 1px solid #b6bcae;
+  padding-top: 32px;
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 0 54px;
+}
+.outdoor-planning__note h3 {
+  font-size: 30px;
+  max-width: 360px;
+}
+.outdoor-planning__note p {
+  margin: 0;
+  color: var(--muted);
+}
+.outdoor-planning__note .editorial-link {
+  grid-column: 2;
+  justify-self: start;
+}
+.outdoor-budget {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(32px, 7vw, 100px);
+  align-items: center;
+}
+.outdoor-budget__card {
+  padding: 38px;
+  background: #eceee5;
+}
+.outdoor-budget__card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.outdoor-budget__card li {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.outdoor-budget__card > p:not(.index-label) {
+  font-size: 14px;
+  color: var(--muted);
+}
+.outdoor-budget__card .editorial-link {
+  display: flex;
+  justify-content: space-between;
+}
+.outdoor-showroom {
+  background: #e8ebdf;
+  padding-block: var(--outdoor-space);
+}
+.outdoor-showroom__grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: clamp(40px, 10vw, 150px);
+  align-items: center;
+}
+.outdoor-showroom__grid > div > p:not(.index-label) {
+  color: var(--muted);
+}
+.outdoor-showroom aside {
+  background: var(--blue-deep);
+  color: var(--paper);
+  padding: 40px;
+}
+.outdoor-showroom aside .index-label {
+  color: var(--accent);
+}
+.outdoor-showroom address {
+  font-size: 21px;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: -0.025em;
+}
+.outdoor-showroom aside > p:not(.index-label) {
+  font-size: 13px;
+  color: #d2d8cc;
+}
+.outdoor-phone {
+  display: block;
+  font-size: 32px;
+  letter-spacing: -0.04em;
+  margin: 26px 0;
+}
+.outdoor-faq {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: clamp(32px, 7vw, 100px);
+}
+.outdoor-faq > div > p {
+  color: var(--muted);
+  max-width: 380px;
+}
+.outdoor-faq details {
+  border-top: 1px solid var(--line);
+}
+.outdoor-faq details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.outdoor-faq summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 0;
+  font-size: 18px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+.outdoor-faq summary::-webkit-details-marker {
+  display: none;
+}
+.outdoor-faq summary > span {
+  flex-shrink: 0;
+  font-size: 25px;
+}
+.outdoor-faq details[open] summary > span {
+  transform: rotate(45deg);
+}
+.outdoor-faq details > p {
+  margin: 0;
+  padding: 0 24px 26px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+.outdoor-related {
+  padding-bottom: var(--outdoor-space);
+}
+.outdoor-related__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+.outdoor-related__heading .editorial-link {
+  flex-shrink: 0;
+}
+.outdoor-related__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.outdoor-related__grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-width: 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+}
+.outdoor-related__image {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.outdoor-related__grid h3 {
+  font-size: 26px;
+  max-width: 100%;
+  min-width: 0;
+  hyphens: auto;
+}
+.outdoor-related__grid p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 0;
+}
+.outdoor-related__grid .editorial-link {
+  margin-top: auto;
+  border: 0;
+}
+.outdoor-reading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-block: 1px solid var(--line);
+  margin-top: 46px;
+}
+.outdoor-reading > a {
+  display: block;
+  padding: 30px;
+}
+.outdoor-reading > a:first-child {
+  padding-left: 0;
+}
+.outdoor-reading > a + a {
+  border-left: 1px solid var(--line);
+}
+.outdoor-reading .index-label {
+  display: block;
+}
+.outdoor-reading h3 {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+.outdoor-reading h3 span {
+  flex-shrink: 0;
+}
+.outdoor-reading p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+.outdoor-reading a:hover h3,
+.outdoor-related h3 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.outdoor-contact {
+  background: var(--blue-deep);
+  color: var(--paper);
+  padding-block: var(--outdoor-space);
+}
+.outdoor-contact > .shell {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 60px;
+  align-items: end;
+}
+.outdoor-contact .index-label {
+  color: var(--accent);
+}
+.outdoor-contact p:not(.index-label) {
+  color: #d2d8cc;
+  max-width: 620px;
+}
+.outdoor-contact .outdoor-actions {
+  margin-top: 30px;
+}
+.outdoor-contact__call {
+  border-left: 1px solid #5e6c60;
+  padding-left: 40px;
+}
+.outdoor-contact__call > a {
+  font-size: clamp(27px, 3vw, 42px);
+  letter-spacing: -0.04em;
+}
+.outdoor-contact__call p {
+  font-size: 13px;
+}
+.outdoor-editorial-note {
+  padding-block: 18px;
+}
+.outdoor-editorial-note p {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}
+@media (max-width: 1100px) {
+  .outdoor-hero__grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 28px;
+  }
+  .outdoor-hero h1 {
+    font-size: clamp(40px, 4.5vw, 54px);
+  }
+  .outdoor-service p {
+    font-size: 15px;
+  }
+  .outdoor-benefits > div {
+    padding: 26px 20px;
+  }
+  .outdoor-benefits h2 {
+    font-size: 21px;
+  }
+  .outdoor-options__grid {
+    gap: 24px;
+  }
+  .outdoor-options__grid h3 {
+    font-size: 25px;
+  }
+  .outdoor-budget__card {
+    padding: 28px;
+  }
+  .outdoor-related__grid h3 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 760px) {
+  .outdoor-hero {
+    padding-bottom: 35px;
+  }
+  .outdoor-hero .breadcrumbs {
+    padding-block: 20px;
+  }
+  .outdoor-hero__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0;
+    gap: 0;
+  }
+  .outdoor-hero__copy {
+    display: contents;
+  }
+  .outdoor-hero__copy > .index-label {
+    order: 0;
+    margin-top: 15px;
+  }
+  .outdoor-hero h1 {
+    order: 1;
+    font-size: clamp(40px, 8.5vw, 64px);
+  }
+  .outdoor-hero h1 em {
+    margin-top: 5px;
+  }
+  .outdoor-hero__lead {
+    order: 4;
+    font-size: 16px !important;
+  }
+  .outdoor-hero__figure {
+    order: 2;
+    margin-bottom: 24px;
+  }
+  .outdoor-hero__copy > .outdoor-actions {
+    order: 3;
+    margin-bottom: 26px;
+  }
+  .outdoor-hero__local {
+    order: 5;
+  }
+  .outdoor-benefits {
+    grid-template-columns: 1fr;
+  }
+  .outdoor-benefits > div,
+  .outdoor-benefits > div:first-child {
+    padding: 22px 0;
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 0 14px;
+  }
+  .outdoor-benefits > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .outdoor-benefits .outdoor-index {
+    grid-row: span 2;
+    margin: 4px 0 0;
+  }
+  .outdoor-benefits h2 {
+    margin-bottom: 8px;
+  }
+  .outdoor-benefits p {
+    grid-column: 2;
+  }
+  .outdoor-story,
+  .outdoor-detail,
+  .outdoor-budget,
+  .outdoor-showroom__grid,
+  .outdoor-faq {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .outdoor-section-heading {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .outdoor-section-heading > p {
+    padding: 0;
+  }
+  .outdoor-options__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .outdoor-options__grid h3 {
+    font-size: 29px;
+    max-width: none;
+  }
+  .outdoor-options__grid p {
+    font-size: 16px;
+  }
+  .outdoor-options__suitable {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .outdoor-detail figure {
+    order: 2;
+  }
+  .outdoor-detail figure img {
+    max-height: 600px;
+  }
+  .outdoor-planning ol {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .outdoor-planning li {
+    gap: 14px;
+    grid-template-columns: 24px 1fr;
+  }
+  .outdoor-planning__note {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .outdoor-planning__note h3 {
+    max-width: none;
+    margin: 0;
+  }
+  .outdoor-planning__note .editorial-link {
+    grid-column: auto;
+  }
+  .outdoor-showroom aside {
+    padding: 30px;
+  }
+  .outdoor-faq > div > p {
+    max-width: none;
+  }
+  .outdoor-faq summary {
+    font-size: 17px;
+  }
+  .outdoor-related__heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+  .outdoor-related__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .outdoor-related__grid h3 {
+    font-size: 28px;
+  }
+  .outdoor-related__grid p {
+    font-size: 15px;
+  }
+  .outdoor-reading {
+    grid-template-columns: 1fr;
+  }
+  .outdoor-reading > a,
+  .outdoor-reading > a:first-child {
+    padding: 26px 0;
+  }
+  .outdoor-reading > a + a {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .outdoor-reading h3 {
+    font-size: 23px;
+  }
+  .outdoor-reading h3 > span {
+    font-size: 20px;
+  }
+  .outdoor-contact > .shell {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .outdoor-contact__call {
+    border-left: 0;
+    border-top: 1px solid #5e6c60;
+    padding: 24px 0 0;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .outdoor-hero__figure {
+    animation: outdoor-arrive 0.7s ease-out both;
+  }
+  @keyframes outdoor-arrive {
+    from {
+      opacity: 0.4;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

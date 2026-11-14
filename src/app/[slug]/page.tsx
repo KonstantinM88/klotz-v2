@@ -13,7 +13,7 @@ import { CompanyPage } from "@/features/company/company-page";
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
   return (await repository.getOverviewPages())
-    .filter(({ slug }) => slug !== "angebote")
+    .filter(({ slug }) => !["angebote", "terrasse-garten"].includes(slug))
     .map(({ slug }) => ({ slug }));
 }
 export async function generateMetadata({ params }: Props) {

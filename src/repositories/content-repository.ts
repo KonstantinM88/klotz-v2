@@ -14,8 +14,12 @@ import type {
   OverviewPageContent,
 } from "@/domain/content/presentation";
 import type { OfferPageContent } from "@/domain/content/offers";
+import type { TerracePageContent } from "@/domain/content/terrace";
+import type { TerraceServiceContent } from "@/domain/content/terrace-service";
 
 export interface ContentRepository {
+  getTerracePageContent(): Promise<TerracePageContent>;
+  getTerraceServicePages(): Promise<TerraceServiceContent[]>;
   getOfferPages(): Promise<OfferPageContent[]>;
   getOfferPage(slug: string): Promise<OfferPageContent | undefined>;
   getCompanyPageContent(): Promise<CompanyPageContent>;

@@ -10,7 +10,7 @@ export const overviewPages: OverviewPageContent[] = [
     heading: "Wetterschutz, Licht und Komfort im richtigen Verhältnis.",
     body: [
       "Eine gute Überdachung beginnt nicht beim Produkt, sondern bei der Frage, wie Sie Ihren Außenbereich nutzen möchten. KLOTZ verbindet persönliche Beratung, präzises Aufmaß und eine Lösung, die sich gestalterisch in Ihr Zuhause einfügt.",
-      "Die Detailseiten und Produktdaten werden im nächsten Schritt anhand der freigegebenen Hersteller- und Projektdaten ausgebaut.",
+      "Ob festes Glasdach, bewegliche Lamellen oder ein geschützter Sommergarten: Nutzung, Beschattung, Einbausituation und mögliche Erweiterungen werden gemeinsam betrachtet. Beratung und Ausstellung finden Sie in Merseburg-Meuschau.",
     ],
     features: [
       "Terrassenüberdachungen",
