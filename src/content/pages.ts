@@ -60,17 +60,17 @@ export const overviewPages: OverviewPageContent[] = [
     eyebrow: "B2B & Wohnungswirtschaft",
     title: "Verlässlich für Objekt, Bestand und Betrieb.",
     intro:
-      "Planbare Leistungen, klare Kommunikation und feste Ansprechpartner für professionelle Auftraggeber.",
-    heading: "Komplexe Anforderungen strukturiert umsetzen.",
+      "Bauelemente, abgestimmte Montage und Service für Wohnungsbestand, Unternehmen, Hotels und Gastronomie aus Merseburg.",
+    heading: "Aufgabe, Objekt und Umsetzung gemeinsam klären.",
     body: [
-      "Gewerbliche und institutionelle Projekte brauchen belastbare Abläufe. Die künftige Plattform schafft dafür eigene Leistungsseiten, strukturierte Projektanfragen und nachvollziehbare Referenzen.",
-      "Ausschreibungsunterlagen, Objektlisten oder wiederkehrende Serviceanfragen lassen sich später über geschützte Workflows ergänzen.",
+      "Bestand, Nutzung und gewünschte Veränderung bilden die Grundlage für Beratung, Aufmaß und ein abgegrenztes Angebot.",
+      "Zugänge, Beteiligte und Montagebedingungen werden für den konkreten Auftrag besprochen. Fotos, grobe Maße und Projektort helfen beim Einstieg.",
     ],
     features: [
       "Objektgeschäft & Bestand",
       "Wohnungswirtschaft",
       "Gewerbe & Gastronomie",
-      "Öffentliche Auftraggeber",
+      "Wartung & Service",
     ],
   },
   {

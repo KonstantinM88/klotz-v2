@@ -21,6 +21,8 @@ import { windowsPageContent } from "@/content/windows";
 import { windowsServicePages } from "@/content/windows-services";
 import { fencePageContent } from "@/content/fence";
 import { fenceServicePages } from "@/content/fence-services";
+import { businessPageContent } from "@/content/business";
+import { businessServicePages } from "@/content/business-services";
 
 function withAsset<
   T extends {
@@ -42,6 +44,12 @@ function withAsset<
 }
 
 export const localContentRepository: ContentRepository = {
+  async getBusinessPageContent() {
+    return businessPageContent;
+  },
+  async getBusinessServicePages() {
+    return businessServicePages;
+  },
   async getFencePageContent() {
     return fencePageContent;
   },

@@ -15,9 +15,13 @@ export async function generateStaticParams() {
   return (await repository.getOverviewPages())
     .filter(
       ({ slug }) =>
-        !["angebote", "terrasse-garten", "fenster-tueren", "zaun-tor"].includes(
-          slug,
-        ),
+        ![
+          "angebote",
+          "terrasse-garten",
+          "fenster-tueren",
+          "zaun-tor",
+          "gewerbekunden",
+        ].includes(slug),
     )
     .map(({ slug }) => ({ slug }));
 }

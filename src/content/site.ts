@@ -1,4 +1,5 @@
 import { fenceMedia } from "./fence-media";
+import { businessWorkMedia } from "./business-media";
 import { windowsMedia } from "./windows-media";
 import type {
   Article,
@@ -118,16 +119,9 @@ export const serviceCategories: ServiceCategory[] = z
       slug: "gewerbekunden",
       title: "Gewerbe & Wohnungswirtschaft",
       description:
-        "Planbare Leistungen für Bestand, Objekt und laufenden Service.",
+        "Bauelemente, Montage und Service für Hausverwaltungen, Unternehmen, Hotels und Gastronomie.",
       href: "/gewerbekunden",
-      image: {
-        src: "/images/gewerbe.webp",
-        alt: "Architektonische Outdoor-Lösung für Gewerbe und Gastronomie",
-        width: 740,
-        height: 588,
-        sourceUrl: `${legacyBase}/`,
-        rightsStatus: "rights-check",
-      },
+      image: businessWorkMedia.image,
       status: "legacy",
     },
   ]);

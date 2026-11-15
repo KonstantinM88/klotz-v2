@@ -6,6 +6,7 @@ import Link from "next/link";
 import { TerraceServicePage } from "@/features/terrace/terrace-service-page";
 import { WindowsServicePage } from "@/features/windows/windows-service-page";
 import { FenceServicePage } from "@/features/fence/fence-service-page";
+import { BusinessServicePage } from "@/features/business/business-service-page";
 type Props = { params: Promise<{ slug: string; service: string }> };
 export async function generateStaticParams() {
   return (await repository.getServices()).map((s) => {
@@ -15,6 +16,19 @@ export async function generateStaticParams() {
 }
 export async function generateMetadata({ params }: Props) {
   const p = await params;
+  if (p.slug === "gewerbekunden") {
+    const detail = (await repository.getBusinessServicePages()).find(
+      (page) => page.slug === p.service,
+    );
+    return detail
+      ? pageMetadata(
+          detail.metaTitle,
+          detail.metaDescription,
+          `/gewerbekunden/${detail.slug}`,
+          detail.media.image.src,
+        )
+      : {};
+  }
   if (p.slug === "zaun-tor") {
     const detail = (await repository.getFenceServicePages()).find(
       (page) => page.slug === p.service,
@@ -68,6 +82,27 @@ export async function generateMetadata({ params }: Props) {
 }
 export default async function ServicePage({ params }: Props) {
   const p = await params;
+  if (p.slug === "gewerbekunden") {
+    const [pages, overview, site, articles] = await Promise.all([
+      repository.getBusinessServicePages(),
+      repository.getBusinessPageContent(),
+      repository.getSiteSettings(),
+      repository.getFeaturedArticles(),
+    ]);
+    const detail = pages.find((page) => page.slug === p.service);
+    if (!detail) notFound();
+    return (
+      <BusinessServicePage
+        content={detail}
+        site={site}
+        related={detail.related.flatMap((slug) =>
+          pages.filter((page) => page.slug === slug),
+        )}
+        process={overview.process}
+        guide={articles.find((article) => article.slug === detail.guideSlug)}
+      />
+    );
+  }
   if (p.slug === "zaun-tor") {
     const [pages, site, articles] = await Promise.all([
       repository.getFenceServicePages(),

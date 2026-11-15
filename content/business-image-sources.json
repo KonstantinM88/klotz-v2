@@ -1,0 +1,38 @@
+[
+  {
+    "id": "business-work",
+    "sourcePage": "https://www.klotz.mobi/Wartung-und-Service",
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/20161027_153640.jpg?itok=CD-jph-X",
+    "factStatus": "legacy-work-photo"
+  },
+  {
+    "id": "business-workshop",
+    "sourcePage": "https://www.klotz.mobi/Wartung-und-Service",
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/IMG_9193.jpg?itok=63lcrmqc",
+    "factStatus": "legacy-work-photo"
+  },
+  {
+    "id": "business-industry-hero",
+    "sourcePage": "https://www.klotz.mobi/produkte/stahlhoftore",
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/020-modern-wisniowski.jpg?itok=bweSY5kd",
+    "factStatus": "legacy-product-illustration"
+  },
+  {
+    "id": "business-industry-detail",
+    "sourcePage": "https://www.klotz.mobi/produkte/stahlhoftore",
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/020-ogrodzenia-wisniowski.jpg?itok=zqlvS6Ai",
+    "factStatus": "legacy-product-illustration"
+  },
+  {
+    "id": "business-hospitality-hero",
+    "sourcePage": "https://www.klotz.mobi/inspirationen-f%C3%BCr-die-hotellerie-gastronomiebranche",
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/IMG%20OPERA_02.jpg?itok=kWDNt5Ho",
+    "factStatus": "legacy-product-illustration"
+  },
+  {
+    "id": "business-hospitality-detail",
+    "sourcePage": "https://www.klotz.mobi/inspirationen-f%C3%BCr-die-hotellerie-gastronomiebranche",
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/IMG%20OPERA_03.jpg?itok=ZBD2x_NB",
+    "factStatus": "legacy-product-illustration"
+  }
+]

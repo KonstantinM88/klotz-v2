@@ -15,7 +15,7 @@ export async function serviceRequestContext(
     slug: string;
     topic: Topic;
     message: string;
-    pages: () => Promise<ServicePageContent[]>;
+    pages: () => Promise<(ServicePageContent & { inquiryTopic?: Topic })[]>;
   }[] = [
     {
       slug: "terrasse-garten",
@@ -38,6 +38,13 @@ export async function serviceRequestContext(
         "Ich interessiere mich für Zaun, Tor oder Geländer. Bitte beraten Sie mich zur passenden Gestaltung, Ausführung und Montage.",
       pages: () => repository.getFenceServicePages(),
     },
+    {
+      slug: "gewerbekunden",
+      topic: "Gewerbe / Wohnungswirtschaft",
+      message:
+        "Ich möchte eine Objektanfrage für unser Unternehmen oder unseren Wohnungsbestand besprechen.\n\nProjektort / PLZ:\nNutzung und betroffene Bauelemente:\nGewünschte Arbeiten:\nAnsprechpartner und Terminwunsch:",
+      pages: () => repository.getBusinessServicePages(),
+    },
   ];
   if (typeof leistung === "string") {
     const sets = await Promise.all(groups.map((group) => group.pages()));
@@ -47,7 +54,7 @@ export async function serviceRequestContext(
       if (page && group)
         return {
           key: `${group.slug}/${page.slug}`,
-          topic: group.topic,
+          topic: page.inquiryTopic ?? group.topic,
           message: `${page.requestMessage}\n\nMein Vorhaben: `,
         };
     }
