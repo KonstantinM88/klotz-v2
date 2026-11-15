@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import type { Article, SiteSettings } from "@/domain/content/types";
 import type { ServicePageContent } from "@/domain/content/service-page";
@@ -22,12 +23,14 @@ export function ServiceLandingPage({
   related,
   context,
   guide,
+  gallery,
 }: {
   content: ServicePageContent;
   site: SiteSettings;
   related: ServicePageContent[];
   context: ServicePageContext;
   guide?: Article;
+  gallery?: ReactNode;
 }) {
   const requestHref = `/projekt-anfragen?leistung=${content.slug}`;
   return (
@@ -69,7 +72,14 @@ export function ServiceLandingPage({
           </div>
           <figure className="outdoor-hero__figure">
             <ServiceMedia media={content.media} priority />
-            <figcaption>{content.media.caption}</figcaption>
+            <figcaption>
+              {content.media.caption}
+              {gallery ? (
+                <a className="outdoor-gallery-shortcut" href="#bilder">
+                  Zur Bildergalerie <span aria-hidden="true">↘</span>
+                </a>
+              ) : null}
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -156,6 +166,7 @@ export function ServiceLandingPage({
           </ButtonLink>
         </div>
       </section>
+      {gallery}
       <section className="outdoor-planning" aria-labelledby="planning-title">
         <div className="shell outdoor-section">
           <div className="outdoor-section-heading">

@@ -1,7 +1,9 @@
 import { terraceImage as image, mediaForTerraceService } from "./terrace-media";
 import type { TerracePageContent } from "@/domain/content/terrace";
+import { terraceOverviewGallery } from "./terrace-galleries";
 
 export const terracePageContent: TerracePageContent = {
+  gallery: terraceOverviewGallery,
   metadata: {
     title: "Terrassenüberdachung & Lamellendach in Merseburg",
     description:

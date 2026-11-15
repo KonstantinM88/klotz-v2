@@ -7,6 +7,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { terraceStructuredData } from "./structured-data";
 import { ServiceMedia } from "./service-media";
+import { TerracePhotoGallery } from "./terrace-photo-gallery";
 import "@/styles/terrace.css";
 
 const requestHref = "/projekt-anfragen?bereich=terrasse-garten";
@@ -187,6 +188,7 @@ export function TerracePage({
         </p>
       </section>
 
+      <TerracePhotoGallery content={content.gallery} />
       <section
         className="terrace-choice"
         id="vergleich"

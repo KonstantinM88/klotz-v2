@@ -1,5 +1,6 @@
 import type { ImageAsset } from "./types";
 import type { TerraceMedia } from "./terrace-service";
+import type { ServiceGalleryContent } from "./service-gallery";
 
 export type TerraceSolution = {
   id: string;
@@ -13,6 +14,7 @@ export type TerraceSolution = {
 };
 
 export type TerracePageContent = {
+  gallery: ServiceGalleryContent;
   metadata: { title: string; description: string };
   hero: { title: string; accent: string; lead: string; image: ImageAsset };
   introduction: string;

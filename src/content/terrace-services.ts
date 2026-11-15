@@ -1,5 +1,6 @@
 import type { TerraceServiceContent } from "@/domain/content/terrace-service";
 import { terraceImage as image, terraceMedia } from "./terrace-media";
+import { terraceGalleries } from "./terrace-galleries";
 
 const base = "https://www.klotz.mobi";
 const companySources = [`${base}/ueber-uns`, `${base}/kontakt`];
@@ -18,6 +19,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       cta: "Mein Terrassendach besprechen",
     },
     media: terraceMedia.terrassenueberdachungen,
+    gallery: terraceGalleries["terrassenueberdachungen"]!,
     benefits: [
       {
         title: "Draußen mehr vorhaben",
@@ -149,6 +151,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       cta: "Mein Lamellendach planen",
     },
     media: terraceMedia.lamellendaecher,
+    gallery: terraceGalleries["lamellendaecher"]!,
     benefits: [
       {
         title: "Licht aktiv gestalten",
@@ -276,6 +279,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       cta: "Meine Pergola gestalten",
     },
     media: terraceMedia.pergolen,
+    gallery: terraceGalleries["pergolen"]!,
     benefits: [
       {
         title: "Schatten nach Bedarf",
@@ -403,6 +407,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       cta: "Meinen Gartenraum besprechen",
     },
     media: terraceMedia["sommer-wintergaerten"],
+    gallery: terraceGalleries["sommer-wintergaerten"]!,
     benefits: [
       {
         title: "Den Übergang gestalten",
@@ -539,6 +544,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       cta: "Meine Glaslösung anfragen",
     },
     media: terraceMedia.glasschiebewaende,
+    gallery: terraceGalleries["glasschiebewaende"]!,
     benefits: [
       {
         title: "Die Aussicht behalten",
@@ -674,6 +680,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       cta: "Meinen Sonnenschutz finden",
     },
     media: terraceMedia.sonnenschutz,
+    gallery: terraceGalleries["sonnenschutz"]!,
     benefits: [
       {
         title: "Schatten am richtigen Ort",
