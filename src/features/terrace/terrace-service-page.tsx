@@ -1,7 +1,7 @@
 import type { Article, Project, SiteSettings } from "@/domain/content/types";
 import type { TerraceServiceContent } from "@/domain/content/terrace-service";
 import { ServiceLandingPage } from "@/features/services/service-landing-page";
-import { TerracePhotoGallery } from "./terrace-photo-gallery";
+import { ServicePhotoGallery } from "@/features/services/service-photo-gallery";
 export function TerraceServicePage({
   content,
   site,
@@ -28,7 +28,7 @@ export function TerraceServicePage({
       site={site}
       related={related}
       guide={guide}
-      gallery={<TerracePhotoGallery content={content.gallery} />}
+      gallery={<ServicePhotoGallery content={content.gallery} />}
       context={{
         label: "Terrasse & Garten",
         href: "/terrasse-garten",

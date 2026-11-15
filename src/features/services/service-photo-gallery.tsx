@@ -5,18 +5,22 @@ import { useEffect, useRef, useState, type MouseEvent } from "react";
 import type { ServiceGalleryContent } from "@/domain/content/service-gallery";
 import "@/styles/terrace-photo-gallery.css";
 
-export function TerracePhotoGallery({
+export function ServicePhotoGallery({
   content,
 }: {
   content: ServiceGalleryContent;
 }) {
   const [active, setActive] = useState<number>();
+  const [groupId, setGroupId] = useState<string>();
   const dialog = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLAnchorElement | null>(null);
   const strip = useRef<HTMLDivElement>(null);
   const pointer = useRef<{ x: number; y: number } | undefined>(undefined);
-  const current = content.items[active ?? 0]!;
-  const total = content.items.length;
+  const items = groupId
+    ? content.items.filter((item) => item.groupId === groupId)
+    : content.items;
+  const current = items[active ?? 0]!;
+  const total = items.length;
   function open(event: MouseEvent<HTMLAnchorElement>, index: number) {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
       return;
@@ -64,7 +68,7 @@ export function TerracePhotoGallery({
           <p className="terrace-photo-gallery__lead">{content.lead}</p>
           <a
             className="editorial-link"
-            href={content.items[0]!.image.src}
+            href={items[0]!.image.src}
             onClick={(event) => open(event, 0)}
             aria-haspopup="dialog"
           >
@@ -72,8 +76,54 @@ export function TerracePhotoGallery({
           </a>
         </div>
       </div>
-      <div className="terrace-photo-gallery__grid">
-        {content.items.slice(0, 6).map((item, index) => (
+      {content.groups?.length ? (
+        <nav
+          className="service-photo-filters"
+          aria-label="Bilder nach Material auswählen"
+        >
+          {[
+            { id: undefined, label: "Alle", href: "#bilder" },
+            ...content.groups,
+          ].map((group) => (
+            <a
+              key={group.id ?? "all"}
+              href={group.href}
+              aria-current={groupId === group.id ? "true" : undefined}
+              onClick={(event) => {
+                if (
+                  event.ctrlKey ||
+                  event.metaKey ||
+                  event.shiftKey ||
+                  event.altKey
+                )
+                  return;
+                event.preventDefault();
+                setGroupId(group.id);
+                setActive(undefined);
+              }}
+            >
+              {group.label}
+              <span>
+                {group.id
+                  ? content.items.filter((item) => item.groupId === group.id)
+                      .length
+                  : content.items.length}
+              </span>
+            </a>
+          ))}
+        </nav>
+      ) : null}
+      {content.groups?.length ? (
+        <p className="service-photo-filter-count" role="status">
+          {groupId
+            ? `${total} Ansichten · ${content.groups.find((group) => group.id === groupId)!.label}`
+            : `${total} Ansichten · Alle Materialien`}
+        </p>
+      ) : null}
+      <div
+        className={`terrace-photo-gallery__grid${groupId ? " terrace-photo-gallery__grid--filtered" : ""}`}
+      >
+        {items.slice(0, 6).map((item, index) => (
           <figure
             className={`terrace-photo-gallery__tile${item.image.height > item.image.width * 1.1 ? " terrace-photo-gallery__tile--portrait" : ""}`}
             key={item.id}
@@ -122,7 +172,7 @@ export function TerracePhotoGallery({
         <p>{content.note}</p>
         <a
           className="button button--secondary"
-          href={content.items[0]!.image.src}
+          href={items[0]!.image.src}
           aria-haspopup="dialog"
           onClick={(event) => open(event, 0)}
         >
@@ -141,7 +191,14 @@ export function TerracePhotoGallery({
         aria-labelledby="terrace-photo-viewer-title"
         onClose={() => {
           setActive(undefined);
-          opener.current?.focus({ preventScroll: true });
+          const focused = document.activeElement;
+          // Native dialogs restore focus first. Respect a user's next focus move.
+          if (
+            !focused ||
+            focused === document.body ||
+            dialog.current?.contains(focused)
+          )
+            opener.current?.focus({ preventScroll: true });
         }}
         onKeyDown={(event) => {
           if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
@@ -154,8 +211,8 @@ export function TerracePhotoGallery({
           }
           if (event.key === "Tab") {
             const buttons = [
-              ...event.currentTarget.querySelectorAll<HTMLButtonElement>(
-                "button",
+              ...event.currentTarget.querySelectorAll<HTMLElement>(
+                "button, a[href]",
               ),
             ].filter((button) => button.getClientRects().length > 0);
             const first = buttons[0],
@@ -228,7 +285,11 @@ export function TerracePhotoGallery({
                   loading="eager"
                   placeholder="blur"
                   blurDataURL={current.blurDataURL}
-                  style={{ objectFit: "contain" }}
+                  style={{
+                    objectFit: "contain",
+                    maxWidth: current.image.width,
+                    maxHeight: current.image.height,
+                  }}
                   sizes="(max-width: 760px) 80vw, 85vw"
                 />
               </div>
@@ -252,6 +313,14 @@ export function TerracePhotoGallery({
               <div>
                 <h3>{current.title}</h3>
                 <p>{current.caption}</p>
+                {current.requestHref ? (
+                  <a
+                    className="service-photo-request"
+                    href={current.requestHref}
+                  >
+                    Diese Ansicht besprechen <span aria-hidden="true">↗</span>
+                  </a>
+                ) : null}
               </div>
             </div>
             <div
@@ -260,7 +329,7 @@ export function TerracePhotoGallery({
               role="group"
               aria-label="Bildauswahl"
             >
-              {content.items.map((item, index) => (
+              {items.map((item, index) => (
                 <button
                   type="button"
                   key={item.id}

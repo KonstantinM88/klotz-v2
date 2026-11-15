@@ -16,7 +16,10 @@ import type {
 import type { OfferPageContent } from "@/domain/content/offers";
 import type { TerracePageContent } from "@/domain/content/terrace";
 import type { TerraceServiceContent } from "@/domain/content/terrace-service";
-import type { WindowsPageContent } from "@/domain/content/windows";
+import type {
+  WindowsPageContent,
+  WindowsServiceContent,
+} from "@/domain/content/windows";
 import type { ServicePageContent } from "@/domain/content/service-page";
 import type { FencePageContent } from "@/domain/content/fence";
 import type {
@@ -34,7 +37,7 @@ export interface ContentRepository {
   getFencePageContent(): Promise<FencePageContent>;
   getFenceServicePages(): Promise<ServicePageContent[]>;
   getWindowsPageContent(): Promise<WindowsPageContent>;
-  getWindowsServicePages(): Promise<ServicePageContent[]>;
+  getWindowsServicePages(): Promise<WindowsServiceContent[]>;
   getTerracePageContent(): Promise<TerracePageContent>;
   getTerraceServicePages(): Promise<TerraceServiceContent[]>;
   getOfferPages(): Promise<OfferPageContent[]>;

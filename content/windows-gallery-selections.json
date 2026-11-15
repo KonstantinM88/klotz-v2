@@ -1,0 +1,555 @@
+[
+  {
+    "slug": "fenster",
+    "title": "Licht verändert Räume.",
+    "accent": "Details verändern Fenster.",
+    "lead": "Fassaden mit Charakter, Rahmen im Detail und fließende Übergänge nach draußen: Diese Ansichten helfen, Material und Öffnungsart gemeinsam zu betrachten. Wählen Sie eine Richtung – die konkrete Ausführung planen wir für Ihr Haus.",
+    "items": [
+      {
+        "id": "windows-gallery-fenster-01",
+        "title": "Holzfenster · Die Fassade im Blick",
+        "caption": "Teilung und Proportionen greifen den Charakter des Gebäudes auf.",
+        "alt": "Weiße Holzfenster mit gegliederten Oberlichtern in einer gelben Fassade",
+        "sourcePage": "https://www.klotz.mobi/holzfenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Fenster_Holzfenster%20%288%29.jpg?itok=45gjXSz7",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-02",
+        "title": "Terrassentüren · Dem Garten näher",
+        "caption": "Große Glasflächen verbinden den Wohnraum mit dem Außenbereich.",
+        "alt": "Bodentiefe verglaste Terrassentüren zwischen heller Sitzecke und Garten",
+        "sourcePage": "https://www.klotz.mobi/terrassentueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/2392a24.JPG?itok=ZTZcNrnW",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-03",
+        "title": "Aluminium · Der Aufbau zählt",
+        "caption": "Schnittmodell eines Aluminiumfensters als Gesprächsgrundlage.",
+        "alt": "Schnittmodell eines Aluminiumfensters mit dunklem Rahmen und mehrteiliger Verglasung",
+        "sourcePage": "https://www.klotz.mobi/alufenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Alufenster1_AWS_75_BS_SI_plus_e.jpg?itok=SIauVMc_",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-04",
+        "title": "Kunststoff · Hell und zurückhaltend",
+        "caption": "Rahmen, Glas und Dichtungen als vollständiges Element betrachten.",
+        "alt": "Schnittmodell eines weißen Kunststofffensters mit sichtbarem Profilaufbau",
+        "sourcePage": "https://www.klotz.mobi/kunststofffenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Fenster_Modern%20%286%29.jpg?itok=kqo63p3c",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-05",
+        "title": "Holzfenster · Konturen bewahren",
+        "caption": "Fenster und Fassadendetails wirken als gestalterische Einheit.",
+        "alt": "Weiße Fenster unter geschwungenen Stuckverzierungen einer hellen Fassade",
+        "sourcePage": "https://www.klotz.mobi/holzfenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Fenster_Holzfenster%20%282%29.jpg?itok=FGpOFIhk",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-06",
+        "title": "Holzfenster · Teilung mit Rhythmus",
+        "caption": "Auch bei mehreren Etagen entscheidet das Gesamtbild.",
+        "alt": "Gegliederte Fenster in einer mehrgeschossigen historischen Fassade mit Stuck",
+        "sourcePage": "https://www.klotz.mobi/holzfenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Fenster_Holzfenster%20%287%29.jpg?itok=wlcwA3tT",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-07",
+        "title": "Aluminium · Eine weitere Perspektive",
+        "caption": "Profil und Verglasung werden für das gewählte System abgestimmt.",
+        "alt": "Aluminiumfenster als aufgeschnittenes Profilmodell mit sichtbaren inneren Kammern",
+        "sourcePage": "https://www.klotz.mobi/alufenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Alufenster2_AWS_90_SI_plus_Green_e.jpg?itok=CMV-TU08",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-08",
+        "title": "Aluminium · Verschattung mitdenken",
+        "caption": "Die gewünschte Lichtführung gehört in die frühe Planung.",
+        "alt": "Aluminiumfenstermodell mit dunklem Sonnenschutzelement vor der Verglasung",
+        "sourcePage": "https://www.klotz.mobi/alufenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Alufenster3_AWS_Blendschutz_d.jpg?itok=BORwidi0",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-09",
+        "title": "Aluminium · Rahmen und Glas",
+        "caption": "Die Anforderungen betreffen das ganze Fensterelement.",
+        "alt": "Schnittmodell eines Aluminiumrahmens mit mehrschichtig dargestellter Verglasung",
+        "sourcePage": "https://www.klotz.mobi/alufenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Alufenster5_AWS_112_IC_e.jpg?itok=SLr7LO6A",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-10",
+        "title": "Kunststoff · Farbe als Akzent",
+        "caption": "Innenansicht und Fassadenfarbe dürfen unterschiedlich gedacht werden.",
+        "alt": "Kunststofffenster-Schnittmodell mit roter äußerer Oberfläche und weißem Innenrahmen",
+        "sourcePage": "https://www.klotz.mobi/kunststofffenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Fenster_Modern%20%285%29.jpg?itok=jv8tSDRn",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-11",
+        "title": "Kunststoff · Dunkle Außenansicht",
+        "caption": "Dekor und Profilansicht mit den übrigen Bauelementen vergleichen.",
+        "alt": "Kunststofffenster als Schnittmodell mit dunkelroter äußerer Profiloberfläche",
+        "sourcePage": "https://www.klotz.mobi/kunststofffenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Fenster_Modern%20%287%29.jpg?itok=rWHng_g1",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-12",
+        "title": "Kunststoff · Klare Profilansicht",
+        "caption": "Das Muster macht Unterschiede zwischen Rahmenaufbauten sichtbar.",
+        "alt": "Weißes Kunststofffenster-Profilmodell mit geöffneter Darstellung der inneren Kammern",
+        "sourcePage": "https://www.klotz.mobi/kunststofffenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Fenster_Modern%20%288%29.jpg?itok=gOuY1FzU",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-13",
+        "title": "Dreh-Kipp · Der vertraute Zugang",
+        "caption": "Öffnungsraum und Möbelstellung gehören zur Auswahl.",
+        "alt": "Produktabbildung einer weißen verglasten Terrassentür in einem hellen Wohnraum",
+        "sourcePage": "https://www.klotz.mobi/terrassentueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_TerassenTueren%20%281%29.jpg?itok=4Hrs93ap",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-14",
+        "title": "Schieben · Raum vor der Öffnung",
+        "caption": "Schiebende Flügel können die Einrichtung vor dem Zugang erleichtern.",
+        "alt": "Produktabbildung einer breiten Glasschiebetür mit Blick auf eine Terrasse",
+        "sourcePage": "https://www.klotz.mobi/terrassentueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Easy_Slide%5B1%5Dcmyk_01.jpg?itok=PvHWRyIo",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-fenster-15",
+        "title": "Falten · Den Übergang öffnen",
+        "caption": "Faltende Flügel benötigen einen passend geplanten Abstellbereich.",
+        "alt": "Produktabbildung einer geöffneten Glasfalttür zwischen Wohnraum und Terrasse",
+        "sourcePage": "https://www.klotz.mobi/terrassentueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Falttuer_Mood_01_50P_01.jpg?itok=QPpkjZEP",
+        "sourceTitle": ""
+      }
+    ]
+  },
+  {
+    "slug": "haustueren",
+    "title": "Ein Eingang.",
+    "accent": "Viele Möglichkeiten.",
+    "lead": "Aluminium, Kunststoff oder Holz: Entdecken Sie unterschiedliche Materialien, Lichtausschnitte und Proportionen. Die Bilder zeigen Gestaltungsideen; Motiv, Ausstattung und Einbau werden für Ihren Eingang zusammengestellt.",
+    "items": [
+      {
+        "id": "windows-gallery-haustueren-01",
+        "title": "Aluminium · Ruhe in der Fassade",
+        "caption": "Eine dunkle Tür setzt einen klaren Akzent am hellen Haus.",
+        "alt": "Dunkle Aluminiumhaustür mit langem Griff in einer zurückgesetzten weißen Fassade",
+        "sourcePage": "https://www.klotz.mobi/alutueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/neu8.jpg?itok=LHtRzgdZ",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-02",
+        "title": "Holz · Natürlich modern",
+        "caption": "Eine sichtbare Holzoberfläche kann auch geradlinig wirken.",
+        "alt": "Geradlinige Holzhaustür mit schmalem Glasausschnitt in einer Klinkerfassade",
+        "sourcePage": "https://www.klotz.mobi/holztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_KlennerHolz%20%284%29.jpg?itok=JEeRzynP",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-03",
+        "title": "Kunststoff · Klare Linien",
+        "caption": "Glasstreifen und Griff geben dem Türblatt seine Richtung.",
+        "alt": "Dunkle Kunststoffhaustür mit zwei schmalen senkrechten Glasstreifen an heller Fassade",
+        "sourcePage": "https://www.klotz.mobi/kunststofftueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Unbenannt2.jpg?itok=D4wscJYY",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-04",
+        "title": "Kunststoff · Ein bewegtes Motiv",
+        "caption": "Glasausschnitt und Fläche bewusst zusammenstellen.",
+        "alt": "Dunkle Haustür mit gebogenem Glasmotiv an einer weißen Hauswand",
+        "sourcePage": "https://www.klotz.mobi/kunststofftueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Klauke%20%2826%29.jpg?itok=JSk8d9Y5",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-05",
+        "title": "Holz · Klassischer Empfang",
+        "caption": "Glas, Teilung und Holzton prägen eine traditionelle Ansicht.",
+        "alt": "Zweiflügelige dunkle Holzhaustür mit dekorativen Glaseinsätzen und Oberlicht",
+        "sourcePage": "https://www.klotz.mobi/holztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Holztuer_Klotz_2.jpg?itok=YbARZgLG",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-06",
+        "title": "Aluminium · Licht von der Seite",
+        "caption": "Ein Seitenteil verändert Helligkeit und Proportion des Eingangs.",
+        "alt": "Graue Aluminiumhaustür mit langem Griff und seitlicher Verglasung in heller Klinkerfassade",
+        "sourcePage": "https://www.klotz.mobi/alutueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Aluminiumtueren%20%281%29.jpg?itok=1CvGncnW",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-07",
+        "title": "Aluminium · Farbe zeigen",
+        "caption": "Türfarbe und Verglasung bilden einen bewussten Kontrast.",
+        "alt": "Rote Aluminiumhaustür mit großflächiger seitlicher und oberer Verglasung",
+        "sourcePage": "https://www.klotz.mobi/alutueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Aluminiumtueren%20%2818%29.jpg?itok=lieHecYc",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-08",
+        "title": "Aluminium · Ein grafischer Akzent",
+        "caption": "Ein markantes Motiv setzt sich von der Fassade ab.",
+        "alt": "Dunkle Aluminiumhaustür mit schräg angeordnetem Glaselement und langem Griff",
+        "sourcePage": "https://www.klotz.mobi/alutueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Aluminiumtueren%20%2817%29.jpg?itok=cWS6Hmw_",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-09",
+        "title": "Kunststoff · Die Innenansicht",
+        "caption": "Der Eingang soll auch zum Flur und zur Einrichtung passen.",
+        "alt": "Weiße Haustür mit dekorativer Verglasung von innen neben einer Treppe",
+        "sourcePage": "https://www.klotz.mobi/kunststofftueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Klauke%20%283%29.jpg?itok=YZMdCG2m",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-10",
+        "title": "Kunststoff · Ein Eingang als Einheit",
+        "caption": "Seitenteil, Türblatt und Umgebung gemeinsam betrachten.",
+        "alt": "Dunkle Kunststoffhaustür mit seitlichen Glasflächen und Briefkasten vor hellem Haus",
+        "sourcePage": "https://www.klotz.mobi/kunststofftueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Klauke%20%2820%29.jpg?itok=qL60MSfs",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-11",
+        "title": "Holz · Ein warmer Ton",
+        "caption": "Materialwirkung mit Fassade und Boden zusammen auswählen.",
+        "alt": "Helle Holzhaustür mit schmalem Glasausschnitt an weiß verputztem Eingang",
+        "sourcePage": "https://www.klotz.mobi/holztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_KlennerHolz%20%282%29.JPG?itok=g-9ta4xd",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-haustueren-12",
+        "title": "Holz · Charakter erhalten",
+        "caption": "Bei bestehenden Gebäuden verdienen die vorhandenen Details Aufmerksamkeit.",
+        "alt": "Reich verzierte zweiflügelige Holzhaustür mit geschnitzten Füllungen in historischer Öffnung",
+        "sourcePage": "https://www.klotz.mobi/holztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Holztuer_Klotz_1.jpg?itok=Lx1DQNl6",
+        "sourceTitle": ""
+      }
+    ]
+  },
+  {
+    "slug": "innentueren",
+    "title": "Ein Stil.",
+    "accent": "Von Raum zu Raum.",
+    "lead": "Furnier mit natürlicher Zeichnung, ruhiger Weißlack, alltagstaugliche CPL-Dekore oder Glas für mehr Licht: Vergleichen Sie die Wirkung im Raum. Zargen, Griffe und Öffnungsrichtungen machen aus einzelnen Türen ein durchdachtes Ganzes.",
+    "items": [
+      {
+        "id": "windows-gallery-innentueren-01",
+        "title": "Furnier · Natürlich verbunden",
+        "caption": "Holzzeichnung verbindet Tür, Boden und Möbel.",
+        "alt": "Helle furnierte Innentür zwischen einem Flur und einem Wohnraum mit Holzfußboden",
+        "sourcePage": "https://www.klotz.mobi/echtholztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/seite_30_furnier_art_88_ahorn.jpg?itok=CFr6fYO2",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-02",
+        "title": "Weißlack · Licht und Ruhe",
+        "caption": "Weiße Türflächen können die Architektur zurückhaltend begleiten.",
+        "alt": "Weiße Innentür mit schmalen Lichtausschnitten in hellem Raum mit Holzfußboden",
+        "sourcePage": "https://www.klotz.mobi/weisslacktueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/seite_74_75_101.jpg?itok=RWt--pu0",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-03",
+        "title": "CPL · Holzoptik im Alltag",
+        "caption": "Eine Dekoroberfläche mit dem Boden und den Möbeln vergleichen.",
+        "alt": "Innentür mit dunklem Holzdekor und passender Zarge vor einer hellen Wand",
+        "sourcePage": "https://www.klotz.mobi/clp",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/milieu_eiche_antik_quer.jpg?itok=KpZ2ucQ2",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-04",
+        "title": "Glas · Räume bleiben verbunden",
+        "caption": "Glas lässt Blickbeziehungen und Tageslicht weiterwirken.",
+        "alt": "Zweiflügelige Glastür und Glasschiebeelement zwischen hellen Wohnräumen",
+        "sourcePage": "https://www.klotz.mobi/glastueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/screen_dt_gemini_ms_2flg_square_em_lform_st_gemini_mk_tvin20_em_g420r.jpg?itok=wU-j9sPg",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-05",
+        "title": "Furnier · Helle Materialwirkung",
+        "caption": "Maserung und Griff als Teil der Raumgestaltung wählen.",
+        "alt": "Geöffnete helle Holzfurniertür neben einem Bad mit weißem Waschtisch",
+        "sourcePage": "https://www.klotz.mobi/echtholztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/seite_09_steel_art_135_eiche_matt.jpg?itok=2-IrKLU-",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-06",
+        "title": "Glas · Ein großzügiger Übergang",
+        "caption": "Öffnungsart und Platzbedarf zusammen betrachten.",
+        "alt": "Zweiflügelige Glasschiebetür mit sichtbarer Laufschiene zwischen Wohnbereichen",
+        "sourcePage": "https://www.klotz.mobi/glastueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/screen_ga_typ3_streamtyp1_ms_2flg_edstyle_ecgp_g700regl.jpg?itok=1J2AkIGb",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-07",
+        "title": "Furnier · Ein satter Holzton",
+        "caption": "Natürliche Oberflächen setzen einen warmen Schwerpunkt.",
+        "alt": "Geschlossene dunkle Furniertür mit waagerechten Linien in einem Wohnraum",
+        "sourcePage": "https://www.klotz.mobi/echtholztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/seite_04_steel_art_135_amerik_nuss.jpg?itok=B5KBmKHW",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-08",
+        "title": "Furnier · Seitlich geöffnet",
+        "caption": "Für eine Schiebelösung braucht es Platz neben der Öffnung.",
+        "alt": "Helle Holzschiebetür vor der Wand zwischen zwei möblierten Wohnräumen",
+        "sourcePage": "https://www.klotz.mobi/echtholztueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/seite_25_furnier_art_typ_88_schiebet%C3%BCr_auf_wand_buche.jpg?itok=6N1GlQH4",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-09",
+        "title": "CPL · Weiß mit Lichtausschnitt",
+        "caption": "Oberfläche und Glas können im gleichen Konzept zusammenkommen.",
+        "alt": "Weiße CPL-Innentür mit drei schmalen Glasausschnitten und heller Zarge",
+        "sourcePage": "https://www.klotz.mobi/clp",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/milieu_9010.jpg?itok=7Iez8GnO",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-10",
+        "title": "CPL · Eine offene Perspektive",
+        "caption": "Auch bei einer Schiebetür bleibt die Oberfläche ein Gestaltungsthema.",
+        "alt": "Weiße seitlich laufende Innentür mit Lichtausschnitt an einer hellen Wand",
+        "sourcePage": "https://www.klotz.mobi/clp",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/milieu_9010_tvin.jpg?itok=ayTYMonR",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-11",
+        "title": "CPL · Dezenter Farbton",
+        "caption": "Ein zurückhaltender Ton kann sich sanft vom Raum abheben.",
+        "alt": "Helle Innentür mit dezent getönter Oberfläche neben einem weißen Möbel",
+        "sourcePage": "https://www.klotz.mobi/clp",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/milieu_taupe.jpg?itok=-pO8wyD1",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-12",
+        "title": "Weißlack · Linien im Türblatt",
+        "caption": "Feine Gliederungen geben einer hellen Fläche Struktur.",
+        "alt": "Weiße Innentür mit waagerechten Einsätzen neben einem modernen Waschtisch",
+        "sourcePage": "https://www.klotz.mobi/weisslacktueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/seite_79_steel-art_typ101.jpg?itok=5hJRv5IU",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-13",
+        "title": "Weißlack · Der Blick in den nächsten Raum",
+        "caption": "Zarge und Wandanschluss beeinflussen die gesamte Ansicht.",
+        "alt": "Weiße geöffnete Innentür mit profilierter Zarge in einem hellen Flur",
+        "sourcePage": "https://www.klotz.mobi/weisslacktueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/seite_50_sonderausf%C3%BChrung.jpg?itok=-Yei-ORo",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-14",
+        "title": "Glas · Leicht und transparent",
+        "caption": "Einblick und Raumverbindung bewusst auswählen.",
+        "alt": "Transparente Glastür mit dezentem Motiv und Metallbeschlägen in einem weißen Flur",
+        "sourcePage": "https://www.klotz.mobi/glastueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/screen_dt_alana_ms_2flg_square_em_lform.jpg?itok=8KRLvg48",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-15",
+        "title": "Glas · Licht mit Struktur",
+        "caption": "Teilweise satinierte Bereiche verändern den Einblick.",
+        "alt": "Geöffnete Glastür mit waagerechten satinierten Streifen und Metallgriff",
+        "sourcePage": "https://www.klotz.mobi/glastueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/screen_dt_lucido_vistadue_cg_h1043_cg_offen.jpg?itok=38EH0f82",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-innentueren-16",
+        "title": "Glas · Seitlich verschoben",
+        "caption": "Den Laufweg und die freie Wandfläche gemeinsam planen.",
+        "alt": "Satinierte Glasschiebetür an gelber Wand mit oberer Laufschiene",
+        "sourcePage": "https://www.klotz.mobi/glastueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/screen_st_atos_mk_edstyle_ecgp_g700r_dt_modus_ms_pure_cg_h4705.jpg?itok=9CeTtXP6",
+        "sourceTitle": ""
+      }
+    ]
+  },
+  {
+    "slug": "rolllaeden",
+    "title": "Licht nach Ihrem Rhythmus.",
+    "accent": "Rückzug nach Ihrem Gefühl.",
+    "lead": "Ansichten aus dem KLOTZ-Archiv zeigen Rollläden an unterschiedlichen Fassaden und Öffnungen. Farbe, Kasten, Führung und Bedienung betrachten wir gemeinsam mit Ihren Fenstern und Ihrem Tagesablauf.",
+    "items": [
+      {
+        "id": "windows-gallery-rolllaeden-01",
+        "title": "Terrasse · Sichtschutz am Abend",
+        "caption": "Auch bodentiefe Elemente gehören in die Raumplanung.",
+        "alt": "Weiße Rollläden an breiten bodentiefen Fenstern vor einer möblierten Terrasse",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2822%29.JPG?itok=i6ap-D85",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-rolllaeden-02",
+        "title": "Fassade · Als Ganzes gedacht",
+        "caption": "Kästen und Schienen beeinflussen das äußere Erscheinungsbild.",
+        "alt": "Modernes Haus mit weißer und roter Fassade und teilweise geschlossenen Rollläden",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2816%29.JPG?itok=HdBdhc59",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-rolllaeden-03",
+        "title": "Farbe · Ein eigener Akzent",
+        "caption": "Behang und Rahmen können sich farblich ergänzen.",
+        "alt": "Dunkelrote Rollläden mit grauen Führungsschienen an zwei nebeneinanderliegenden Fenstern",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%285%29.JPG?itok=fLdeQLRd",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-rolllaeden-04",
+        "title": "Bestand · Vor der Öffnung",
+        "caption": "Die Einbausituation bestimmt die Position des Kastens.",
+        "alt": "Weißer geschlossener Rollladen mit sichtbarem Kasten an einem Fenster im Bestand",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2821%29.JPG?itok=xqfUfJrC",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-rolllaeden-05",
+        "title": "Mehrere Etagen · Ein Konzept",
+        "caption": "Fenstergruppen mit einer gemeinsamen Gestaltung verbinden.",
+        "alt": "Weißes mehrgeschossiges Wohnhaus mit mehreren teilweise geschlossenen Rollläden",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2824%29.JPG?itok=CUNrkYPQ",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-rolllaeden-06",
+        "title": "Sichtschutz · In der Nähe des Gartens",
+        "caption": "Die gewünschte Privatsphäre wird für jeden Raum abgestimmt.",
+        "alt": "Beiger geschlossener Rollladen vor einer Terrassentür mit hohen Gräsern im Vordergrund",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2823%29.JPG?itok=QKxPqg3c",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-rolllaeden-07",
+        "title": "Balkon · Innen und außen betrachten",
+        "caption": "Balkontüren brauchen eine bewusst geplante Bedienung.",
+        "alt": "Weiße Rollläden an Fenstern und einer Balkontür einer hellen Hausfassade",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2820%29.JPG?itok=Nlvd1t3P",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-rolllaeden-08",
+        "title": "Architektur · Auch am Giebel",
+        "caption": "Form und Zugänglichkeit sind Teil der individuellen Prüfung.",
+        "alt": "Haus mit verglastem Giebel und außenliegenden Rollläden an mehreren Fensterformen",
+        "sourcePage": "https://www.klotz.mobi/rolllaeden",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2825%29.JPG?itok=vObHc3a4",
+        "sourceTitle": ""
+      }
+    ]
+  },
+  {
+    "slug": "einbruchschutz",
+    "title": "Die Zugänge kennen.",
+    "accent": "Das Ganze betrachten.",
+    "lead": "Fenster, Haustür und Terrassenzugang bilden unterschiedliche Aufgaben für die Sicherheitsplanung. Diese Produktansichten dienen der Orientierung am Bauteil. Sie zeigen keine nachgewiesene Schutzklasse; geeignete Ausstattung und Montage werden konkret geprüft.",
+    "items": [
+      {
+        "id": "windows-gallery-einbruchschutz-01",
+        "title": "Haustür · Auch von innen denken",
+        "caption": "Bedienung und Verriegelung nach dem tatsächlichen Alltag besprechen.",
+        "alt": "Innenansicht einer dunklen Haustür in einem hellen Flur mit Sitzbank",
+        "sourcePage": "https://www.klotz.mobi/kunststofftueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Klauke%20%2830%29.jpg?itok=LZ0zsFXD",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-einbruchschutz-02",
+        "title": "Terrassenzugang · Den Garten einbeziehen",
+        "caption": "Erreichbare Zugänge am Haus gemeinsam erfassen.",
+        "alt": "Bodentiefe verglaste Terrassenelemente zwischen Wohnraum und Gartenbereich",
+        "sourcePage": "https://www.klotz.mobi/terrassentueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/2392a24.JPG?itok=ZTZcNrnW",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-einbruchschutz-03",
+        "title": "Fenster · Mehr als ein Griff",
+        "caption": "Rahmen, Glas, Beschläge und Anschluss gehören zusammen.",
+        "alt": "Schnittmodell eines Aluminiumfensters zur Veranschaulichung des Elementaufbaus",
+        "sourcePage": "https://www.klotz.mobi/alufenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Alufenster1_AWS_75_BS_SI_plus_e.jpg?itok=SIauVMc_",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-einbruchschutz-04",
+        "title": "Bestand · Die Konstruktion verstehen",
+        "caption": "Eine Nachrüstung muss zum vorhandenen Element passen.",
+        "alt": "Weißes Kunststofffenster-Profilmodell mit sichtbarem Rahmen- und Glasaufbau",
+        "sourcePage": "https://www.klotz.mobi/kunststofffenster",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Fenster_Modern%20%286%29.jpg?itok=kqo63p3c",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-einbruchschutz-05",
+        "title": "Eingang · Glas mitberücksichtigen",
+        "caption": "Seitenteile werden mit dem vollständigen Türelement betrachtet.",
+        "alt": "Graue Haustür mit seitlicher Verglasung und langem Griff im Klinkereingang",
+        "sourcePage": "https://www.klotz.mobi/alutueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Aluminiumtueren%20%281%29.jpg?itok=1CvGncnW",
+        "sourceTitle": ""
+      },
+      {
+        "id": "windows-gallery-einbruchschutz-06",
+        "title": "Nutzung · Die Innenansicht kennen",
+        "caption": "Anschlag, Erreichbarkeit und Öffnungswege bei der Beratung zeigen.",
+        "alt": "Weiße Haustür mit Glaseinsätzen von innen in einem hellen Treppenflur",
+        "sourcePage": "https://www.klotz.mobi/kunststofftueren",
+        "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Klauke%20%283%29.jpg?itok=YZMdCG2m",
+        "sourceTitle": ""
+      }
+    ]
+  }
+]

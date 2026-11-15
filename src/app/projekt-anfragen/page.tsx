@@ -1,9 +1,15 @@
-import { serviceRequestContext } from "@/features/inquiry/service-context";
+import {
+  serviceRequestContext,
+  type RequestContext,
+} from "@/features/inquiry/service-context";
 import { configuratorRequestContext } from "@/features/inquiry/configurator-context";
 import type { Metadata } from "next";
 import { ProjectRequestForm } from "@/components/forms/project-request-form";
 import { pageMetadata } from "@/lib/metadata";
 import { localContentRepository as contentRepository } from "@/repositories/local-content-repository";
+import Image from "next/image";
+import Link from "next/link";
+import "@/styles/request-inspiration.css";
 
 export const metadata: Metadata = pageMetadata(
   "Projekt anfragen",
@@ -22,9 +28,13 @@ export default async function RequestPage({
     typeof angebot === "string"
       ? await contentRepository.getOfferPage(angebot)
       : undefined;
-  const context = !offer
-    ? ((await serviceRequestContext(contentRepository, leistung, bereich)) ??
-      (await configuratorRequestContext(contentRepository, params)))
+  const context: RequestContext | undefined = !offer
+    ? ((await serviceRequestContext(
+        contentRepository,
+        leistung,
+        bereich,
+        params,
+      )) ?? (await configuratorRequestContext(contentRepository, params)))
     : undefined;
   return (
     <main id="main-content">
@@ -56,6 +66,30 @@ export default async function RequestPage({
                 Dateien und Fotos sicher ergänzt werden.
               </p>
             </div>
+            {context?.inspiration ? (
+              <figure className="request-inspiration">
+                <div className="request-inspiration__image">
+                  <Image
+                    src={context.inspiration.image.src}
+                    alt={context.inspiration.image.alt}
+                    width={context.inspiration.image.width}
+                    height={context.inspiration.image.height}
+                    sizes="(max-width: 760px) calc(100vw - 40px), 35vw"
+                  />
+                </div>
+                <figcaption>
+                  <p className="request-inspiration__label">
+                    Ihre Gesprächsgrundlage
+                  </p>
+                  <h3>{context.inspiration.title}</h3>
+                  <p>{context.inspiration.description}</p>
+                  <Link href={context.inspiration.backHref}>
+                    Auswahl noch einmal ansehen{" "}
+                    <span aria-hidden="true">↗</span>
+                  </Link>
+                </figcaption>
+              </figure>
+            ) : null}
           </div>
           <ProjectRequestForm
             key={offer?.slug ?? context?.key ?? "general"}

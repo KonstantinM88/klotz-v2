@@ -1,6 +1,9 @@
 import type { Article, SiteSettings } from "@/domain/content/types";
 import type { ServicePageContent } from "@/domain/content/service-page";
+import type { WindowsServiceContent } from "@/domain/content/windows";
 import { ServiceLandingPage } from "@/features/services/service-landing-page";
+import { ServicePhotoGallery } from "@/features/services/service-photo-gallery";
+import { WindowsMaterials } from "./windows-materials";
 
 export function WindowsServicePage({
   content,
@@ -8,7 +11,7 @@ export function WindowsServicePage({
   related,
   guide,
 }: {
-  content: ServicePageContent;
+  content: WindowsServiceContent;
   site: SiteSettings;
   related: ServicePageContent[];
   guide?: Article;
@@ -19,6 +22,15 @@ export function WindowsServicePage({
       site={site}
       related={related}
       guide={guide}
+      editorial={
+        content.materials.length ? (
+          <WindowsMaterials
+            chapters={content.materials}
+            serviceSlug={content.slug}
+          />
+        ) : undefined
+      }
+      gallery={<ServicePhotoGallery content={content.gallery} />}
       context={{
         label: "Fenster & Türen",
         href: "/fenster-tueren",

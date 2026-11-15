@@ -6,6 +6,8 @@ export type ServiceGalleryImage = {
   caption: string;
   blurDataURL: string;
   image: ImageAsset;
+  groupId?: string;
+  requestHref?: string;
 };
 export type ServiceGalleryContent = {
   title: string;
@@ -13,4 +15,5 @@ export type ServiceGalleryContent = {
   lead: string;
   items: ServiceGalleryImage[];
   note: string;
+  groups?: { id: string; label: string; href: string }[];
 };

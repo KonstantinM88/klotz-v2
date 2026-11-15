@@ -1,6 +1,8 @@
 import type { WindowsPageContent } from "@/domain/content/windows";
 import { windowsServicePages } from "./windows-services";
 import { windowsMedia } from "./windows-media";
+import { windowsOverviewGallery } from "./windows-galleries";
+import { windowsMaterialNavigation } from "./windows-materials";
 
 const cards: Record<string, { benefit: string; description: string }> = {
   einbruchschutz: {
@@ -30,10 +32,12 @@ const cards: Record<string, { benefit: string; description: string }> = {
   },
 };
 export const windowsPageContent: WindowsPageContent = {
+  gallery: windowsOverviewGallery,
+  materialNavigation: windowsMaterialNavigation,
   metadata: {
     title: "Fenster & Türen in Merseburg: Beratung & Montage",
     description:
-      "Fenster, Haustüren, Innentüren und Rollläden für Ihr Zuhause. KLOTZ in Merseburg verbindet persönliche Auswahl, Aufmaß und Montage in Halle, Leipzig & Region.",
+      "Fenster aus Holz, Kunststoff oder Aluminium, Haustüren, Innentüren & Rollläden: Materialien und Bilder entdecken. KLOTZ berät in Merseburg, Halle und Leipzig.",
   },
   hero: {
     title: "Das gute Gefühl,",
@@ -152,6 +156,7 @@ export const windowsPageContent: WindowsPageContent = {
   ],
   sourceRefs: [
     "https://www.klotz.mobi/portfolio/fenster",
+    ...windowsServicePages.flatMap((page) => page.sourceRefs),
     "https://www.klotz.mobi/portfolio/tueren",
     "https://www.klotz.mobi/rolllaeden",
     "https://www.klotz.mobi/portfolio/wartung-service",

@@ -2,21 +2,24 @@ import type { ServicePageContent } from "@/domain/content/service-page";
 import { windowsMedia } from "./windows-media";
 import { serviceImage } from "./service-images";
 import { windowsSecurityPage } from "./windows-security";
+import { windowsGalleries } from "./windows-galleries";
+import { windowsMaterials } from "./windows-materials";
+import type { WindowsServiceContent } from "@/domain/content/windows";
 
 const base = "https://www.klotz.mobi";
 const repairGuide = "fenster-reparieren-oder-austauschen";
 
-export const windowsServicePages: ServicePageContent[] = [
+const servicePages: ServicePageContent[] = [
   {
     slug: "fenster",
     title: "Fenster",
-    metaTitle: "Fenster in Merseburg: Auswahl & Austausch",
+    metaTitle: "Fenster & Terrassentüren in Merseburg",
     metaDescription:
-      "Neue Fenster für Ihr Zuhause: Kunststoff, Aluminium oder Holz. KLOTZ berät in Merseburg zu Material, Verglasung, Aufmaß und Montage im Bestand.",
+      "Kunststoff-, Aluminium- und Holzfenster sowie Terrassentüren entdecken. Bilder, Materialvergleich und Beratung mit Aufmaß & Montage bei KLOTZ in Merseburg.",
     hero: {
       title: "Neue Fenster.",
       accent: "Ein anderes Wohngefühl.",
-      lead: "Morgens leichter öffnen. Am Lieblingsplatz angenehmer sitzen. Eine Fassade, die wieder stimmig wirkt. Gemeinsam mit KLOTZ wählen Sie Fenster, die zu Ihrem Haus und Ihrem Alltag passen – von der Materialentscheidung bis zum Einbau.",
+      lead: "Kunststoff, Aluminium oder Holz: Neue Fenster sollen sich im Alltag richtig anfühlen und Ihrem Haus ein stimmiges Gesicht geben. Vergleichen Sie Materialien, entdecken Sie Terrassen- und Balkontüren und planen Sie mit KLOTZ die passende Ausführung – vom ersten Wunsch bis zum Einbau.",
       cta: "Meine Fenster besprechen",
     },
     media: windowsMedia.fenster,
@@ -144,6 +147,7 @@ export const windowsServicePages: ServicePageContent[] = [
       `${base}/kunststofffenster`,
       `${base}/alufenster`,
       `${base}/holzfenster`,
+      `${base}/terrassentueren`,
       `${base}/portfolio/wartung-service`,
     ],
     status: "draft",
@@ -498,6 +502,8 @@ export const windowsServicePages: ServicePageContent[] = [
         "Gurt oder Kurbel sind vertraute Bedienwege. Ein Motor kann die tägliche Nutzung erleichtern, etwa bei großen Elementen oder mehreren Fenstern. Ob vorhandene Anlagen dafür geeignet sind, wird anhand der Technik und des verfügbaren Platzes geprüft.",
         "Wenn eine elektrische Bedienung gewünscht ist, gehören Stromversorgung, Schalterposition und mögliche Leitungswege früh in die Planung. Für Funk oder automatisierte Abläufe zählt, welche Komponenten tatsächlich zusammenarbeiten. Bestehende Hausautomation sollte deshalb mit Hersteller und System benannt werden.",
         "Auch später muss die Anlage erreichbar bleiben. Der Zugang zum Kasten und die Möglichkeit zur Wartung werden bei der Einbaulösung mitbedacht. Wünsche nach integriertem Insektenschutz lassen sich für das gewählte System prüfen und direkt in die Auswahl aufnehmen.",
+        "Denken Sie bei mehreren Räumen in Alltagssituationen: Wo möchten Sie morgens Tageslicht, wo abends Privatsphäre und welches Fenster wird zum Zugang nach draußen? So lassen sich einzelne Bedienungen und gewünschte gemeinsame Abläufe sinnvoll ordnen. Eine vorhandene Steuerung wird zuerst auf Kompatibilität mit den vorgesehenen Komponenten geprüft, bevor ein neues Bedienkonzept festgelegt wird.",
+        "Auch die Außenansicht lohnt einen eigenen Blick. Kastenposition, Behangfarbe und Führungsschienen sollen mit Rahmen, Fassade und Terrassenzugang harmonieren. Bei einem späteren Fenstertausch oder einer geplanten Fassadenarbeit stimmen wir die Schnittstellen früh ab. Beschreiben Sie deshalb nicht nur den defekten Rollladen, sondern auch weitere Arbeiten, die Sie am Haus vorhaben.",
       ],
     },
     planning: [
@@ -569,3 +575,11 @@ export const windowsServicePages: ServicePageContent[] = [
   },
   windowsSecurityPage,
 ];
+
+export const windowsServicePages: WindowsServiceContent[] = servicePages.map(
+  (page) => {
+    const gallery = windowsGalleries[page.slug];
+    if (!gallery) throw Error(`Missing windows gallery: ${page.slug}`);
+    return { ...page, gallery, materials: windowsMaterials[page.slug] ?? [] };
+  },
+);

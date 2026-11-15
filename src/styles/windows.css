@@ -142,6 +142,51 @@
   color: var(--blue);
   display: block;
 }
+.windows-material-index {
+  border-top: 1px solid var(--line);
+  padding-top: 55px;
+}
+.windows-material-index__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 30px;
+}
+.windows-material-index__grid > a {
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+  text-decoration: none;
+}
+.windows-material-index__grid > a:hover,
+.windows-material-index__grid > a:focus-visible {
+  color: var(--blue);
+}
+.windows-material-index__grid > a > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+.windows-material-index__grid p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+@media (max-width: 760px) {
+  .windows-material-index__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 20px;
+  }
+  .windows-material-index__grid > a > span {
+    font-size: 17px;
+  }
+}
+@media (max-width: 420px) {
+  .windows-material-index__grid {
+    grid-template-columns: 1fr;
+  }
+}
 .windows-planning__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

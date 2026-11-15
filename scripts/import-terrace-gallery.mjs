@@ -2,16 +2,17 @@ import { readFile, writeFile, mkdir, access } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import sharp from "sharp";
 
+const section = process.argv.includes("--windows") ? "windows" : "terrace";
 const selections = JSON.parse(
-  await readFile("content/terrace-gallery-selections.json", "utf8"),
+  await readFile(`content/${section}-gallery-selections.json`, "utf8"),
 );
 const baseAssets = JSON.parse(
   await readFile("content/assets-manifest.json", "utf8"),
 );
-const manifestPath = "content/terrace-gallery-assets-manifest.json";
-const cache = ".lighthouseci/terrace-gallery-source/originals";
-const originalDir = "content/legacy/originals/terrace-gallery";
-const publicDir = "public/images/terrace-gallery";
+const manifestPath = `content/${section}-gallery-assets-manifest.json`;
+const cache = `.lighthouseci/${section}-gallery-source/originals`;
+const originalDir = `content/legacy/originals/${section}-gallery`;
+const publicDir = `public/images/${section}-gallery`;
 await Promise.all(
   [cache, originalDir, publicDir].map((p) => mkdir(p, { recursive: true })),
 );
@@ -83,7 +84,7 @@ for (const group of selections) {
       reused++;
     } else {
       originalPath = `${originalDir}/${selected.id}.${metadata.format}`;
-      src = `/images/terrace-gallery/${selected.id}.webp`;
+      src = `/images/${section}-gallery/${selected.id}.webp`;
       const output = await sharp(bytes)
         .rotate()
         .resize({

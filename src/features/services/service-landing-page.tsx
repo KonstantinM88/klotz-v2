@@ -24,6 +24,7 @@ export function ServiceLandingPage({
   context,
   guide,
   gallery,
+  editorial,
 }: {
   content: ServicePageContent;
   site: SiteSettings;
@@ -31,6 +32,7 @@ export function ServiceLandingPage({
   context: ServicePageContext;
   guide?: Article;
   gallery?: ReactNode;
+  editorial?: ReactNode;
 }) {
   const requestHref = `/projekt-anfragen?leistung=${content.slug}`;
   return (
@@ -139,6 +141,7 @@ export function ServiceLandingPage({
           </div>
         </div>
       </section>
+      {editorial}
       <section
         className="shell outdoor-section outdoor-detail"
         aria-labelledby="detail-title"

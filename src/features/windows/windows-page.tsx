@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/sections/page-parts";
 import { ButtonLink } from "@/components/ui/button-link";
 import { ServiceMedia } from "@/features/services/service-media";
 import { getSiteUrl } from "@/lib/site-url";
+import { ServicePhotoGallery } from "@/features/services/service-photo-gallery";
 import "@/styles/windows.css";
 
 export function WindowsPage({
@@ -73,7 +74,12 @@ export function WindowsPage({
           </div>
           <figure className="outdoor-hero__figure">
             <ServiceMedia media={content.hero.media} priority />
-            <figcaption>{content.hero.media.caption}</figcaption>
+            <figcaption>
+              {content.hero.media.caption}
+              <a className="outdoor-gallery-shortcut" href="#bilder">
+                Zur Bildergalerie <span aria-hidden="true">↘</span>
+              </a>
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -158,6 +164,43 @@ export function WindowsPage({
           ))}
         </div>
       </section>
+      <section
+        className="shell windows-material-index"
+        aria-labelledby="windows-material-index-title"
+      >
+        <div className="windows-section-head">
+          <div>
+            <p className="index-label">
+              Ihre Auswahl / Materialien im Vergleich
+            </p>
+            <h2 id="windows-material-index-title">
+              Welches Material
+              <br />
+              <em>fühlt sich richtig an?</em>
+            </h2>
+          </div>
+          <p>
+            Die Oberfläche prägt den Eindruck. Konstruktion, Ausstattung und
+            Einbau bestimmen, wie die Lösung zu Ihrem Alltag passt. Hier steigen
+            Sie direkt in Ihr Thema ein.
+          </p>
+        </div>
+        <nav
+          aria-label="Fenster- und Türmaterialien"
+          className="windows-material-index__grid"
+        >
+          {content.materialNavigation.map((item) => (
+            <Link key={item.href} href={item.href}>
+              <span>
+                {item.label}
+                <span aria-hidden="true">↗</span>
+              </span>
+              <p>{item.description}</p>
+            </Link>
+          ))}
+        </nav>
+      </section>
+      <ServicePhotoGallery content={content.gallery} />
       <section className="windows-decisions" aria-labelledby="decisions-title">
         <div className="shell outdoor-section">
           <div className="windows-section-head">

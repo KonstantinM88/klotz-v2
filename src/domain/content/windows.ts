@@ -1,6 +1,25 @@
-import type { ServicePageMedia } from "./service-page";
+import type { ServicePageContent, ServicePageMedia } from "./service-page";
+import type {
+  ServiceGalleryContent,
+  ServiceGalleryImage,
+} from "./service-gallery";
+
+export type WindowsMaterialChapter = {
+  id: string;
+  label: string;
+  title: string;
+  paragraphs: string[];
+  considerations: string[];
+  image: ServiceGalleryImage;
+};
+export type WindowsServiceContent = ServicePageContent & {
+  gallery: ServiceGalleryContent;
+  materials: WindowsMaterialChapter[];
+};
 
 export type WindowsPageContent = {
+  gallery: ServiceGalleryContent;
+  materialNavigation: { label: string; href: string; description: string }[];
   metadata: { title: string; description: string };
   hero: {
     title: string;
