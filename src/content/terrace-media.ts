@@ -1,19 +1,6 @@
-import manifest from "../../content/assets-manifest.json";
-import type { ImageAsset } from "@/domain/content/types";
+import { serviceImage as terraceImage } from "./service-images";
 import type { TerraceMedia } from "@/domain/content/terrace-service";
-
-export function terraceImage(src: string, alt: string): ImageAsset {
-  const asset = manifest.find((entry) => entry.src === src);
-  if (!asset) throw new Error(`Missing terrace image provenance: ${src}`);
-  return {
-    src,
-    alt,
-    width: asset.width,
-    height: asset.height,
-    sourceUrl: asset.sourcePage,
-    rightsStatus: "client-presentation-approved",
-  };
-}
+export { serviceImage as terraceImage } from "./service-images";
 export const terraceMedia = {
   terrassenueberdachungen: {
     image: terraceImage(

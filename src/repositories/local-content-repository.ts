@@ -17,6 +17,8 @@ import assetManifest from "../../content/assets-manifest.json";
 import { offerPages } from "@/content/offers";
 import { terracePageContent } from "@/content/terrace";
 import { terraceServicePages } from "@/content/terrace-services";
+import { windowsPageContent } from "@/content/windows";
+import { windowsServicePages } from "@/content/windows-services";
 
 function withAsset<
   T extends {
@@ -38,6 +40,12 @@ function withAsset<
 }
 
 export const localContentRepository: ContentRepository = {
+  async getWindowsPageContent() {
+    return windowsPageContent;
+  },
+  async getWindowsServicePages() {
+    return windowsServicePages;
+  },
   async getTerraceServicePages() {
     return terraceServicePages;
   },

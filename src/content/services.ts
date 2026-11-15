@@ -1,5 +1,6 @@
 import type { ServiceDetail } from "@/domain/content/presentation";
 import { terraceServicePages } from "./terrace-services";
+import { windowsServicePages } from "./windows-services";
 
 const terrace = "https://www.klotz.mobi/portfolio/terrassenueberdachung";
 const windows = "https://www.klotz.mobi/portfolio/fenster";
@@ -433,40 +434,37 @@ const seeds: Seed[] = [
 export const serviceDetails: ServiceDetail[] = seeds.map(
   ([slug, title, introHeading, intro, variants, planning, costs]) => {
     const category = slug.split("/")[0]!;
-    const terracePage =
+    const presentationPage =
       category === "terrasse-garten"
         ? terraceServicePages.find(
             (page) => slug === `terrasse-garten/${page.slug}`,
           )
-        : undefined;
-    if (terracePage)
+        : category === "fenster-tueren"
+          ? windowsServicePages.find(
+              (page) => slug === `fenster-tueren/${page.slug}`,
+            )
+          : undefined;
+    if (
+      ["terrasse-garten", "fenster-tueren"].includes(category) &&
+      !presentationPage
+    )
+      throw new Error(`Missing complete service content: ${slug}`);
+    if (presentationPage)
       return {
         slug,
         category,
-        title: terracePage.title,
-        intro: terracePage.hero.lead,
-        image: terracePage.media.image.src,
-        variants: terracePage.variants.map((v) => v.title),
-        planning: terracePage.planning.map((v) => v.text),
-        costs: terracePage.costs.factors,
-        faq: terracePage.faq,
-        sourceRefs: terracePage.sourceRefs,
-        status: terracePage.status,
+        title: presentationPage.title,
+        intro: presentationPage.hero.lead,
+        image: presentationPage.media.image.src,
+        variants: presentationPage.variants.map((v) => v.title),
+        planning: presentationPage.planning.map((v) => v.text),
+        costs: presentationPage.costs.factors,
+        faq: presentationPage.faq,
+        sourceRefs: presentationPage.sourceRefs,
+        status: presentationPage.status,
       };
     const image =
-      category === "fenster-tueren"
-        ? slug.endsWith("/fenster")
-          ? "/images/fenster-1.webp"
-          : "/images/haustuer-detail.webp"
-        : category === "zaun-tor"
-          ? "/images/zaun.webp"
-          : category === "gewerbekunden"
-            ? "/images/gewerbe.webp"
-            : slug.includes("glas") || slug.includes("winter")
-              ? "/images/glas-detail-1.webp"
-              : slug.endsWith("/terrassenueberdachungen")
-                ? "/images/terrasse.webp"
-                : "/images/lamelle-detail-1.webp";
+      category === "zaun-tor" ? "/images/zaun.webp" : "/images/gewerbe.webp";
     return {
       slug,
       category,

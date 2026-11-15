@@ -24,9 +24,18 @@ export default async function RequestPage({
       ? await contentRepository.getOfferPage(angebot)
       : undefined;
   const terraceContext = !offer && bereich === "terrasse-garten";
+  const windowsContext = !offer && bereich === "fenster-tueren";
+  const [terracePages, windowsPages] =
+    !offer && typeof leistung === "string"
+      ? await Promise.all([
+          contentRepository.getTerraceServicePages(),
+          contentRepository.getWindowsServicePages(),
+        ])
+      : [[], []];
+  const windowsService = windowsPages.find((page) => page.slug === leistung);
   const service =
     !offer && typeof leistung === "string"
-      ? (await contentRepository.getTerraceServicePages()).find(
+      ? [...terracePages, ...windowsPages].find(
           (page) => page.slug === leistung,
         )
       : undefined;
@@ -65,20 +74,34 @@ export default async function RequestPage({
             key={
               offer?.slug ??
               service?.slug ??
-              (terraceContext ? "terrasse-garten" : "general")
+              (terraceContext
+                ? "terrasse-garten"
+                : windowsContext
+                  ? "fenster-tueren"
+                  : "general")
             }
             initialTopic={
               offer?.inquiryTopic ??
-              (service || terraceContext ? "Terrasse & Garten" : undefined)
+              (windowsService
+                ? "Fenster & Türen"
+                : service
+                  ? "Terrasse & Garten"
+                  : windowsContext
+                    ? "Fenster & Türen"
+                    : terraceContext
+                      ? "Terrasse & Garten"
+                      : undefined)
             }
             initialMessage={
               offer
                 ? `Ich interessiere mich für ${offer.shortTitle}. Bitte beraten Sie mich zu einer passenden Ausführung und einem aktuellen Angebot.\n\nMein Vorhaben: `
                 : service
                   ? `${service.requestMessage}\n\nMein Vorhaben: `
-                  : terraceContext
-                    ? "Ich interessiere mich für eine Lösung für meine Terrasse oder meinen Garten. Bitte beraten Sie mich zu Überdachung, Beschattung und passenden Erweiterungen.\n\nMein Vorhaben: "
-                    : undefined
+                  : windowsContext
+                    ? "Ich interessiere mich für Fenster, Türen oder Rollläden. Bitte beraten Sie mich zur passenden Auswahl und Montage.\n\nMein Vorhaben: "
+                    : terraceContext
+                      ? "Ich interessiere mich für eine Lösung für meine Terrasse oder meinen Garten. Bitte beraten Sie mich zu Überdachung, Beschattung und passenden Erweiterungen.\n\nMein Vorhaben: "
+                      : undefined
             }
           />
         </div>

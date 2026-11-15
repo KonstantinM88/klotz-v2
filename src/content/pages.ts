@@ -28,7 +28,7 @@ export const overviewPages: OverviewPageContent[] = [
     heading: "Gute Bauelemente wirken jeden Tag.",
     body: [
       "Material, Verglasung, Beschläge und Montage entscheiden gemeinsam über das Ergebnis. Deshalb betrachtet KLOTZ nicht nur einzelne Produkte, sondern die jeweilige Einbausituation und Ihre Anforderungen.",
-      "Konkrete Systeme, Hersteller und Leistungswerte werden nach Sichtung der freigegebenen Produktunterlagen ergänzt.",
+      "Fenster, Haustüren, Innentüren und Rollläden lassen sich einzeln oder gemeinsam planen. In Merseburg-Meuschau besprechen Sie Materialien, Gestaltung und Einbau persönlich mit KLOTZ.",
     ],
     features: [
       "Fensterlösungen",

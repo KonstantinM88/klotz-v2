@@ -1,3 +1,4 @@
+import { windowsMedia } from "./windows-media";
 import type {
   Article,
   NavigationItem,
@@ -98,14 +99,7 @@ export const serviceCategories: ServiceCategory[] = z
       description:
         "Komfort, Sicherheit und Energieeffizienz passend zum Gebäude.",
       href: "/fenster-tueren",
-      image: {
-        src: "/images/haustuer-detail.webp",
-        alt: "Moderne Hauseingangstür mit Vordach",
-        width: 4100,
-        height: 1400,
-        sourceUrl: `${legacyBase}/`,
-        rightsStatus: "rights-check",
-      },
+      image: windowsMedia.haustueren.image,
       status: "legacy",
     },
     {

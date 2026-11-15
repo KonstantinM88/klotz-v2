@@ -1,5 +1,13 @@
 # Content source register
 
+## 2026-11-15 — Fenster & Türen: обзор, пять услуг и девять фотографий
+
+- src/content/windows.ts, windows-services.ts, windows-media.ts: самостоятельная немецкая редактура, статус draft. Источники проверены 15.11.2026: `/portfolio/fenster`, `/kunststofffenster`, `/alufenster`, `/holzfenster`, `/portfolio/tueren`, `/alutueren`, `/kunststofftueren`, `/holztueren`, `/clp`, `/echtholztueren`, `/weisslacktueren`, `/glastueren`, `/rolllaeden`, `/portfolio/sicht-sonnenschutz`, `/portfolio/wartung-service` на https://www.klotz.mobi/. Консультация/выставка/контакты используют действующую общую карточку сайта с /ueber-uns и /kontakt.
+- Ассортимент берётся из источников; пояснения по выбору, планированию и составу предложения — редакционный текст, не цитаты клиента. Нет числовой экономии, неподтверждённых классов защиты, изготовителей-партнёров, цен, сроков и оконных референсов. Непроверенный HTTP-конфигуратор не перенесён.
+- content/building-service-image-sources.json и scripts/import-building-service-assets.mjs: девять точных наблюдённых URL; скрипт получает исходник без Drupal style, не увеличивает и создаёт WebP. Оригиналы: content/legacy/originals/building-_; изображения: public/images/building-_; размеры/байты/SHA/sourcePage/sourceUrl — content/assets-manifest.json.
+- building-window-hero/detail — /holzfenster и /kunststofffenster; building-entry-hero/detail — /alutueren; building-interior-hero/detail — /clp; building-shutter-hero/detail — /rolllaeden. Фотографии иллюстрируют продукт, не объявлены выполненными объектами. Права client-presentation-approved, факт legacy-product-illustration.
+- Часть оригиналов шириной около 600 px требует крупных материалов перед публичным релизом; искусственной детализации и AI-подмены нет. Карта намерений: docs/FENSTER_TUEREN_CONTENT_PLAN_2026-11-15.md.
+
 ## 2026-11-15 — шесть полноценных страниц Terrasse & Garten
 
 - `src/content/terrace-services.ts`: новая самостоятельная немецкая редактура для Terrassenüberdachungen, Lamellendächer, Pergolen, Sommer-/Wintergärten, Glasschiebewände и Sonnenschutz. Внутренний статус draft. Источники разделены по услугам в `sourceRefs`: `/produkte/terrassen%C3%BCberdachungen-0`, `/portfolio/terrassenueberdachung`, `/produkt/lamellendach`, `/produkte/pergola-mit-sonnentuch`, `/produkte/gartenzimmer`, `/portfolio/wintergaerten`, `/produkte/glasschiebe-faltw%C3%A4nde`, `/markiesen`, `/portfolio/sicht-sonnenschutz`, а также `/ueber-uns` и `/kontakt` на klotz.mobi. Страницы/галереи перепроверены 15.11.2026; `/markiesen` доступна через HTTP fetch, хотя web-open вернул ошибку.
@@ -254,3 +262,7 @@ URL `/portfolio/z%C3%A4une` не является актуальной само�
 - `src/features/assistant/knowledge.ts`: немецкие сценарные ответы о направлениях KLOTZ основаны на существующих demo-разделах `src/content/services.ts`, `src/content/site.ts`, `src/content/articles.ts`; статус `demo`, не подтверждённые проектные факты.
 - Английские и русские версии этих ответов написаны для локальной демонстрации и не являются дословным legacy-контентом. Они не добавляют цены, сроки, характеристики и данные референсов.
 - Live-ответы создаются из текущего repository-контекста на языке вопроса; они не сохраняются в content repository и требуют проверки перед production.
+
+### Дополнение 15.11.2026 — Einbruchschutz
+
+Пятая существующая услуга /fenster-tueren/einbruchschutz также полностью переработана (src/content/windows-security.ts). Источники: https://www.klotz.mobi/portfolio/einbruchschutz, https://www.klotz.mobi/produkte/rc23-fenster-t%C3%BCren и https://www.klotz.mobi/produkte/abus-zusatzsicherungen; общая техническая ориентация: https://www.polizei-beratung.de/themen-und-tipps/einbruch/technische-sicherheit/ (проверены 15.11.2026). Никаких сертификатов фирмы и обещаний предотвращения взлома. Девятая фотография building-security-hero — вид входа изнутри из галереи /alutueren, иллюстрация без приписывания защитных свойств; точный файл и SHA в manifest. Изображения-заглушки дочерних legacy-страниц и сюжет с силуэтом взломщика не используются.

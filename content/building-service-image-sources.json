@@ -1,0 +1,47 @@
+[
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Fenster_Holzfenster%20%282%29.jpg?itok=FGpOFIhk",
+    "id": "building-window-hero",
+    "sourcePage": "https://www.klotz.mobi/holzfenster"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Fenster_Modern%20%286%29.jpg?itok=kqo63p3c",
+    "id": "building-window-detail",
+    "sourcePage": "https://www.klotz.mobi/kunststofffenster"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Aluminiumtueren%20%281%29.jpg?itok=1CvGncnW",
+    "id": "building-entry-hero",
+    "sourcePage": "https://www.klotz.mobi/alutueren"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Aluminiumtueren%20%2817%29.jpg?itok=cWS6Hmw_",
+    "id": "building-entry-detail",
+    "sourcePage": "https://www.klotz.mobi/alutueren"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/Klotz_Innentuer_0.jpg?itok=OS2nSqP3",
+    "id": "building-interior-hero",
+    "sourcePage": "https://www.klotz.mobi/clp"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/milieu_ahornselect_quer.jpg?itok=6741LUe8",
+    "id": "building-interior-detail",
+    "sourcePage": "https://www.klotz.mobi/clp"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2826%29.JPG?itok=1e-8Ycd0",
+    "id": "building-shutter-hero",
+    "sourcePage": "https://www.klotz.mobi/rolllaeden"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Inhalte_Produkte_Licht%20und%20SonnenSchutz_Rolladen%20%2812%29.JPG?itok=Gop2oEzx",
+    "id": "building-shutter-detail",
+    "sourcePage": "https://www.klotz.mobi/rolllaeden"
+  },
+  {
+    "displaySourceUrl": "https://www.klotz.mobi/sites/default/files/styles/juicebox_medium/public/MetallbauKlotz_Tueren_Haustueren_Aluminiumtueren%20%2813%29.jpg?itok=6kJcmsxk",
+    "sourcePage": "https://www.klotz.mobi/alutueren",
+    "id": "building-security-hero"
+  }
+]
