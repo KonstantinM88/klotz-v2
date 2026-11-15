@@ -61,6 +61,7 @@ export const primaryNavigation: NavigationItem[] = [
   { label: "Zaun & Tor", href: "/zaun-tor" },
   { label: "Gewerbekunden", href: "/gewerbekunden" },
   { label: "Angebote", href: "/angebote" },
+  { label: "Konfigurator", href: "/konfigurator" },
   { label: "Referenzen", href: "/referenzen" },
   { label: "Wissen", href: "/wissen" },
   { label: "Über uns", href: "/unternehmen" },

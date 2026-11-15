@@ -98,6 +98,12 @@ export function WindowsPage({
           {content.introduction.paragraphs.map((p) => (
             <p key={p}>{p}</p>
           ))}
+          <p>
+            Schon eine Idee im Kopf? Im{" "}
+            <Link href="/konfigurator">KLOTZ-Konfigurator</Link> gestalten Sie
+            Ihren Eingang oder vergleichen das rechnerische Potenzial neuer
+            Fenster vor dem persönlichen Gespräch.
+          </p>
         </div>
       </section>
       <section

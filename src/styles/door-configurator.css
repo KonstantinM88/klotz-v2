@@ -1,0 +1,795 @@
+.door-configurator {
+  margin-top: 44px;
+}
+.door-catalog-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.6fr;
+  gap: 24px;
+  border-block: 1px solid var(--line);
+  padding: 25px 0;
+  margin-bottom: 35px;
+}
+.door-catalog-proof strong {
+  display: block;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+}
+.door-catalog-proof span {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.door-catalog-proof p {
+  margin: auto 0 auto auto;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.door-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: start;
+}
+.door-selected-model {
+  padding-bottom: 28px;
+}
+.door-selected-model h3 {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  margin: 16px 0;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+.door-selected-model h3 span {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin-left: 14px;
+}
+.door-selected-model > p:not(.index-label) {
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 54ch;
+}
+.door-selected-actions {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+.door-selected-actions .button {
+  flex: 1;
+  justify-content: space-between;
+  text-align: left;
+}
+.door-favorite-button {
+  width: 52px;
+  flex: 0 0 52px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: inherit;
+  font-size: 28px;
+  cursor: pointer;
+}
+.door-favorite-button[aria-pressed="true"] {
+  background: #e1e7b6;
+}
+.door-plan-group {
+  border-top: 1px solid var(--line);
+}
+.door-plan-group summary {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 68px;
+  cursor: pointer;
+  font-size: 14px;
+  list-style: none;
+}
+.door-plan-group summary::-webkit-details-marker {
+  display: none;
+}
+.door-plan-group summary span {
+  font-size: 24px;
+}
+.door-plan-group[open] summary span {
+  transform: rotate(45deg);
+}
+.door-plan-group > div {
+  padding: 0 0 25px;
+}
+.door-configurator label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.door-configurator input,
+.door-configurator select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  color: #222e25;
+  border: 1px solid #8b9485;
+  border-radius: 0;
+  background: #f9f9f3;
+  font: inherit;
+  padding: 12px;
+  font-size: 13px;
+}
+.door-configurator select {
+  padding-right: 24px;
+}
+.door-size-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.door-size-field {
+  margin-top: 16px;
+}
+.door-size-pair .door-size-field {
+  margin-top: 0;
+}
+.door-size-field > div {
+  display: flex;
+  align-items: center;
+  background: #f9f9f3;
+  border: 1px solid #8b9485;
+}
+.door-size-field input {
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+.door-size-field input[aria-invalid="true"] {
+  outline: 2px solid #963920;
+  outline-offset: -2px;
+}
+.door-size-field > div > span {
+  padding-right: 12px;
+  font-size: 12px;
+}
+.door-range {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #4e5c50;
+  margin: 13px 0 0;
+}
+.door-plan-error {
+  color: #92391f;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+.door-color-field {
+  margin-top: 20px;
+}
+.door-color-field > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.door-color-field > div > span {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #889181;
+  flex-shrink: 0;
+}
+.door-plan-summary {
+  padding: 26px;
+  background: #e6e9dc;
+  border: 1px solid var(--line);
+}
+.door-plan-summary > p[role="status"] {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 14px 0 22px;
+  overflow-wrap: anywhere;
+}
+.door-plan-summary .button {
+  width: 100%;
+  justify-content: space-between;
+}
+.door-plan-summary .configurator-text-button {
+  margin: 20px 0 0;
+}
+.door-model-preview {
+  margin: 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  position: sticky;
+  top: 120px;
+  min-width: 0;
+}
+.door-model-preview__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+}
+.door-model-preview__photo {
+  aspect-ratio: 1;
+  max-height: 510px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.door-model-preview__photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+.door-model-preview figcaption {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #526052;
+  margin-top: 14px;
+}
+.door-preview-color {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 28px minmax(0, 1fr);
+  gap: 10px;
+  border-top: 1px solid #d9ded4;
+  padding-top: 20px;
+  margin-top: 20px;
+  align-items: start;
+}
+.door-preview-color > span {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #889181;
+}
+.door-preview-color small {
+  display: block;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.door-preview-color strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.door-plan-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  border-block: 1px solid var(--line);
+  margin-top: 55px;
+  padding: 32px 0;
+}
+.door-plan-detail h3,
+.door-discovery h3,
+.door-technical h3 {
+  font-size: clamp(27px, 3.3vw, 40px);
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  margin: 18px 0;
+}
+.door-plan-detail
+  > div
+  > p:not(.index-label):not(.door-range):not(.door-total-dimension),
+.door-technical > div > p:not(.index-label):not(.door-range) {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 60ch;
+}
+.door-total-dimension {
+  margin: 24px 0;
+  font-size: 12px;
+}
+.door-total-dimension strong {
+  display: block;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.05em;
+}
+.door-dimensions {
+  width: 100%;
+  max-height: 350px;
+  background: #e9ecdf;
+  padding: 15px;
+}
+.door-dimensions text {
+  font-family: inherit;
+  font-size: 12px;
+  fill: #29392d;
+}
+.door-dimensions-empty {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: 300px;
+  padding: 30px;
+  background: #e9ecdf;
+  font-size: 13px;
+}
+.door-discovery {
+  padding: 35px 0 40px;
+}
+.door-discovery > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.door-discovery__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.door-discovery__grid button {
+  background: white;
+  border: 1px solid var(--line);
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  color: inherit;
+  min-width: 0;
+}
+.door-discovery__grid img {
+  width: 100%;
+  height: 145px;
+  object-fit: contain;
+}
+.door-discovery__grid span {
+  display: block;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  margin-top: 10px;
+}
+.door-discovery__grid small {
+  display: block;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.door-technical {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
+  gap: 25px 50px;
+  padding: 35px;
+  background: #e5e8db;
+  border: 1px solid var(--line);
+  align-items: center;
+}
+.door-technical > .button {
+  white-space: normal;
+  text-align: left;
+  line-height: 1.8;
+}
+.door-technical__frame {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+.door-technical__frame > p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.door-technical__frame > div {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: white;
+}
+.door-technical iframe {
+  width: 1160px;
+  height: 900px;
+  border: 0;
+  display: block;
+}
+.door-catalog-dialog {
+  width: min(1380px, 96vw);
+  max-width: none;
+  height: min(1040px, 92dvh);
+  max-height: 92dvh;
+  border: 1px solid #75816e;
+  background: #f3f2e9;
+  color: #222e25;
+  padding: 0;
+  overflow: hidden;
+}
+.door-catalog-dialog[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.door-catalog-dialog__body {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding: clamp(18px, 3vw, 40px);
+  scroll-padding-block: 16px;
+}
+.door-catalog-dialog::backdrop {
+  background: rgb(22 34 25 / 0.75);
+  backdrop-filter: blur(5px);
+}
+.door-catalog-dialog__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  background: #f3f2e9;
+  padding: 18px clamp(18px, 3vw, 40px);
+  border-bottom: 1px solid #c4cabd;
+}
+.door-catalog-dialog__heading .index-label {
+  margin: 0;
+}
+.door-catalog-dialog h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  margin: 8px 0 0;
+  line-height: 1.05;
+}
+.door-catalog-dialog__heading > button {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  font-size: 32px;
+  background: transparent;
+  border: 1px solid #75816e;
+  color: inherit;
+  cursor: pointer;
+}
+.door-catalog-filters {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 18px;
+}
+.door-catalog-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  margin: 22px 0;
+}
+.door-catalog-toolbar button,
+.door-comparison button {
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid #75816e;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+.door-catalog-toolbar button[aria-pressed="true"] {
+  background: #e1e7b6;
+}
+.door-model-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+.door-model-grid > article {
+  background: #fff;
+  border: 1px solid #c4cabd;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.door-model-grid > article.is-selected {
+  border: 2px solid #385444;
+}
+.door-model-select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+}
+.door-model-select img {
+  height: 180px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.door-model-select > strong {
+  font-size: 12px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.door-model-select > strong span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.door-model-select > small {
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+}
+.door-model-card-actions {
+  display: flex;
+  border-top: 1px solid #d9ded4;
+}
+.door-model-card-actions button {
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+.door-model-card-actions button:first-child {
+  font-size: 24px;
+  min-width: 44px;
+  border-right: 1px solid #d9ded4;
+}
+.door-model-card-actions button:last-child {
+  flex: 1;
+}
+.door-model-card-actions button[aria-pressed="true"] {
+  background: #e1e7b6;
+}
+.door-model-card-actions button:disabled {
+  color: #647161;
+  cursor: default;
+}
+.door-load-more {
+  display: flex;
+  margin: 30px auto;
+}
+.door-catalog-footnote {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 28px;
+  max-width: 100ch;
+}
+.door-catalog-empty {
+  padding: 40px 0;
+}
+.door-comparison {
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #a5b096;
+  background: #e7ebdd;
+}
+.door-comparison > div:first-child {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.door-comparison h3 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+.door-comparison__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.door-comparison__grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: white;
+}
+.door-comparison h4 {
+  font-size: 14px;
+  margin: 15px 0 10px;
+  overflow-wrap: anywhere;
+}
+.door-comparison p {
+  font-size: 11px;
+  line-height: 1.8;
+}
+.door-no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 180px;
+  padding: 20px;
+  background: #e9ecdf;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+.door-no-image small {
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 10px;
+  text-align: center;
+}
+.door-configurator button:focus-visible,
+.door-configurator select:focus-visible,
+.door-configurator input:focus-visible,
+.door-configurator summary:focus-visible,
+.door-catalog-dialog button:focus-visible,
+.door-catalog-dialog input:focus-visible,
+.door-catalog-dialog select:focus-visible {
+  outline: 3px solid #46643d;
+  outline-offset: 4px;
+}
+.door-catalog-dialog__body:focus-visible {
+  outline: 3px solid #46643d;
+  outline-offset: -4px;
+}
+@media (max-width: 1100px) {
+  .door-model-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .door-preview-color {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+  .door-discovery__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .door-configurator {
+    margin-top: 25px;
+  }
+  .door-catalog-proof {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-block: 20px;
+  }
+  .door-catalog-proof span {
+    font-size: 10px;
+  }
+  .door-catalog-proof p {
+    grid-column: 1 / -1;
+    margin: 5px 0 0;
+    font-size: 12px;
+  }
+  .door-catalog-proof p br {
+    display: none;
+  }
+  .door-workbench {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .door-model-preview {
+    position: static;
+    grid-row: 1;
+    padding: 18px;
+  }
+  .door-model-preview__photo {
+    height: 310px;
+    aspect-ratio: auto;
+  }
+  .door-preview-color {
+    grid-template-columns: 24px minmax(0, 1fr) 24px minmax(0, 1fr);
+    gap: 8px;
+  }
+  .door-preview-color > span {
+    width: 24px;
+    height: 24px;
+  }
+  .door-preview-color strong {
+    font-size: 10px;
+  }
+  .door-plan-detail {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 35px;
+  }
+  .door-dimensions {
+    max-height: 340px;
+  }
+  .door-discovery > div:first-child {
+    display: block;
+  }
+  .door-discovery__grid {
+    gap: 8px;
+  }
+  .door-discovery__grid button {
+    padding: 6px;
+  }
+  .door-discovery__grid img {
+    height: 120px;
+  }
+  .door-discovery__grid span {
+    font-size: 10px;
+  }
+  .door-technical {
+    grid-template-columns: 1fr;
+    padding: 22px;
+    gap: 20px;
+  }
+  .door-catalog-dialog {
+    width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .door-catalog-dialog__heading {
+    padding: 16px;
+    gap: 12px;
+  }
+  .door-catalog-dialog__heading .index-label {
+    font-size: 9px;
+  }
+  .door-catalog-dialog__body {
+    padding: 20px 16px;
+  }
+  .door-catalog-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .door-catalog-filters > div:first-child {
+    grid-column: 1 / -1;
+  }
+  .door-catalog-toolbar {
+    align-items: flex-start;
+    font-size: 11px;
+  }
+  .door-catalog-toolbar p {
+    padding-top: 12px;
+    margin: 0;
+  }
+  .door-model-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .door-model-select {
+    padding: 9px;
+  }
+  .door-model-select img {
+    height: 165px;
+  }
+  .door-model-card-actions button {
+    font-size: 9px;
+    padding: 5px;
+  }
+  .door-comparison {
+    padding: 15px;
+  }
+  .door-comparison > div:first-child {
+    align-items: flex-start;
+  }
+  .door-comparison h3 {
+    font-size: 21px;
+  }
+  .door-comparison__grid {
+    grid-template-columns: 1fr;
+  }
+  .door-comparison__grid > article {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 10px 15px;
+  }
+  .door-comparison__grid img {
+    grid-row: span 4;
+    height: 180px;
+  }
+  .door-comparison__grid h4,
+  .door-comparison__grid p {
+    margin: 0;
+  }
+}

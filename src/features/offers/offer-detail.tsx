@@ -189,15 +189,22 @@ export function OfferDetail({
               ))}
               {section.link ? (
                 <p>
-                  <a
+                  <Link
                     href={section.link.href}
                     className="text-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={
+                      section.link.href.startsWith("/") ? undefined : "_blank"
+                    }
+                    rel={
+                      section.link.href.startsWith("/")
+                        ? undefined
+                        : "noopener noreferrer"
+                    }
                   >
-                    {section.link.label} (neuer Tab){" "}
+                    {section.link.label}
+                    {!section.link.href.startsWith("/") && " (neuer Tab)"}{" "}
                     <span aria-hidden="true">↗</span>
-                  </a>
+                  </Link>
                 </p>
               ) : null}
             </section>

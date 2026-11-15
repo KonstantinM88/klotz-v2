@@ -10,11 +10,15 @@ const routes = Object.keys(manifest.routes).filter(
 );
 const internalLinks = new Set();
 let redirects = 0;
+const expectedRedirects = {
+  "/ueber-uns": "/unternehmen",
+  "/energiesparrechner": "/konfigurator#energiesparrechner",
+};
 for (const path of routes) {
-  if (path === "/ueber-uns") {
+  if (expectedRedirects[path]) {
     const response = await fetch(base + path, { redirect: "manual" });
     assert.equal(response.status, 308, path);
-    assert.equal(response.headers.get("location"), "/unternehmen");
+    assert.equal(response.headers.get("location"), expectedRedirects[path]);
     redirects += 1;
     continue;
   }

@@ -326,7 +326,7 @@ const definitions = [
         ],
         link: {
           label: "Zum Haustürkonfigurator",
-          href: "http://konfigurator.klotz.mobi/",
+          href: "/konfigurator#haustuer",
         },
       },
       {
@@ -405,7 +405,7 @@ const definitions = [
       },
       {
         title: "KLOTZ: Haustürkonfigurator",
-        url: "http://konfigurator.klotz.mobi/",
+        url: "https://konfigurator.klotz.mobi/",
       },
       {
         title: "Verbraucherzentrale: Fenster sanieren oder austauschen",

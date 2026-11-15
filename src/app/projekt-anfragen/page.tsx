@@ -1,4 +1,5 @@
 import { serviceRequestContext } from "@/features/inquiry/service-context";
+import { configuratorRequestContext } from "@/features/inquiry/configurator-context";
 import type { Metadata } from "next";
 import { ProjectRequestForm } from "@/components/forms/project-request-form";
 import { pageMetadata } from "@/lib/metadata";
@@ -13,19 +14,17 @@ export const metadata: Metadata = pageMetadata(
 export default async function RequestPage({
   searchParams,
 }: {
-  searchParams: Promise<{
-    angebot?: string | string[];
-    bereich?: string | string[];
-    leistung?: string | string[];
-  }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const { angebot, bereich, leistung } = await searchParams;
+  const params = await searchParams;
+  const { angebot, bereich, leistung } = params;
   const offer =
     typeof angebot === "string"
       ? await contentRepository.getOfferPage(angebot)
       : undefined;
   const context = !offer
-    ? await serviceRequestContext(contentRepository, leistung, bereich)
+    ? ((await serviceRequestContext(contentRepository, leistung, bereich)) ??
+      (await configuratorRequestContext(contentRepository, params)))
     : undefined;
   return (
     <main id="main-content">

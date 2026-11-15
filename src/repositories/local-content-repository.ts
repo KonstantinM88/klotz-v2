@@ -23,6 +23,8 @@ import { fencePageContent } from "@/content/fence";
 import { fenceServicePages } from "@/content/fence-services";
 import { businessPageContent } from "@/content/business";
 import { businessServicePages } from "@/content/business-services";
+import { configuratorPageContent } from "@/content/configurator";
+import { manufacturerDoorCatalog } from "@/content/door-catalog";
 
 function withAsset<
   T extends {
@@ -44,6 +46,12 @@ function withAsset<
 }
 
 export const localContentRepository: ContentRepository = {
+  async getDoorCatalog() {
+    return manufacturerDoorCatalog;
+  },
+  async getConfiguratorPageContent() {
+    return configuratorPageContent;
+  },
   async getBusinessPageContent() {
     return businessPageContent;
   },

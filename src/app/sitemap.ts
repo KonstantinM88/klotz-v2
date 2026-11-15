@@ -17,6 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const paths = [
     "",
     "projekt-anfragen",
+    "konfigurator",
     ...overviewPages.map(({ slug }) => slug),
     ...featuredProjects.map(({ href }) => href.slice(1)),
     ...featuredArticles.map(({ href }) => href.slice(1)),

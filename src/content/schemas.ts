@@ -141,7 +141,15 @@ export const offerPageSchema = z.object({
         id: z.string().regex(/^[a-z0-9-]+$/),
         title: z.string().min(1),
         paragraphs: z.array(z.string().min(1)).min(1),
-        link: z.object({ label: z.string().min(1), href: z.url() }).optional(),
+        link: z
+          .object({
+            label: z.string().min(1),
+            href: z.union([
+              z.string().regex(/^\/(?!\/)[a-z0-9/#?=&%-]*$/i),
+              z.url({ protocol: /^https?$/ }),
+            ]),
+          })
+          .optional(),
       }),
     )
     .min(3),

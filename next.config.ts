@@ -38,6 +38,20 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
+      {
+        source: "/konfigurator",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: securityHeaders
+              .find((header) => header.key === "Content-Security-Policy")!
+              .value.replace(
+                "frame-src 'none'",
+                "frame-src https://konfigurator.klotz.mobi",
+              ),
+          },
+        ],
+      },
     ];
   },
 };

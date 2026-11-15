@@ -23,8 +23,12 @@ import type {
   BusinessPageContent,
   BusinessServiceContent,
 } from "@/domain/content/business";
+import type { ConfiguratorPageContent } from "@/domain/content/configurator";
+import type { ManufacturerDoorCatalog } from "@/domain/configurator/door-catalog";
 
 export interface ContentRepository {
+  getDoorCatalog(): Promise<ManufacturerDoorCatalog>;
+  getConfiguratorPageContent(): Promise<ConfiguratorPageContent>;
   getBusinessPageContent(): Promise<BusinessPageContent>;
   getBusinessServicePages(): Promise<BusinessServiceContent[]>;
   getFencePageContent(): Promise<FencePageContent>;
