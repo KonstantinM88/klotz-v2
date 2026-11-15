@@ -1,6 +1,7 @@
 import type { ServiceDetail } from "@/domain/content/presentation";
 import { terraceServicePages } from "./terrace-services";
 import { windowsServicePages } from "./windows-services";
+import { fenceServicePages } from "./fence-services";
 
 const terrace = "https://www.klotz.mobi/portfolio/terrassenueberdachung";
 const windows = "https://www.klotz.mobi/portfolio/fenster";
@@ -443,9 +444,11 @@ export const serviceDetails: ServiceDetail[] = seeds.map(
           ? windowsServicePages.find(
               (page) => slug === `fenster-tueren/${page.slug}`,
             )
-          : undefined;
+          : category === "zaun-tor"
+            ? fenceServicePages.find((page) => slug === `zaun-tor/${page.slug}`)
+            : undefined;
     if (
-      ["terrasse-garten", "fenster-tueren"].includes(category) &&
+      ["terrasse-garten", "fenster-tueren", "zaun-tor"].includes(category) &&
       !presentationPage
     )
       throw new Error(`Missing complete service content: ${slug}`);
@@ -463,8 +466,7 @@ export const serviceDetails: ServiceDetail[] = seeds.map(
         sourceRefs: presentationPage.sourceRefs,
         status: presentationPage.status,
       };
-    const image =
-      category === "zaun-tor" ? "/images/zaun.webp" : "/images/gewerbe.webp";
+    const image = "/images/gewerbe.webp";
     return {
       slug,
       category,

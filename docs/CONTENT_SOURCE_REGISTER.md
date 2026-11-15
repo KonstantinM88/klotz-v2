@@ -1,5 +1,13 @@
 # Content source register
 
+## 2026-11-15 — Zaun & Tor: обзор, шесть услуг, фотографии и схемы
+
+- src/content/fence.ts, fence-services.ts, fence-media.ts: новая самостоятельная немецкая редактура, draft. Источники на https://www.klotz.mobi/ проверены 15.11.2026: /portfolio/zaeune, /produkte/doppelstabmatten, /produkte/aluminiumz%C3%A4une, /produkte/sichtschutzz%C3%A4une, /portfolio/hoftore, /produkte/aluhoftore, /produkte/stahlhoftore, /portfolio/aussengelaender, /produkte/glasgel%C3%A4nder, /produkte/metallgel%C3%A4nder и /portfolio/wartung-service. Общая карточка консультации/выставки/контактов сохраняет источники /ueber-uns и /kontakt.
+- Объяснения выбора и подготовки — новая редактура; нет новых цен, дат, сертификатов, защитных классов, нагрузки, скорости привода и универсальной совместимости. Дополнительный официальный источник по общим принципам ворот: https://publikationen.dguv.de/widgets/pdf/download/article/648 (DGUV Information 208-022); числовые интервалы/правовые требования для всех частных домов не переносятся.
+- 12 фото: content/fence-service-image-sources.json и scripts/import-fence-service-assets.mjs. boundary-fence-* — галерея aluminiumzäune; boundary-privacy-* — sichtschutzzäune; boundary-gate-* — aluhoftore; boundary-sliding-* и boundary-electric-* — stahlhoftore; boundary-railing-* — glasgeländer, файлы Dekoglas. Оригиналы, WebP и SHA занесены в manifest. Права client-presentation-approved, факт legacy-product-illustration; возможный производитель отдельно требует публичного разрешения.
+- Stock AdobeStock из галерей перил не переносится. Также исключены логотипы/favicons и blank-заглушки. Автоматизация иллюстрируется общим видом въезда; наличие привода и конкретной защитной комплектации по фото не заявляется.
+- src/features/fence/gate-principle.tsx — оригинальные SVG-принципы двух способов открывания ворот, без размеров и проектных расчётов; не AI и не внешние фотографии. Existing Einzäunung Stadtstadion используется только с уже зарегистрированными сведениями и источником. Полная карта: docs/ZAUN_TOR_CONTENT_PLAN_2026-11-15.md.
+
 ## 2026-11-15 — Fenster & Türen: обзор, пять услуг и девять фотографий
 
 - src/content/windows.ts, windows-services.ts, windows-media.ts: самостоятельная немецкая редактура, статус draft. Источники проверены 15.11.2026: `/portfolio/fenster`, `/kunststofffenster`, `/alufenster`, `/holzfenster`, `/portfolio/tueren`, `/alutueren`, `/kunststofftueren`, `/holztueren`, `/clp`, `/echtholztueren`, `/weisslacktueren`, `/glastueren`, `/rolllaeden`, `/portfolio/sicht-sonnenschutz`, `/portfolio/wartung-service` на https://www.klotz.mobi/. Консультация/выставка/контакты используют действующую общую карточку сайта с /ueber-uns и /kontakt.

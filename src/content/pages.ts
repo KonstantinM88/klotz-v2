@@ -46,7 +46,7 @@ export const overviewPages: OverviewPageContent[] = [
     heading: "Funktion und Architektur zusammen gedacht.",
     body: [
       "Ein Zaun soll schützen, führen und zum Umfeld passen. KLOTZ plant Anlagen mit Blick auf Gelände, Zufahrt, Bedienkomfort und das gewünschte Maß an Privatsphäre.",
-      "Die spätere Website kann Varianten, Materialien und Referenzen filterbar und verständlich gegenüberstellen.",
+      "Zaun, Tor und Gehtür werden gemeinsam gestaltet. Für eine passende Ausführung nimmt KLOTZ Gelände, Untergrund und Zugänge auf und verbindet Ihre Auswahl mit einem nachvollziehbaren Montageumfang.",
     ],
     features: [
       "Zaun- & Sichtschutzsysteme",

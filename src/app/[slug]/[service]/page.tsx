@@ -5,6 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { TerraceServicePage } from "@/features/terrace/terrace-service-page";
 import { WindowsServicePage } from "@/features/windows/windows-service-page";
+import { FenceServicePage } from "@/features/fence/fence-service-page";
 type Props = { params: Promise<{ slug: string; service: string }> };
 export async function generateStaticParams() {
   return (await repository.getServices()).map((s) => {
@@ -14,6 +15,19 @@ export async function generateStaticParams() {
 }
 export async function generateMetadata({ params }: Props) {
   const p = await params;
+  if (p.slug === "zaun-tor") {
+    const detail = (await repository.getFenceServicePages()).find(
+      (page) => page.slug === p.service,
+    );
+    return detail
+      ? pageMetadata(
+          detail.metaTitle,
+          detail.metaDescription,
+          `/zaun-tor/${detail.slug}`,
+          detail.media.image.src,
+        )
+      : {};
+  }
   if (p.slug === "fenster-tueren") {
     const detail = (await repository.getWindowsServicePages()).find(
       (page) => page.slug === p.service,
@@ -54,6 +68,25 @@ export async function generateMetadata({ params }: Props) {
 }
 export default async function ServicePage({ params }: Props) {
   const p = await params;
+  if (p.slug === "zaun-tor") {
+    const [pages, site, articles] = await Promise.all([
+      repository.getFenceServicePages(),
+      repository.getSiteSettings(),
+      repository.getFeaturedArticles(),
+    ]);
+    const detail = pages.find((page) => page.slug === p.service);
+    if (!detail) notFound();
+    return (
+      <FenceServicePage
+        content={detail}
+        site={site}
+        related={detail.related.flatMap((slug) =>
+          pages.filter((page) => page.slug === slug),
+        )}
+        guide={articles.find((article) => article.slug === detail.guideSlug)}
+      />
+    );
+  }
   if (p.slug === "fenster-tueren") {
     const [pages, site, articles] = await Promise.all([
       repository.getWindowsServicePages(),

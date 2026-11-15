@@ -1,3 +1,4 @@
+import { serviceRequestContext } from "@/features/inquiry/service-context";
 import type { Metadata } from "next";
 import { ProjectRequestForm } from "@/components/forms/project-request-form";
 import { pageMetadata } from "@/lib/metadata";
@@ -23,22 +24,9 @@ export default async function RequestPage({
     typeof angebot === "string"
       ? await contentRepository.getOfferPage(angebot)
       : undefined;
-  const terraceContext = !offer && bereich === "terrasse-garten";
-  const windowsContext = !offer && bereich === "fenster-tueren";
-  const [terracePages, windowsPages] =
-    !offer && typeof leistung === "string"
-      ? await Promise.all([
-          contentRepository.getTerraceServicePages(),
-          contentRepository.getWindowsServicePages(),
-        ])
-      : [[], []];
-  const windowsService = windowsPages.find((page) => page.slug === leistung);
-  const service =
-    !offer && typeof leistung === "string"
-      ? [...terracePages, ...windowsPages].find(
-          (page) => page.slug === leistung,
-        )
-      : undefined;
+  const context = !offer
+    ? await serviceRequestContext(contentRepository, leistung, bereich)
+    : undefined;
   return (
     <main id="main-content">
       <section className="inner-hero">
@@ -71,37 +59,12 @@ export default async function RequestPage({
             </div>
           </div>
           <ProjectRequestForm
-            key={
-              offer?.slug ??
-              service?.slug ??
-              (terraceContext
-                ? "terrasse-garten"
-                : windowsContext
-                  ? "fenster-tueren"
-                  : "general")
-            }
-            initialTopic={
-              offer?.inquiryTopic ??
-              (windowsService
-                ? "Fenster & Türen"
-                : service
-                  ? "Terrasse & Garten"
-                  : windowsContext
-                    ? "Fenster & Türen"
-                    : terraceContext
-                      ? "Terrasse & Garten"
-                      : undefined)
-            }
+            key={offer?.slug ?? context?.key ?? "general"}
+            initialTopic={offer?.inquiryTopic ?? context?.topic}
             initialMessage={
               offer
                 ? `Ich interessiere mich für ${offer.shortTitle}. Bitte beraten Sie mich zu einer passenden Ausführung und einem aktuellen Angebot.\n\nMein Vorhaben: `
-                : service
-                  ? `${service.requestMessage}\n\nMein Vorhaben: `
-                  : windowsContext
-                    ? "Ich interessiere mich für Fenster, Türen oder Rollläden. Bitte beraten Sie mich zur passenden Auswahl und Montage.\n\nMein Vorhaben: "
-                    : terraceContext
-                      ? "Ich interessiere mich für eine Lösung für meine Terrasse oder meinen Garten. Bitte beraten Sie mich zu Überdachung, Beschattung und passenden Erweiterungen.\n\nMein Vorhaben: "
-                      : undefined
+                : context?.message
             }
           />
         </div>

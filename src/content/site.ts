@@ -1,3 +1,4 @@
+import { fenceMedia } from "./fence-media";
 import { windowsMedia } from "./windows-media";
 import type {
   Article,
@@ -109,14 +110,7 @@ export const serviceCategories: ServiceCategory[] = z
       description:
         "Sichtschutz, Grundstücksabschluss und komfortable Toranlagen.",
       href: "/zaun-tor",
-      image: {
-        src: "/images/zaun.webp",
-        alt: "Moderner Zaun mit Sichtschutz und integrierter Multibox",
-        width: 4100,
-        height: 1400,
-        sourceUrl: `${legacyBase}/`,
-        rightsStatus: "rights-check",
-      },
+      image: fenceMedia.hoftore.image,
       status: "legacy",
     },
     {

@@ -19,6 +19,8 @@ import { terracePageContent } from "@/content/terrace";
 import { terraceServicePages } from "@/content/terrace-services";
 import { windowsPageContent } from "@/content/windows";
 import { windowsServicePages } from "@/content/windows-services";
+import { fencePageContent } from "@/content/fence";
+import { fenceServicePages } from "@/content/fence-services";
 
 function withAsset<
   T extends {
@@ -40,6 +42,12 @@ function withAsset<
 }
 
 export const localContentRepository: ContentRepository = {
+  async getFencePageContent() {
+    return fencePageContent;
+  },
+  async getFenceServicePages() {
+    return fenceServicePages;
+  },
   async getWindowsPageContent() {
     return windowsPageContent;
   },
