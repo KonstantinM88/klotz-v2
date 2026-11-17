@@ -1,0 +1,139 @@
+/* Premium presentation layer for the service hubs (Terrasse & Garten,
+   Fenster & Türen, Zaun & Tor): dark hero continued by a trust band. */
+
+.terrace-page .terrace-hero,
+.windows-page > .outdoor-hero,
+.fence-page > .outdoor-hero {
+  background:
+    radial-gradient(
+      120% 80% at 85% 0%,
+      rgba(217, 237, 151, 0.08),
+      transparent 55%
+    ),
+    #17201b;
+  color: #e9ece4;
+  padding-bottom: clamp(48px, 5vw, 84px);
+}
+.terrace-page .terrace-hero h1,
+.windows-page > .outdoor-hero h1,
+.fence-page > .outdoor-hero h1 {
+  color: #fff;
+}
+.terrace-page .terrace-hero h1 em,
+.windows-page > .outdoor-hero h1 em,
+.fence-page > .outdoor-hero h1 em {
+  color: #d9ed97;
+}
+.terrace-page .terrace-hero .index-label,
+.windows-page > .outdoor-hero .index-label,
+.fence-page > .outdoor-hero .index-label {
+  color: #d9ed97;
+}
+.terrace-page .terrace-hero .breadcrumbs,
+.terrace-page .terrace-hero__lead,
+.terrace-page .terrace-hero__location,
+.terrace-page .terrace-hero figcaption,
+.windows-page > .outdoor-hero .breadcrumbs,
+.windows-page > .outdoor-hero .outdoor-hero__lead,
+.windows-page > .outdoor-hero .outdoor-hero__local,
+.windows-page > .outdoor-hero figcaption,
+.fence-page > .outdoor-hero .breadcrumbs,
+.fence-page > .outdoor-hero .outdoor-hero__lead,
+.fence-page > .outdoor-hero .outdoor-hero__local,
+.fence-page > .outdoor-hero figcaption {
+  color: rgba(233, 236, 228, 0.68);
+}
+.terrace-page .terrace-hero a:not(.button),
+.windows-page > .outdoor-hero a:not(.button),
+.fence-page > .outdoor-hero a:not(.button) {
+  color: #e9ece4;
+}
+.terrace-page .terrace-hero__location,
+.windows-page > .outdoor-hero .outdoor-hero__local,
+.fence-page > .outdoor-hero .outdoor-hero__local {
+  border-top-color: rgba(233, 236, 228, 0.16);
+}
+.terrace-page .terrace-hero .button--primary,
+.windows-page > .outdoor-hero .button--primary,
+.fence-page > .outdoor-hero .button--primary {
+  background: #d9ed97;
+  border-color: #d9ed97;
+  color: #17201b;
+}
+.terrace-page .terrace-hero .button--primary:hover,
+.windows-page > .outdoor-hero .button--primary:hover,
+.fence-page > .outdoor-hero .button--primary:hover {
+  background: #fff;
+}
+.windows-page > .outdoor-hero .service-media,
+.fence-page > .outdoor-hero .service-media {
+  background: #202e27;
+}
+
+.trust-band {
+  background: #17201b;
+  color: #e9ece4;
+}
+.trust-band__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-block: 0;
+  border-top: 1px solid rgba(233, 236, 228, 0.16);
+}
+.trust-band__grid > div {
+  padding: 30px 28px 38px 0;
+}
+.trust-band__grid > div + div {
+  padding-left: 28px;
+  border-left: 1px solid rgba(233, 236, 228, 0.16);
+}
+.trust-band dt {
+  display: grid;
+  gap: 8px;
+}
+.trust-band__value {
+  font-size: clamp(32px, 3.2vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  color: #fff;
+}
+.trust-band__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #d9ed97;
+}
+.trust-band dd {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(233, 236, 228, 0.66);
+}
+@media (max-width: 1100px) {
+  .trust-band__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .trust-band__grid > div:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .trust-band__grid > div:nth-child(n + 3) {
+    border-top: 1px solid rgba(233, 236, 228, 0.16);
+  }
+}
+@media (max-width: 560px) {
+  .trust-band__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .trust-band__grid > div,
+  .trust-band__grid > div + div {
+    padding: 22px 0;
+    border-left: 0;
+  }
+  .trust-band__grid > div + div {
+    border-top: 1px solid rgba(233, 236, 228, 0.16);
+  }
+}
+.terrace-page .terrace-hero__image-label {
+  color: #17201b;
+}

@@ -119,7 +119,7 @@ export const windowsSecurityPage: ServicePageContent = {
     {
       question: "Welche Schutzklasse hat die abgebildete Tür?",
       answer:
-        "Unsere Produktabbildungen dienen als Gestaltungsideen. Daraus wird keine Schutzklasse zugesichert. Wenn Sie eine bestimmte Eigenschaft benötigen, wird sie für die ausgewählte Ausführung anhand geeigneter Produktunterlagen geklärt und im vereinbarten Leistungsumfang berücksichtigt.",
+        "Unsere Produktabbildungen zeigen Gestaltungsideen. Benötigen Sie eine bestimmte Sicherheitseigenschaft, legen wir sie für Ihre Ausführung anhand der Produktunterlagen fest und nehmen sie verbindlich in den Leistungsumfang auf.",
     },
     {
       question: "Wie verbinde ich Sicherheitswünsche mit einem Fenstertausch?",

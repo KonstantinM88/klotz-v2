@@ -12,10 +12,18 @@ export async function generateMetadata() {
   );
 }
 export default async function Page() {
-  const [content, services, site] = await Promise.all([
+  const [content, services, site, company] = await Promise.all([
     repository.getBusinessPageContent(),
     repository.getBusinessServicePages(),
     repository.getSiteSettings(),
+    repository.getCompanyPageContent(),
   ]);
-  return <BusinessPage content={content} services={services} site={site} />;
+  return (
+    <BusinessPage
+      content={content}
+      services={services}
+      site={site}
+      team={company.team}
+    />
+  );
 }

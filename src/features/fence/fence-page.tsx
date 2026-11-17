@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrustBand } from "@/components/sections/trust-band";
 import type { Project, SiteSettings } from "@/domain/content/types";
 import type { FencePageContent } from "@/domain/content/fence";
 import { Breadcrumbs } from "@/components/sections/page-parts";
@@ -76,6 +77,7 @@ export function FencePage({
           </figure>
         </div>
       </section>
+      <TrustBand />
       <nav
         className="shell fence-jump"
         aria-label="Ihr Thema für Grundstück und Eingang"

@@ -14,6 +14,8 @@ import {
   BusinessHero,
   BusinessProcess,
 } from "./business-parts";
+import { BusinessAssurance, BusinessFactsBand } from "./business-assurance";
+import type { CompanyPageContent } from "@/domain/content/presentation";
 
 export function BusinessServicePage({
   content,
@@ -21,13 +23,18 @@ export function BusinessServicePage({
   related,
   process,
   guide,
+  overview,
+  contacts,
 }: {
   content: BusinessServiceContent;
   site: SiteSettings;
   related: BusinessServiceContent[];
   process: BusinessPageContent["process"];
   guide?: Article;
+  overview: BusinessPageContent;
+  contacts: CompanyPageContent["team"];
 }) {
+  const reference = overview.references[0];
   const request = `/projekt-anfragen?leistung=${content.slug}`;
   return (
     <main
@@ -43,6 +50,7 @@ export function BusinessServicePage({
         serviceTitle={content.title}
         slug={content.slug}
       />
+      <BusinessFactsBand facts={overview.facts} />
       <BusinessBenefits items={content.benefits} />
       <section
         className="shell outdoor-section business-intro"
@@ -284,11 +292,18 @@ export function BusinessServicePage({
         </div>
         <BusinessCards pages={related} compact />
       </section>
+      {reference ? (
+        <BusinessAssurance
+          reference={reference}
+          contacts={contacts}
+          site={site}
+        />
+      ) : null}
       <BusinessContact
         site={site}
         request={request}
         title="Ihr Anliegen ist ein guter Anfang."
-        text="Beschreiben Sie uns Ihr Vorhaben und den Projektort. Ob erste Idee oder bereits konkrete Aufgabenstellung: Gemeinsam besprechen wir, welche Informationen und nächsten Schritte für Ihr Objekt sinnvoll sind."
+        text="Beschreiben Sie uns Ihr Vorhaben und den Projektort. Ob erste Idee oder fertiges Leistungsverzeichnis: Wir melden uns mit den nächsten Schritten für Ihr Objekt."
       />
     </main>
   );

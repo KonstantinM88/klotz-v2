@@ -1,157 +1,308 @@
 import type { BusinessPageContent } from "@/domain/content/business";
-import { businessWorkMedia } from "./business-media";
+import { businessHubMedia } from "./business-media";
+import { serviceImage } from "./service-images";
+
+const img = (src: string, alt: string) => {
+  const { width, height } = serviceImage(src, alt);
+  return { src, alt, width, height };
+};
 
 export const businessPageContent: BusinessPageContent = {
   metadata: {
     title: "Bauelemente für Gewerbe & Wohnungswirtschaft | Merseburg",
     description:
-      "KLOTZ begleitet Hausverwaltungen, Unternehmen, Hotels und Gastronomie mit Bauelementen, Montage und Service. Ihr Objekt in Merseburg, Halle und Leipzig besprechen.",
+      "Fenster, Türen, Zaun- und Toranlagen, Überdachungen und Service für Hausverwaltungen, Unternehmen, Hotels und Gastronomie – mit eigenem Montageteam aus Merseburg.",
   },
   hero: {
-    title: "Ihr Objekt.",
-    accent: "Unser gemeinsamer Plan.",
-    lead: "Fenster, Türen, Außenanlagen und Service für Gebäude, die täglich genutzt werden. KLOTZ begleitet Hausverwaltungen, Unternehmen sowie Hotels und Gastronomie – mit persönlicher Beratung, Aufmaß und abgestimmter Montage aus Merseburg-Meuschau.",
-    media: businessWorkMedia,
-  },
-  introduction: {
-    title: "Ihr Auftrag beginnt beim Verstehen.",
-    paragraphs: [
-      "Ein Wohnungsbestand stellt andere Fragen als eine Betriebszufahrt oder eine Restaurantterrasse. Gemeinsam ist ihnen: Die Lösung muss zur Nutzung passen, der Umfang verständlich sein und die Umsetzung mit den Menschen vor Ort abgestimmt werden. Deshalb beginnt KLOTZ bei Ihrer Aufgabe und dem vorhandenen Objekt.",
-      "Für Wohnungsgesellschaften, Hausverwaltungen und mittelständische Unternehmen verbindet KLOTZ Fachberatung, technische Vorbereitung und Montage. So führen wir Ihr Vorhaben vom Aufmaß und Angebot bis zur Umsetzung und Abnahme. Im Raum Merseburg, Halle (Saale), Leipzig und Saalekreis besprechen wir mit Ihnen, welche Leistungen zu Ihrem Objekt passen.",
+    eyebrow: "Gewerbe · Wohnungswirtschaft · Hotellerie",
+    title: "Bauelemente für Objekte,",
+    accent: "die jeden Tag funktionieren.",
+    lead: "Fenster und Türen im Bestand, Zaun- und Toranlagen, Überdachungen und Service – für Hausverwaltungen, Unternehmen, Hotels und Gastronomie. Mit eigener Ansprechpartnerin für gewerbliche Kunden, eigenem Montageteam und kurzen Wegen aus Merseburg-Meuschau.",
+    media: businessHubMedia,
+    mosaic: [
+      {
+        ...img(
+          "/images/b2b/montageteam.webp",
+          "KLOTZ-Montageteam vor einem Firmenfahrzeug",
+        ),
+        label: "Eigenes Montageteam",
+      },
+      {
+        ...img(
+          "/images/b2b/stadion-zaun.webp",
+          "Neue Doppelstabmatten-Zaunanlage entlang eines Sportplatzes",
+        ),
+        label: "Stadtstadion Merseburg · 2025",
+      },
+      {
+        ...img(
+          "/images/b2b/see-verglasung.webp",
+          "Verglaster, überdachter Außenbereich an einem Gebäudekomplex",
+        ),
+        label: "Überdachung am Störmthaler See",
+      },
     ],
   },
-  trust: {
-    title: "Verlässlich an Ihrer Seite.",
-    accent: "Mit Erfahrung für Ihr Objekt.",
-    lead: "Für professionelle Auftraggeber zählen fachliche Erfahrung, erreichbare Ansprechpartner und ein verständlicher Weg zur Umsetzung. Dafür verbinden wir bei KLOTZ Beratung, technische Vorbereitung, Montage und Service.",
-    experience: {
+  facts: [
+    {
       value: "30+",
       label: "Jahre KLOTZ in der Region",
-      text: "Der Name KLOTZ steht seit über 30 Jahren für Bauelemente im Raum Halle und Leipzig. Diese gewachsene Erfahrung fließt in die Beratung und Umsetzung Ihres Vorhabens ein.",
+      text: "Bauelemente aus Merseburg-Meuschau für Halle, Leipzig und Mitteldeutschland.",
     },
-    advantages: [
+    {
+      value: "13",
+      label: "Fachleute im eigenen Team",
+      text: "Fachberatung, technische Sachbearbeitung, Monteure und Ausbildung unter einem Dach.",
+    },
+    {
+      value: "1,1 km+",
+      label: "Zaunanlage am Stadtstadion",
+      text: "Einzäunung des Stadtstadions Merseburg, umgesetzt Anfang 2025.",
+    },
+    {
+      value: "1",
+      label: "Ansprechpartnerin für Gewerbe",
+      text: "Arbeitsvorbereitung, Kalkulation und Einkauf für gewerbliche Kunden.",
+    },
+  ],
+  statement: {
+    label: "Unser Anspruch",
+    text: "Ein Wohnungsbestand stellt andere Fragen als eine Betriebszufahrt oder eine Hotelterrasse. Deshalb beginnen wir bei Ihrem Objekt – und liefern Beratung, Aufmaß, Montage und Service aus einer Hand.",
+    signature: "KLOTZ GmbH · Merseburg-Meuschau",
+  },
+  references: [
+    {
+      id: "stadtstadion",
+      eyebrow: "Referenz / Öffentliches Objekt",
+      title: "Über 1,1 Kilometer Zaun.",
+      accent: "Ein Projekt, ein Team.",
+      text: "Anfang 2025 hat KLOTZ das Stadtstadion Merseburg neu eingezäunt: Doppelstabmatten-Zaunanlage mit Toren über eine Länge von mehr als 1,1 Kilometern – vom Setzen der Pfosten bis zum fertigen Grundstücksabschluss mit eigenem Montageteam.",
+      facts: [
+        { label: "Objekt", value: "Stadtstadion Merseburg" },
+        {
+          label: "Leistung",
+          value: "Einzäunung mit Doppelstabmatten und Toren",
+        },
+        { label: "Umfang", value: "über 1,1 km Zaunlänge" },
+        { label: "Zeitraum", value: "Februar 2025" },
+      ],
+      images: [
+        img(
+          "/images/b2b/stadion-montage.webp",
+          "Monteure in Warnkleidung setzen Zaunpfosten mit Betonkübel am Sportplatz",
+        ),
+        img(
+          "/images/b2b/stadion-zaun.webp",
+          "Fertige grüne Doppelstabmatten-Zaunanlage entlang des Sportplatzes",
+        ),
+        img(
+          "/images/b2b/stadion-eingang.webp",
+          "Eingangsbereich mit Schild Stadtstadion und neuer Zaunanlage",
+        ),
+        img(
+          "/images/b2b/stadion-fahrzeuge.webp",
+          "Firmenfahrzeuge und Baumaschinen auf dem Baufeld am Stadion",
+        ),
+      ],
+      caption:
+        "Aufnahmen aus dem KLOTZ-Bildbericht „Einzäunung Stadtstadion“, Februar 2025",
+      href: "/referenzen/einzaeunung-stadtstadion",
+      source: "https://www.klotz.mobi/news/einz%C3%A4unung-stadtstadion",
+    },
+    {
+      id: "stoermthaler-see",
+      eyebrow: "Referenz / Außenbereich am Wasser",
+      title: "Überdachung am Störmthaler See.",
+      accent: "Geschützt draußen, mit Blick aufs Wasser.",
+      text: "Ein großzügiger Außenbereich an einem Gebäudekomplex am Störmthaler See: überdacht und seitlich verglast, damit die Fläche bei Wind und Regen nutzbar bleibt und der Blick nach draußen frei ist.",
+      facts: [
+        { label: "Ort", value: "Störmthaler See bei Leipzig" },
+        { label: "Leistung", value: "Überdachung mit seitlicher Verglasung" },
+      ],
+      images: [
+        img(
+          "/images/b2b/see-terrasse.webp",
+          "Überdachte Terrasse mit Glasdach und Blick auf den See",
+        ),
+        img(
+          "/images/b2b/see-fassade.webp",
+          "Gebäudekomplex mit vorgesetzter verglaster Überdachung im Erdgeschoss",
+        ),
+        img(
+          "/images/b2b/see-verglasung.webp",
+          "Seitliche Glaselemente der Überdachung mit Spiegelung des Himmels",
+        ),
+      ],
+      caption: "Aufnahmen aus der KLOTZ-Projektgalerie",
+      source: "https://www.klotz.mobi/",
+    },
+  ],
+  matrix: {
+    title: "Ein Partner.",
+    accent: "Alle Bauelemente rund ums Objekt.",
+    lead: "Statt mehrere Firmen zu koordinieren, klären Sie Fenster, Türen, Außenanlagen und Service mit einem Team. Typische Aufgaben je Bereich auf einen Blick:",
+    sectors: [
+      "Wohnungswirtschaft",
+      "Industrie & Gewerbe",
+      "Hotellerie & Gastronomie",
+    ],
+    rows: [
       {
-        title: "Von der Beratung bis zur Abnahme",
-        text: "Fachberatung, technische Vorbereitung und Montage greifen bei KLOTZ ineinander. Aufmaß, Angebot und die vereinbarte Ausführung bilden einen zusammenhängenden Weg für Ihr Projekt.",
+        service: "Fenster & Rollläden",
+        href: "/fenster-tueren/fenster",
+        marks: [true, true, true],
       },
       {
-        title: "Mit Wohnungsbestand und Gewerbe vertraut",
-        text: "Wohnungsgesellschaften, Hausverwaltungen und mittelständische Unternehmen gehören zu unserem Kundenkreis. Wir betrachten Ihr Anliegen mit Blick auf Nutzung, Zugang und die Menschen vor Ort.",
+        service: "Haus- und Objekteingangstüren",
+        href: "/fenster-tueren/haustueren",
+        marks: [true, true, true],
       },
       {
-        title: "Persönlich in Merseburg-Meuschau",
-        text: "Besprechen Sie Ihr Objekt direkt mit KLOTZ. Die Innen- und Außenausstellung am Standort bietet einen Rahmen, um Materialien und Ausführungen im persönlichen Gespräch zu vergleichen.",
+        service: "Einbruchschutz",
+        href: "/fenster-tueren/einbruchschutz",
+        marks: [true, true, false],
       },
       {
-        title: "Auch für Bestehendes ansprechbar",
-        text: "Wartung und Instandsetzung gehören zum Leistungsspektrum. Bei Auffälligkeiten besprechen wir geeignete Schritte, verfügbare Komponenten und die Möglichkeiten, vorhandene Bauelemente zu erhalten.",
+        service: "Zaunanlagen & Sichtschutz",
+        href: "/zaun-tor/zaunanlagen",
+        marks: [true, true, true],
+      },
+      {
+        service: "Hoftore, Schiebetore & elektrische Antriebe",
+        href: "/zaun-tor/elektrische-toranlagen",
+        marks: [true, true, false],
+      },
+      {
+        service: "Geländer",
+        href: "/zaun-tor/gelaender",
+        marks: [true, true, true],
+      },
+      {
+        service: "Überdachungen, Glasschiebewände & Sonnenschutz",
+        href: "/terrasse-garten",
+        marks: [false, true, true],
+      },
+      {
+        service: "Wartung & Instandsetzung",
+        href: "/gewerbekunden/wartung-service",
+        marks: [true, true, true],
       },
     ],
+  },
+  team: {
+    image: img(
+      "/images/b2b/team.webp",
+      "Das KLOTZ-Team vor zwei Firmenfahrzeugen am Standort Merseburg-Meuschau",
+    ),
+    title: "Das Team hinter Ihrem Objekt.",
+    accent: "Persönlich erreichbar.",
+    text: "Bei KLOTZ arbeiten Fachberatung, technische Sachbearbeitung und Montage an einem Standort zusammen. Für gewerbliche Kunden gibt es eine eigene Ansprechpartnerin für Arbeitsvorbereitung, Kalkulation und Einkauf.",
+    contactIds: ["team-shafiee", "team-klotz"],
   },
   tasks: [
     {
       title: "Mehrere Meldungen aus dem Wohnungsbestand?",
-      text: "Objekte und betroffene Elemente ordnen. Reparatur und Erneuerung zunächst anhand des Zustands einordnen, statt jede Meldung als Komplettaustausch zu behandeln.",
+      text: "Wir ordnen Objekte und Elemente, prüfen den Zustand und schlagen vor, was instand gesetzt und was erneuert werden sollte – als nachvollziehbarer Maßnahmenplan.",
       href: "/gewerbekunden/wohnungswirtschaft",
-      label: "Bestandsmaßnahmen vorbereiten",
+      label: "Bestandsmaßnahmen planen",
     },
     {
       title: "Zugang oder Zufahrt am Betrieb verändern?",
-      text: "Verkehrswege, Nutzung und Bewegungsraum gemeinsam betrachten. Montageflächen, elektrische Versorgung und weitere Gewerke von Anfang an ansprechen.",
+      text: "Wir planen Zaun, Tor und Antrieb passend zu Verkehrswegen und Nutzung – und stimmen Montageflächen und Stromversorgung von Anfang an mit Ihnen ab.",
       href: "/gewerbekunden/industrie-gewerbe",
-      label: "Standortprojekt konkretisieren",
+      label: "Standortprojekt planen",
     },
     {
       title: "Die Terrasse soll Gästen mehr bieten?",
-      text: "Sitzbereiche, Schatten und Servicewege zusammen planen. Dach und seitliche Elemente als Konzept vergleichen, passend zu Ihrer gewünschten Nutzung.",
+      text: "Überdachung, Glasschiebewände und Sonnenschutz machen Außenplätze bei mehr Wetterlagen nutzbar. Wir planen Sitzbereiche, Schatten und Servicewege als Gesamtkonzept.",
       href: "/gewerbekunden/hotellerie-gastronomie",
       label: "Außenbereich weiterdenken",
     },
     {
-      title: "Ein Bauelement funktioniert nicht wie gewohnt?",
-      text: "Element, Auffälligkeit und vorhandene Unterlagen beschreiben. Ob Reparatur, Teilersatz oder Erneuerung infrage kommt, wird am konkreten Bestand geprüft.",
+      title: "Ein Tor oder eine Tür funktioniert nicht mehr?",
+      text: "Beschreiben Sie Element und Auffälligkeit – wir prüfen vor Ort, ob Reparatur, Teilersatz oder Erneuerung die wirtschaftlichste Lösung ist.",
       href: "/gewerbekunden/wartung-service",
-      label: "Serviceanliegen einordnen",
+      label: "Service anfragen",
     },
   ],
   process: [
     {
-      title: "Aufgabe und Objekt kennenlernen",
-      text: "Sie beschreiben Anlass, Projektort und vorhandene Situation. Fotos, Stückzahlen und bekannte Maße geben dem ersten Gespräch eine konkrete Grundlage.",
+      title: "Objekt kennenlernen",
+      text: "Sie schildern Anlass, Projektort und Bestand. Fotos, Stückzahlen oder eine Objektliste genügen für den Einstieg.",
       result: "Gemeinsames Verständnis Ihrer Aufgabe",
     },
     {
-      title: "Bestand und Umfang klären",
-      text: "Aufmaß, Ausführung und erforderliche Vorarbeiten werden für das Vorhaben besprochen. Reparaturmöglichkeiten und Schnittstellen werden dort betrachtet, wo sie relevant sind.",
-      result: "Abgegrenzte Grundlage für das Angebot",
+      title: "Aufmaß & Angebot",
+      text: "Wir nehmen vor Ort auf, klären Ausführung und Vorarbeiten und kalkulieren Ihr Angebot – auf Wunsch auch auf Basis Ihres Leistungsverzeichnisses.",
+      result: "Nachvollziehbares Angebot, Position für Position",
     },
     {
-      title: "Ausführung abstimmen",
-      text: "Zugang, zuständige Personen und Montagebedingungen werden vereinbart. Bei laufender Nutzung gehören mögliche Einschränkungen und erforderliche Abstimmungen dazu.",
-      result: "Besprochene Voraussetzungen und nächste Schritte",
+      title: "Ausführung planen",
+      text: "Zugänge, Zeitfenster, Bauabschnitte und Ansprechpartner vor Ort stimmen wir vorab ab – damit Bewohner und Betrieb möglichst wenig beeinträchtigt werden.",
+      result: "Abgestimmter Montageplan",
     },
     {
-      title: "Umsetzen und gemeinsam abschließen",
-      text: "Die vereinbarten Arbeiten führen zur Abnahme. Benötigte Unterlagen, offene Punkte und ein möglicher späterer Service werden passend zum Auftrag besprochen.",
-      result: "Nachvollziehbarer Abschluss der vereinbarten Leistung",
+      title: "Montage & Abnahme",
+      text: "Unser eigenes Montageteam setzt um, die Abnahme machen wir gemeinsam. Wartung und Instandsetzung bleiben danach bei uns in einer Hand.",
+      result: "Übergabe mit einem Ansprechpartner für später",
     },
   ],
   preparation: [
     {
       title: "Objekt & Standort",
-      text: "Welche Gebäude oder Bereiche sind betroffen? Nennen Sie Projektort, Nutzung und eine grobe Stückzahl. Eine vorhandene Objektliste genügt als Einstieg.",
+      text: "Projektort, Nutzung und eine grobe Stückzahl – eine vorhandene Objektliste genügt.",
     },
     {
       title: "Aufgabe & Bestand",
-      text: "Geht es um Erneuerung, Ergänzung oder eine Störung? Gesamtansichten, Details und bekannte Produktangaben helfen bei der Einordnung.",
+      text: "Erneuerung, Ergänzung oder Störung? Gesamtansichten, Details und bekannte Produktangaben.",
     },
     {
       title: "Ablauf & Beteiligte",
-      text: "Wer entscheidet, wer öffnet vor Ort und welche Zeiten oder Wege sind wichtig? Teilen Sie bekannte Einschränkungen früh mit.",
+      text: "Wer entscheidet, wer öffnet vor Ort, welche Zeiten und Wege sind wichtig?",
     },
     {
-      title: "Wünsche & Unterlagen",
-      text: "Ein Terminwunsch, Skizzen oder vorhandene Pläne helfen beim Gespräch. Exakte technische Daten müssen für die erste Anfrage noch nicht vollständig sein.",
+      title: "Termine & Unterlagen",
+      text: "Wunschzeitraum, Skizzen, Pläne oder ein Leistungsverzeichnis – falls vorhanden.",
     },
   ],
   faq: [
     {
       question: "Für welche gewerblichen Auftraggeber arbeitet KLOTZ?",
       answer:
-        "KLOTZ begleitet Wohnungsgesellschaften, Hausverwaltungen und mittelständische Unternehmen sowie Hotels und Gastronomiebetriebe. Welcher Leistungsumfang für Ihr Objekt passt, wird anhand der Aufgabe und der örtlichen Situation geklärt. Wählen Sie Ihr Thema oder beschreiben Sie das Vorhaben direkt in einer Anfrage.",
+        "Für Wohnungsgesellschaften, Hausverwaltungen, mittelständische Unternehmen, Hotels und Gastronomie – und für öffentliche Objekte, wie die Einzäunung des Stadtstadions Merseburg zeigt. Ob einzelnes Bauteil oder ganzes Objekt: Wir prüfen Ihre Aufgabe und sagen Ihnen, wie wir sie umsetzen.",
     },
     {
       question:
         "Können wir Reparaturen und geplante Erneuerungen gemeinsam besprechen?",
       answer:
-        "Ja. Eine Übersicht über betroffene Elemente und den Anlass hilft, unterschiedliche Maßnahmen zu ordnen. Welche Teile erhalten werden können und wo ein Austausch sinnvoll ist, wird am vorhandenen Bestand geprüft. Daraus lässt sich der gewünschte Auftrag abgrenzen.",
+        "Ja. Schicken Sie uns eine Übersicht der betroffenen Elemente. Wir prüfen am Bestand, was sich instand setzen lässt und wo ein Austausch sinnvoll ist – daraus entsteht ein Maßnahmenplan, den Sie auch in Etappen umsetzen können.",
     },
     {
       question:
-        "Wie werden laufender Betrieb oder bewohnte Gebäude berücksichtigt?",
+        "Wie berücksichtigen Sie bewohnte Gebäude und laufenden Betrieb?",
       answer:
-        "Nennen Sie wichtige Wege, Betriebszeiten und Zuständigkeiten für den Zutritt. Mögliche Abschnitte, Sperrungen und Abstimmungen werden vor der Ausführung besprochen. Eine Montage ohne jede Beeinträchtigung oder zu einem festen Wunschtermin wird nicht pauschal zugesagt.",
+        "Zugänge, Zeitfenster und Bauabschnitte stimmen wir vor der Montage mit Ihnen ab. Nennen Sie uns dafür wichtige Wege, Betriebszeiten und wer vor Ort öffnet – dann planen wir die Ausführung entsprechend.",
     },
     {
       question: "Welche Region betreut KLOTZ für Objektanfragen?",
       answer:
-        "Der Standort ist Merseburg-Meuschau. Merseburg, Halle (Saale), Leipzig und Saalekreis bilden den regionalen Schwerpunkt dieser Seite. Nennen Sie Ihren Projektort, damit die konkrete Anfrage und die Möglichkeiten zur Umsetzung eingeordnet werden können.",
+        "Von Merseburg-Meuschau aus betreuen wir Objekte in Halle (Saale), Leipzig, im Saalekreis und Burgenlandkreis sowie in Weimar, Erfurt, Jena und Gera.",
     },
     {
       question: "Brauchen wir bereits ein Leistungsverzeichnis?",
       answer:
-        "Für ein erstes Gespräch genügt eine verständliche Aufgabenbeschreibung mit Projektort, betroffenen Elementen und gegebenenfalls Fotos. Wenn Pläne oder ein Leistungsverzeichnis vorliegen, erwähnen Sie diese in der Anfrage. Benötigte Unterlagen und der weitere Weg werden gemeinsam besprochen.",
+        "Nein. Für den Einstieg genügen Projektort, betroffene Elemente und ein paar Fotos. Liegen Pläne oder ein Leistungsverzeichnis vor, kalkulieren wir gern auf dieser Grundlage.",
     },
     {
-      question:
-        "Gibt es einen pauschalen Wartungsvertrag oder feste Servicezeiten?",
+      question: "Übernimmt KLOTZ auch Wartung und Instandsetzung?",
       answer:
-        "Vertragsumfang, Termine und benötigte Unterlagen werden für das konkrete Objekt besprochen. Nennen Sie die betroffenen Anlagen und die gewünschten Aufgaben, damit die Möglichkeiten eingeordnet werden können. Ein dringendes Anliegen klären Sie am besten telefonisch; ein Termin wird individuell vereinbart.",
+        "Ja, Wartung und Instandsetzung gehören zu unseren Leistungen. Welcher Umfang und welche Intervalle für Ihre Tore, Türen und Fenster sinnvoll sind, legen wir objektbezogen mit Ihnen fest.",
     },
   ],
   sourceRefs: [
     "https://www.klotz.mobi/ueber-uns",
     "https://www.klotz.mobi/kontakt",
+    "https://www.klotz.mobi/news/einz%C3%A4unung-stadtstadion",
     "https://www.klotz.mobi/portfolio/wartung-service",
     "https://www.klotz.mobi/inspirationen-f%C3%BCr-die-hotellerie-gastronomiebranche",
   ],

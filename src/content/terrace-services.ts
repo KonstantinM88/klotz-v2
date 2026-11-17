@@ -590,7 +590,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
     detail: {
       title: "Der gute Anschluss macht den Unterschied.",
       paragraphs: [
-        "Eine niedrige Schiene kann angenehm wirken; entscheidend ist jedoch der tatsächliche Anschluss an den Boden. Höhen, Wasserführung und vorhandene Beläge müssen zusammenpassen. Eine pauschale Zusage zur Barrierefreiheit wäre ohne konkrete Planung nicht aussagekräftig.",
+        "Eine niedrige Schiene kann angenehm wirken; entscheidend ist jedoch der tatsächliche Anschluss an den Boden. Höhen, Wasserführung und vorhandene Beläge müssen zusammenpassen. Wünschen Sie einen möglichst schwellenarmen Übergang, planen wir den Bodenanschluss gezielt darauf hin.",
         "Auch die Reinigung und Bedienung gehören ins Gespräch. Wie erreichen Sie die Glasflächen? Bleibt die Tür zum Haus frei? Wo verlaufen häufig genutzte Wege? Diese Details bestimmen, ob die Glaswand später selbstverständlich zum Alltag gehört.",
       ],
       image: image(
@@ -645,7 +645,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       {
         question: "Sind die Bodenschienen barrierefrei?",
         answer:
-          "Das lässt sich nur anhand des konkreten Systems und Bodenanschlusses beurteilen. Eine flache Schiene allein ist keine pauschale Zusage zur Barrierefreiheit. Nennen Sie besondere Anforderungen an den Durchgang früh im Beratungsgespräch.",
+          "Das hängt vom System und vom Bodenanschluss ab. Nennen Sie uns besondere Anforderungen an den Durchgang früh im Beratungsgespräch – dann planen wir den Übergang so schwellenarm wie möglich.",
       },
       {
         question: "Welche Angaben helfen bei einer Anfrage zur Nachrüstung?",
@@ -726,7 +726,7 @@ export const terraceServicePages: TerraceServiceContent[] = [
       title: "Das Tuch ist sichtbar. Die Befestigung entscheidend.",
       paragraphs: [
         "Farbe und Stoffwirkung fallen zuerst auf. Für eine passende Lösung müssen aber auch die dahinterliegenden Voraussetzungen stimmen: Fassadenaufbau, Montagehöhe, nutzbarer Bewegungsraum und die Lage möglicher Anschlüsse.",
-        "Besprechen Sie außerdem den Umgang mit Wind und Wetter. Eine Markise ist nicht automatisch für jede Witterung vorgesehen. Bedienung und mögliche Steuerung werden passend zur angebotenen Ausführung erklärt. So können Sie Ihren Sonnenschutz im Alltag bewusst und nach den zugehörigen Vorgaben nutzen.",
+        "Besprechen Sie außerdem den Umgang mit Wind und Wetter. Wir erklären Ihnen Bedienung und mögliche Wind- und Sonnensteuerung passend zu Ihrer Ausführung. So können Sie Ihren Sonnenschutz im Alltag bewusst und nach den zugehörigen Vorgaben nutzen.",
       ],
       image: image(
         "/images/terrace-shade-detail.webp",

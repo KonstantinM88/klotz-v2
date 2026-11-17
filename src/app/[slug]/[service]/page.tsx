@@ -83,11 +83,12 @@ export async function generateMetadata({ params }: Props) {
 export default async function ServicePage({ params }: Props) {
   const p = await params;
   if (p.slug === "gewerbekunden") {
-    const [pages, overview, site, articles] = await Promise.all([
+    const [pages, overview, site, articles, company] = await Promise.all([
       repository.getBusinessServicePages(),
       repository.getBusinessPageContent(),
       repository.getSiteSettings(),
       repository.getFeaturedArticles(),
+      repository.getCompanyPageContent(),
     ]);
     const detail = pages.find((page) => page.slug === p.service);
     if (!detail) notFound();
@@ -100,6 +101,10 @@ export default async function ServicePage({ params }: Props) {
         )}
         process={overview.process}
         guide={articles.find((article) => article.slug === detail.guideSlug)}
+        overview={overview}
+        contacts={overview.team.contactIds.flatMap((id) =>
+          company.team.filter((member) => member.id === id),
+        )}
       />
     );
   }

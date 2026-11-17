@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrustBand } from "@/components/sections/trust-band";
 import type { Article, SiteSettings } from "@/domain/content/types";
 import type { WindowsPageContent } from "@/domain/content/windows";
 import { Breadcrumbs } from "@/components/sections/page-parts";
@@ -83,6 +84,7 @@ export function WindowsPage({
           </figure>
         </div>
       </section>
+      <TrustBand />
       <div className="shell windows-jump" aria-label="Direkt zu Ihrem Thema">
         {content.solutions.map((s, i) => (
           <a href={`#${s.slug}`} key={s.slug}>

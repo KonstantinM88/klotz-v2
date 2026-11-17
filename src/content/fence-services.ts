@@ -771,7 +771,7 @@ export const fenceServicePages: ServicePageContent[] = [
       paragraphs: [
         "Die sichtbare Oberfläche zeigt nicht, wie Treppe, Balkon oder Terrassenrand aufgebaut sind. Für eine passende Befestigung zählen Untergrund, Bauteilaufbau und die vorgesehene Konstruktion. Vorhandene Pläne oder Angaben zu einer Sanierung helfen, diese Grundlage früh zu klären.",
         "Im Außenbereich werden Anschlüsse an Beläge und die vorhandenen Abdichtungen mitbetrachtet. Seitliche Befestigung und eine Montage auf dem Bauteil sind unterschiedliche Ansätze, die nicht an jedem Standort gleichermaßen passen. Die Auswahl erfolgt für Ihr Gebäude und das gewählte System.",
-        "Welche Abmessungen, Füllungen und Nachweise erforderlich sind, wird für den konkreten Einsatz geklärt. Pauschale Aussagen aus einem Produktfoto reichen dafür nicht. Das Angebot beschreibt deshalb die abgestimmte Ausführung einschließlich der vereinbarten Montage, damit Gestaltung und Aufbau zusammenkommen.",
+        "Welche Abmessungen, Füllungen und Nachweise erforderlich sind, wird für den konkreten Einsatz geklärt. Das Angebot beschreibt deshalb die abgestimmte Ausführung einschließlich der vereinbarten Montage, damit Gestaltung und Aufbau zusammenkommen.",
       ],
     },
     planning: [

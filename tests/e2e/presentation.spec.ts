@@ -116,6 +116,13 @@ test("homepage explains the offer and FAQ works with the keyboard", async ({
   await expect(
     faq.getByRole("link", { name: "Kostenfaktoren verstehen" }),
   ).toHaveAttribute("href", "/wissen/was-kostet-eine-terrassenueberdachung");
+  await faq.locator(".atelier-faq__intro").scrollIntoViewIfNeeded();
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) =>
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+      ),
+  );
   await expect
     .poll(() =>
       page.evaluate(
@@ -314,20 +321,24 @@ test("unknown routes and crawlable demo without indexing", async ({
   );
 });
 
-test("editorial content works without JavaScript", async ({ browser }) => {
+test("editorial content works without JavaScript", async ({
+  browser,
+  baseURL,
+}) => {
   const context = await browser.newContext({
     javaScriptEnabled: false,
     viewport: { width: 390, height: 844 },
   });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:3100/");
-  await expect(page.locator("h1")).toContainText("Raum für");
-  await expect(page.locator(".expertise-card")).toHaveCount(4);
+  await page.goto(baseURL!);
+  await expect(page.locator("h1")).toContainText("Bauelemente");
+  await expect(page.locator(".hv-hub")).toHaveCount(3);
+  await expect(page.locator(".hv-path")).toHaveCount(2);
   await page.locator(".atelier-faq summary").first().click();
   await expect(
     page.getByRole("link", { name: "Lamellendach und Glasdach vergleichen" }),
   ).toBeVisible();
-  await page.locator(".expertise-card").first().click();
+  await page.locator(".hv-hub h3 a").first().click();
   await expect(page).toHaveURL(/terrasse-garten$/);
   await expect(page.locator(".terrace-solution")).toHaveCount(6);
   await page.locator(".terrace-faq summary").first().click();

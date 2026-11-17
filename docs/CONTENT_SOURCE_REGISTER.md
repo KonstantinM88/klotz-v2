@@ -1,5 +1,16 @@
 # Content source register
 
+## 2026-11-17 — Redesign v2: изображения и факты Gewerbekunden/главной (D-046)
+
+- Новые WebP в `public/images/b2b/` получены из оригиналов klotz.mobi (загружены на компьютере пользователя, т. к. облако не имеет доступа к сайту). Права client-presentation-approved; manifest — `content/assets-manifest.json` (SHA-256 оригинала, координаты обрезки):
+  - `stadion-montage/zaun/eingang/fahrzeuge` — обрезки коллажа `/sites/default/files/Einzäunung_Stadtstadion_02 2025_0.png` (новость https://www.klotz.mobi/news/einz%C3%A4unung-stadtstadion); оригинал — `content/legacy/originals/stadtstadion-original-full.png`.
+  - `see-terrasse/fassade/verglasung` — три панели слайдера `/sites/default/files/Slider_Störmtaler_See_20260221_0.jpg`.
+  - `team.webp` — `/sites/default/files/Team2.jpg` (Über uns); `montageteam.webp` — `/sites/default/files/Meuschau3.jpg`.
+- Факты: «über 1,1 km», «Februar 2025» — надпись на коллаже Stadtstadion; «30+ Jahre» — meta description главной legacy; «13» и роли — /ueber-uns; регионы — /kontakt и надпись на автомобиле. Статус legacy-current-check.
+- Изображения производителя Pratic (Opera/Level/Brera) скачаны для оценки, но на сайте не используются.
+- При подготовке приватного репозитория v2 загрузки для оценки в `content/legacy/originals-v2/` исключены через `.gitignore`: они не используются кодом или manifests, файлы сохранены локально. Четыре оригинала новых B2B-изображений в `content/legacy/originals/` и девять WebP входят в Git-пакет; права остаются только презентационными.
+- Перед commit/push локально сверены SHA-256 четырёх оригиналов и размеры девяти WebP. Поля `bytes` этих девяти записей уточнены по фактическим файлам; пиксельные размеры совпали, сами изображения не менялись.
+
 ## 2026-11-15 — Выбор материала и изображения для консультации (D-045)
 
 - Новые фотографии/бизнес-факты не добавлялись. Категории галерей Fenster/Haustüren/Innentüren выведены из sourcePage существующих записей content/windows-gallery-assets-manifest.json; источники одиннадцати материалов и права — в D-044 ниже. Все request-ссылки ведут к известным ID той же услуги. Выбранная фотография в заявке использует тот же ImageAsset, без загрузки пользовательского URL и без новой интерпретации технических свойств.

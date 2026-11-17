@@ -9,6 +9,13 @@ export const businessWorkMedia: ServicePageMedia = {
   caption:
     "Einblick in die Montage · unveränderte Aufnahme aus dem KLOTZ-Servicearchiv",
 };
+export const businessHubMedia: ServicePageMedia = {
+  image: serviceImage(
+    "/images/b2b/montageteam.webp",
+    "KLOTZ-Montageteam in Arbeitskleidung vor einem Firmenfahrzeug mit KLOTZ-Beschriftung",
+  ),
+  caption: "Das KLOTZ-Montageteam · Aufnahme aus Merseburg-Meuschau",
+};
 export const businessMedia = {
   wohnungswirtschaft: {
     image: serviceImage(

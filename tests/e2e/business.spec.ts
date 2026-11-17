@@ -32,7 +32,7 @@ for (const slug of slugs)
     );
     await expect(page.locator(".business-hero img")).toHaveCSS(
       "object-fit",
-      "contain",
+      "cover",
     );
     await expect(page.locator(".business-scope__grid article")).toHaveCount(3);
     await expect(page.locator(".business-coordination ol li")).toHaveCount(4);
@@ -145,15 +145,13 @@ test("business section overview, sector navigation and category inquiry", async 
   await expect(page.locator(".business-task-list article")).toHaveCount(4);
   await expect(page.locator(".business-process li")).toHaveCount(4);
   await expect(page.locator(".business-faq details")).toHaveCount(6);
+  await expect(page.locator(".b2b-facts > div")).toHaveCount(4);
+  await expect(page.locator(".b2b-mosaic figure")).toHaveCount(3);
+  await expect(page.locator(".b2b-matrix tbody tr")).toHaveCount(8);
+  await expect(page.locator(".b2b-contacts li")).toHaveCount(2);
   await expect(
-    page.getByRole("region", {
-      name: "Verlässlich an Ihrer Seite. Mit Erfahrung für Ihr Objekt.",
-    }),
+    page.getByRole("heading", { name: /Über 1,1 Kilometer Zaun/ }),
   ).toBeVisible();
-  await expect(page.locator(".business-trust__value")).toHaveText("30+");
-  await expect(page.locator(".business-trust__advantages article")).toHaveCount(
-    4,
-  );
   const schemas = (
     await page.locator('script[type="application/ld+json"]').allTextContents()
   ).map((s) => JSON.parse(s));
@@ -210,7 +208,7 @@ test("business section overview, sector navigation and category inquiry", async 
     ).violations,
   ).toEqual([]);
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await expect(page.locator(".business-hero .outdoor-hero__figure")).toHaveCSS(
+  await expect(page.locator(".b2b-mosaic figure").first()).toHaveCSS(
     "animation-name",
     "none",
   );
@@ -223,7 +221,7 @@ test("business section overview, sector navigation and category inquiry", async 
     path: info.outputPath("overview.png"),
     fullPage: true,
   });
-  await page.locator(".business-hero .button").click();
+  await page.locator(".b2b-hero .button").click();
   await expect(
     page.getByLabel("Leistungsbereich", { exact: false }),
   ).toHaveValue("Gewerbe / Wohnungswirtschaft");

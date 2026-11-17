@@ -18,6 +18,23 @@
 /test-results
 /.lighthouseci
 /tmp/
+/temp/
+/.cache/
+/.turbo/
+/.vercel/
+/.netlify/
+
+# evaluation downloads; registered source originals stay in content/legacy/originals
+/content/legacy/originals-v2/
+
+# local credentials and databases
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
 
 # editors and operating systems
 .DS_Store
@@ -27,6 +44,7 @@ Thumbs.db
 .vscode/
 
 # logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

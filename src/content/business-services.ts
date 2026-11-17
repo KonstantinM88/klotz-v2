@@ -122,7 +122,7 @@ export const businessServicePages: BusinessServiceContent[] = [
     },
     responsibility: {
       title: "Das Ergebnis beginnt bei der Abstimmung.",
-      text: "Für größere Bestände lassen sich die gewünschten Maßnahmen zunächst nach Objekt und Anlass ordnen. Ob mehrere Termine, Abschnitte oder weitere Unterlagen benötigt werden, wird im konkreten Gespräch vereinbart. Ein Rahmenvertrag oder eine feste Reaktionszeit ist damit nicht automatisch verbunden.",
+      text: "Für größere Bestände lassen sich die gewünschten Maßnahmen zunächst nach Objekt und Anlass ordnen. Ob mehrere Termine, Abschnitte oder weitere Unterlagen benötigt werden, wird im konkreten Gespräch vereinbart.",
     },
     productLinks: [
       {
@@ -160,7 +160,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       {
         question: "Müssen alle auffälligen Fenster ausgetauscht werden?",
         answer:
-          "Das lässt sich aus einer Meldung allein nicht entscheiden. Beschläge, Dichtungen oder einzelne Gläser können je nach Zustand und System ersetzt werden. KLOTZ prüft die Möglichkeiten; ein Austausch wird mit der konkreten Einbausituation und dem gewünschten Ergebnis abgewogen.",
+          "Nicht unbedingt. Beschläge, Dichtungen oder einzelne Gläser lassen sich je nach Zustand und System ersetzen. Wir prüfen das vor Ort und empfehlen Ihnen die wirtschaftlichste Lösung – Reparatur oder Austausch.",
       },
       {
         question: "Sind Arbeiten in mehreren Gebäuden möglich?",
@@ -250,11 +250,11 @@ export const businessServicePages: BusinessServiceContent[] = [
         "Tor- und Zaunanlage mit offenem Zufahrtsbereich an einem Gebäude",
       ),
       caption:
-        "Tor und Verkehrsfläche zusammen betrachten · Produktbeispiel, keine zugesicherte Objektausstattung",
+        "Tor und Verkehrsfläche zusammen planen · Produktbeispiel aus der KLOTZ-Torengalerie",
       paragraphs: [
         "Anlieferung, Arbeitsfläche und verfügbare Zugänge gehören zur Vorbereitung. Zeigen Sie mögliche Aufstellflächen und nennen Sie Zeiten, in denen bestimmte Bereiche besonders stark genutzt werden. Auch interne Regeln für den Zutritt und die Anmeldung von Monteuren sollten bekannt sein.",
         "Je nach Vorhaben sind Fundamente, Pflaster, Stromversorgung oder Arbeiten an der Fassade betroffen. Diese Schnittstellen werden mit den zuständigen Beteiligten besprochen. Das Angebot sollte erkennbar machen, was enthalten ist und welche Voraussetzungen durch andere geschaffen werden müssen.",
-        "Ob Arbeiten in Abschnitte geteilt werden können oder zeitweise Sperrungen nötig sind, hängt von der Situation vor Ort ab. Eine Ausführung ohne jede Beeinträchtigung lässt sich daraus nicht pauschal versprechen. Ein abgestimmter Ablauf hilft, Auswirkungen auf Ihr Unternehmen vor der Beauftragung realistisch einzuordnen.",
+        "Ob wir in Abschnitten arbeiten oder Bereiche zeitweise sperren, planen wir gemeinsam mit Ihnen vor Ort. So kennen Sie Ablauf und Auswirkungen auf Ihren Betrieb schon vor der Beauftragung. Wie ein größeres Objekt umgesetzt wird, zeigt die Einzäunung des Stadtstadions Merseburg: über 1,1 Kilometer Doppelstabmatten-Zaun mit Toren, montiert vom eigenen KLOTZ-Team.",
       ],
     },
     planning: [
@@ -325,12 +325,12 @@ export const businessServicePages: BusinessServiceContent[] = [
       {
         question: "Kann der Betrieb während der Montage weiterlaufen?",
         answer:
-          "Das hängt von Arbeitsbereich, Zugängen und Aufgabe ab. Nennen Sie wichtige Betriebszeiten und Wege. Dann können mögliche Abschnitte und Einschränkungen abgestimmt werden. Eine unterbrechungsfreie Ausführung wird nicht pauschal zugesagt.",
+          "Ja, wir richten die Montage nach Ihrem Betrieb aus. Nennen Sie uns wichtige Betriebszeiten und Wege – dann stimmen wir Abschnitte und notwendige Einschränkungen vorab mit Ihnen ab.",
       },
       {
         question: "Übernimmt KLOTZ auch elektrische Anschlüsse und Fundamente?",
         answer:
-          "Diese Leistungen werden im Vorhaben ausdrücklich abgegrenzt. Bestehende Versorgung, Untergrund und beteiligte Fachfirmen gehören deshalb in die Vorbereitung. Aus dem Kauf einer Toranlage folgt nicht automatisch, dass sämtliche Vorarbeiten enthalten sind.",
+          "Das klären wir gleich zu Beginn und weisen es im Angebot klar aus: bestehende Versorgung, Untergrund und eventuell beteiligte Fachfirmen. So wissen Sie genau, welche Vorarbeiten enthalten sind.",
       },
       {
         question:
@@ -391,7 +391,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       paragraphs: [
         "Auf einer Hotelterrasse, vor einem Café oder im Restaurantgarten sollen sich Gäste wohlfühlen. Gleichzeitig brauchen Mitarbeitende freie Wege, die Bestuhlung eine sinnvolle Ordnung und der Betrieb ein handhabbares Konzept für den Alltag. Eine Terrassenlösung wird deshalb nicht allein nach der überdeckten Fläche ausgewählt.",
         "Zeigen Sie, wann und wie der Außenbereich genutzt wird: Frühstück, Mittagsgeschäft, Abendservice oder wechselnde Veranstaltungen stellen unterschiedliche Fragen an Licht, Schatten und Offenheit. KLOTZ bespricht mit Ihnen Überdachungen, Lamellen- und Pergolalösungen sowie mögliche seitliche Glas- und Sonnenschutzelemente. Maßgeblich sind Standort und gewähltes System.",
-        "Eine geschützte Terrasse kann angenehmer nutzbar werden. Welche Jahreszeiten und Wetterlagen sich mit einer bestimmten Ausführung abdecken lassen, muss konkret geklärt werden. Eine offene Überdachung wird durch seitliche Elemente nicht automatisch zu einem ganzjährig beheizbaren Raum. Auch zusätzliche Sitzplätze oder ein wirtschaftlicher Ertrag lassen sich aus einem Produktbild allein nicht ableiten.",
+        "Eine geschützte Terrasse lässt sich an mehr Tagen nutzen. Welche Jahreszeiten und Wetterlagen Ihre Ausführung abdecken soll, legen wir gemeinsam fest – vom offenen Dach bis zum seitlich geschlossenen Außenbereich. Ein Beispiel aus der Region: Am Störmthaler See hat KLOTZ einen großzügigen Außenbereich an einem Gebäudekomplex überdacht und seitlich verglast – geschützt vor Wind und Regen, mit freiem Blick aufs Wasser.",
       ],
     },
     variants: [
@@ -428,7 +428,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       paragraphs: [
         "Eine Skizze mit Tischen, Stühlen und Laufwegen macht viele Fragen früh sichtbar. Wo wird serviert? Welche Wege führen zur Küche oder ins Gebäude? An welcher Stelle würden Stützen oder geöffnete Glaselemente den Ablauf beeinflussen? Auch Reinigungs- und Pflegezugänge gehören in dieses Bild.",
         "Die Bedienung sollte zur Zuständigkeit im Betrieb passen. Besprechen Sie, wer Beschattung oder bewegliche Elemente nutzt und welche Handgriffe im Alltag gewünscht sind. Zusätzliche Ausstattung wie Beleuchtung oder elektrische Versorgung wird nur für die konkret geeignete Ausführung und mit klaren Zuständigkeiten geplant.",
-        "Ebenso früh sind bauliche und örtliche Rahmenbedingungen zu klären: Untergrund, Befestigung, Entwässerung, Grenzen und die Einbindung in das Gebäude. Genehmigung, Nutzung, Fluchtwege und weitere örtliche Anforderungen werden mit den zuständigen Beteiligten geprüft. Eine pauschale Genehmigungsfreiheit wird nicht vorausgesetzt.",
+        "Ebenso früh sind bauliche und örtliche Rahmenbedingungen zu klären: Untergrund, Befestigung, Entwässerung, Grenzen und die Einbindung in das Gebäude. Genehmigung, Nutzung, Fluchtwege und weitere örtliche Anforderungen werden mit den zuständigen Beteiligten geprüft.",
       ],
     },
     planning: [
@@ -450,7 +450,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       },
     ],
     costs: {
-      lead: "Für Ihre Kalkulation zählt der gesamte vereinbarte Umfang: Konstruktion, Ausstattung und Montagebedingungen. KLOTZ bespricht die passende Ausführung anhand Ihres Außenbereichs. Wirtschaftliche Annahmen zu Auslastung oder Umsatz gehören in Ihre eigene Betriebsplanung; eine feste Amortisationszeit wird nicht versprochen.",
+      lead: "Für Ihre Kalkulation zählt der gesamte vereinbarte Umfang: Konstruktion, Ausstattung und Montagebedingungen. KLOTZ bespricht die passende Ausführung anhand Ihres Außenbereichs. So erhalten Sie eine belastbare Grundlage für Ihre eigene Betriebsplanung.",
       factors: [
         "Fläche, Geometrie und gewähltes Dach- oder Beschattungssystem",
         "Seitliche Elemente und abgestimmte Bedienung",
@@ -469,7 +469,7 @@ export const businessServicePages: BusinessServiceContent[] = [
     },
     responsibility: {
       title: "Inspiration wird erst vor Ort zum passenden Konzept.",
-      text: "Die gezeigten Gastronomieterrassen veranschaulichen Produktmöglichkeiten. Sie sind keine Zusage für ein bestimmtes Ergebnis an Ihrem Standort. Nutzbarkeit, Genehmigung, Ausstattung und Montage werden für Ihr Vorhaben geklärt; Umsatz- oder Auslastungssteigerungen sind nicht zugesichert.",
+      text: "Die gezeigten Gastronomieterrassen zeigen, was möglich ist. Nutzbarkeit, Genehmigung, Ausstattung und Montage planen wir für Ihren Standort.",
     },
     productLinks: [
       {
@@ -497,7 +497,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       {
         question: "Wird unsere Terrasse damit ganzjährig nutzbar?",
         answer:
-          "Das ist keine automatische Eigenschaft einer Überdachung. Dach, seitlicher Abschluss, Wetter, Nutzung und bauliche Anforderungen wirken zusammen. Beschreiben Sie die gewünschten Nutzungsmonate, damit geeignete Möglichkeiten und Grenzen besprochen werden können.",
+          "Das hängt von Dach, seitlichem Abschluss und Nutzung ab. Nennen Sie uns die gewünschten Nutzungsmonate – wir zeigen Ihnen, welche Ausführung dazu passt.",
       },
       {
         question: "Wie berücksichtigen wir Servicewege und Bestuhlung?",
@@ -512,7 +512,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       {
         question: "Was sollten wir vor einer geplanten Saison vorbereiten?",
         answer:
-          "Stellen Sie Fotos, grobe Maße, gewünschte Nutzung und einen Terminwunsch zusammen. Klären Sie Zuständigkeiten für Genehmigung und Vorarbeiten möglichst früh. Verfügbare Termine werden individuell abgestimmt; aus dem Saisonwunsch folgt keine feste Liefer- oder Montagezusage.",
+          "Stellen Sie Fotos, grobe Maße, gewünschte Nutzung und einen Terminwunsch zusammen. Klären Sie Zuständigkeiten für Genehmigung und Vorarbeiten möglichst früh. Verfügbare Termine werden individuell abgestimmt. Je früher Sie anfragen, desto besser lässt sich die Montage vor Saisonbeginn planen.",
       },
     ],
     related: ["wartung-service", "industrie-gewerbe", "wohnungswirtschaft"],
@@ -563,8 +563,8 @@ export const businessServicePages: BusinessServiceContent[] = [
       title: "Nicht jede Auffälligkeit verlangt ein neues Bauelement.",
       paragraphs: [
         "Schwergängige Beschläge, auffällige Dichtungen oder beschädigtes Glas haben unterschiedliche Ursachen. Deshalb steht am Anfang die Beurteilung des vorhandenen Elements und des beobachteten Problems. KLOTZ bietet Wartung, Reparatur und Instandsetzung von Fenstern, Türen und Toren. So können passende Maßnahmen besprochen werden, bevor Sie sich für eine Erneuerung entscheiden.",
-        "Je nach Zustand kann eine Einstellung, der Austausch einzelner Komponenten oder eine weitergehende Erneuerung infrage kommen. Ob passende Teile verfügbar sind und ob eine Arbeit sinnvoll ausführbar ist, wird am konkreten System geprüft. Eine Reparatur aller Hersteller oder jedes Alters lässt sich im Voraus nicht zusagen.",
-        "Auch ein planmäßiges Serviceanliegen beginnt mit einer Bestandsbeschreibung. Welche Elemente sollen betrachtet werden, welche Unterlagen liegen vor und wer ist am Objekt zuständig? Diese Angaben helfen, einen geeigneten nächsten Schritt zu besprechen. Die Vereinbarung ersetzt keine anlagenspezifische Klärung von Prüfpflichten und Verantwortlichkeiten.",
+        "Je nach Zustand kann eine Einstellung, der Austausch einzelner Komponenten oder eine weitergehende Erneuerung infrage kommen. Ob passende Teile verfügbar sind und ob eine Arbeit sinnvoll ausführbar ist, wird am konkreten System geprüft. So investieren Sie nur dort, wo es für Ihr Objekt wirklich nötig ist – und verlängern die Nutzungsdauer vorhandener Bauelemente, wo das möglich ist.",
+        "Auch ein planmäßiges Serviceanliegen beginnt mit einer Bestandsbeschreibung. Welche Elemente sollen betrachtet werden, welche Unterlagen liegen vor und wer ist am Objekt zuständig? Diese Angaben helfen, einen geeigneten nächsten Schritt zu besprechen.",
       ],
     },
     variants: [
@@ -585,7 +585,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       {
         title: "Glas und einzelne Komponenten",
         description:
-          "Ein kompletter Austausch ist nicht in jedem Fall nötig. Ob ein Glas, Beschlag oder anderes Bauteil ersetzt werden kann, hängt von Bauart, Zustand und geeigneten verfügbaren Teilen ab.",
+          "Oft nicht. Glas, Beschlag oder andere Bauteile lassen sich je nach Bauart und Zustand einzeln ersetzen – wir prüfen das vor Ort.",
         suitable:
           "Für gezielten Teilersatz nach Prüfung des Elements und der Einbausituation.",
       },
@@ -596,8 +596,8 @@ export const businessServicePages: BusinessServiceContent[] = [
       caption: businessWorkMedia.caption,
       paragraphs: [
         "Eine Gesamtaufnahme zeigt, wo das Element sitzt. Ein Detailbild macht die auffällige Stelle erkennbar. Ergänzen Sie, seit wann Sie die Veränderung bemerken und ob sie ständig oder nur in bestimmten Situationen auftritt. Ein bekanntes Fabrikat, ein Typenschild oder ältere Unterlagen können die Vorbereitung unterstützen.",
-        "Bitte führen Sie für ein Foto keine riskanten Tests durch und öffnen Sie keine Antriebs- oder Elektrogehäuse. Bei erkennbarer Gefahr sollte die Anlage nicht weiter benutzt und der Bereich gesichert werden. Reparaturen und Eingriffe gehören in geeignete Hände; ein Bild ersetzt keine Beurteilung vor Ort.",
-        "Für Hausverwaltungen und Betriebe ist außerdem wichtig, wer Zugang gewährt und wer Arbeiten freigeben kann. Werden nach der Bestandsaufnahme weitere Teile oder Leistungen nötig, ist deren Umfang zu besprechen. Diagnose, Beschaffung und Ausführung sind unterschiedliche Schritte und keine automatische Pauschalleistung.",
+        "Bitte führen Sie für ein Foto keine riskanten Tests durch und öffnen Sie keine Antriebs- oder Elektrogehäuse. Bei erkennbarer Gefahr sollte die Anlage nicht weiter benutzt und der Bereich gesichert werden. Den Rest übernehmen wir vor Ort.",
+        "Für Hausverwaltungen und Betriebe ist außerdem wichtig, wer Zugang gewährt und wer Arbeiten freigeben kann. Werden nach der Bestandsaufnahme weitere Teile oder Leistungen nötig, ist deren Umfang zu besprechen. Diagnose, Beschaffung und Ausführung weisen wir Ihnen nachvollziehbar aus.",
       ],
     },
     planning: [
@@ -619,7 +619,7 @@ export const businessServicePages: BusinessServiceContent[] = [
       },
     ],
     costs: {
-      lead: "Ein Serviceauftrag hängt vom tatsächlichen Fehler und vom Zustand des Elements ab. Für eine Einordnung sind Informationen zum Bestand entscheidend. Diagnose, Anfahrt, Ersatzteile und Arbeitsumfang sollten in der Vereinbarung erkennbar sein; ein pauschaler Reparaturpreis wird hier nicht angenommen.",
+      lead: "Ein Serviceauftrag hängt vom tatsächlichen Fehler und vom Zustand des Elements ab. Für eine Einordnung sind Informationen zum Bestand entscheidend. Diagnose, Anfahrt, Ersatzteile und Arbeitsumfang weisen wir in der Vereinbarung transparent aus.",
       factors: [
         "Anfahrt, Zugänglichkeit und erforderliche Bestandsaufnahme",
         "Bauart, Zustand und Ursache der Auffälligkeit",
@@ -638,7 +638,7 @@ export const businessServicePages: BusinessServiceContent[] = [
     },
     responsibility: {
       title: "Wartung und sicherheitstechnische Prüfung unterscheiden.",
-      text: "Bei gewerblich genutzten Anlagen können besondere Prüfanforderungen gelten. Herstellerunterlagen, Nutzung und technische Ausführung sind dafür maßgeblich. Ein Reparaturtermin ersetzt nicht automatisch eine erforderliche sicherheitstechnische Prüfung. Umfang, Zuständigkeit und benötigte Qualifikation werden gesondert geklärt.",
+      text: "Bei gewerblich genutzten Anlagen können besondere Prüfanforderungen gelten. Herstellerunterlagen, Nutzung und technische Ausführung sind dafür maßgeblich. Umfang und Zuständigkeiten für Prüfungen klären wir objektbezogen mit Ihnen.",
       href: dguv,
       label: "DGUV: Fachinformation zur Prüfung an Türen und Toren",
     },
@@ -673,12 +673,12 @@ export const businessServicePages: BusinessServiceContent[] = [
       {
         question: "Kann KLOTZ Ersatzteile für ältere Elemente beschaffen?",
         answer:
-          "Die Möglichkeiten hängen vom Hersteller, System und der Verfügbarkeit geeigneter Komponenten ab. Ein Fabrikat, Typenschild oder frühere Unterlagen unterstützen die Prüfung. Eine Lieferung sämtlicher Teile oder ein fester Beschaffungstermin wird nicht vorab zugesichert.",
+          "Die Möglichkeiten hängen vom Hersteller, System und der Verfügbarkeit geeigneter Komponenten ab. Ein Fabrikat, Typenschild oder frühere Unterlagen unterstützen die Prüfung.",
       },
       {
         question: "Ist eine Reparatur auch bei Fremdfabrikaten möglich?",
         answer:
-          "Nennen Sie Hersteller und Bauart, soweit bekannt. Dann kann geklärt werden, ob KLOTZ die gewünschte Arbeit übernehmen kann und ob geeignete Teile verfügbar sind. Eine herstellerübergreifende Zusage für jede Anlage wäre ohne Prüfung nicht belastbar.",
+          "Nennen Sie Hersteller und Bauart, soweit bekannt. Dann kann geklärt werden, ob KLOTZ die gewünschte Arbeit übernehmen kann und ob geeignete Teile verfügbar sind.",
       },
       {
         question: "Wie kläre ich ein dringendes Serviceanliegen?",

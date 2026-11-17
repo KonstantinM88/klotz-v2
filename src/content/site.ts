@@ -1,5 +1,5 @@
 import { fenceMedia } from "./fence-media";
-import { businessWorkMedia } from "./business-media";
+import { businessHubMedia } from "./business-media";
 import { windowsMedia } from "./windows-media";
 import type {
   Article,
@@ -122,7 +122,7 @@ export const serviceCategories: ServiceCategory[] = z
       description:
         "Bauelemente, Montage und Service für Hausverwaltungen, Unternehmen, Hotels und Gastronomie.",
       href: "/gewerbekunden",
-      image: businessWorkMedia.image,
+      image: businessHubMedia.image,
       status: "legacy",
     },
   ]);

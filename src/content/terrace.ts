@@ -231,7 +231,7 @@ export const terracePageContent: TerracePageContent = {
       id: "genehmigung",
       question: "Brauche ich eine Baugenehmigung?",
       answer:
-        "Das lässt sich ohne Standort und konkrete Ausführung nicht pauschal beantworten. Größe, Bauweise, Grundstückssituation und örtliche Vorgaben können eine Rolle spielen. Klären Sie die Anforderungen vor der Beauftragung mit der zuständigen Bauaufsicht; für ein Vorhaben im Saalekreis ist die dortige Bauaufsichtsbehörde die richtige Anlaufstelle.",
+        "Das hängt von Größe, Bauweise, Grundstückssituation und örtlichen Vorgaben ab – wir sprechen das beim Aufmaß mit Ihnen durch. Klären Sie die Anforderungen vor der Beauftragung mit der zuständigen Bauaufsicht; für ein Vorhaben im Saalekreis ist die dortige Bauaufsichtsbehörde die richtige Anlaufstelle.",
       href: "/wissen/genehmigung-terrassenueberdachung",
       linkLabel: "Fragen zur Genehmigung vorbereiten",
     },

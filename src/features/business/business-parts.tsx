@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/sections/page-parts";
 import { ButtonLink } from "@/components/ui/button-link";
 import { ServiceMedia } from "@/features/services/service-media";
 import "@/styles/business.css";
+import "@/styles/b2b.css";
 
 export function BusinessHero({
   title,
@@ -158,9 +159,9 @@ export function BusinessProcess({
             </h2>
           </div>
           <p>
-            Der genaue Ablauf richtet sich nach Ihrem Objekt und der
-            vereinbarten Leistung. Diese Schritte geben der Abstimmung eine
-            Richtung.
+            Vom ersten Gespräch bis zur Abnahme – und darüber hinaus: So
+            arbeiten wir mit Hausverwaltungen, Unternehmen und Betrieben
+            zusammen.
           </p>
         </div>
         <ol>

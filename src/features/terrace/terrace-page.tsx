@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TrustBand } from "@/components/sections/trust-band";
 import Link from "next/link";
 import type { Article, Project, SiteSettings } from "@/domain/content/types";
 import type { TerracePageContent } from "@/domain/content/terrace";
@@ -107,6 +108,7 @@ export function TerracePage({
           </figure>
         </div>
       </section>
+      <TrustBand />
 
       <div
         className="shell terrace-trust"
